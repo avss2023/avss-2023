@@ -1,4 +1,6 @@
 ---
+import { GoogleAnalytics } from "astro-google-analytics";
+
 export interface Props {
   title: string;
 }
@@ -12,6 +14,7 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <GoogleAnalytics id="G-L93RZNFRF1" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -41,27 +44,27 @@ const { title } = Astro.props;
         <div class="flex h-40 flex-row space-x-4"></div>
       </div>
     </footer>
-  </body>
-</html>
-<style is:global>
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-  html {
-    font-family: system-ui, sans-serif;
-  }
+    <style is:global>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      html {
+        font-family: system-ui, sans-serif;
+      }
 
-  main {
-    @apply min-h-full w-full scroll-smooth bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-50;
-    /* background-image: radial-gradient(rgba(55, 55, 55, 0.2) 9%, transparent 9%);
+      main {
+        @apply min-h-full w-full scroll-smooth bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-50;
+        /* background-image: radial-gradient(rgba(55, 55, 55, 0.2) 9%, transparent 9%);
     background-position: 0% 0%;
     background-size: 2rem 2rem;
     position: absolute;
     left: 0px;
     top: 0px; */
-  }
-</style>
+      }
+    </style>
+  </body>
+</html>
