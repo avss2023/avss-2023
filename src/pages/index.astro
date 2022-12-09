@@ -3,58 +3,64 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="AVSS2023 Welcome">
   <main>
-    <h1 class="">Welcome to <span class="text-gradient">AVSS 2023</span></h1>
+    <h1 class="py-8 text-center text-6xl font-bold">
+      Welcome to <span
+        class="inline-block bg-gradient-to-l from-red-500 via-rose-500 to-pink-500 bg-clip-text font-bold text-transparent"
+        >AVSS 2023</span
+      >
+    </h1>
+    <article
+      id="article"
+      class="mx-auto grid w-full max-w-2xl gap-6 px-4 pb-12 text-lg md:px-2"
+    >
+      <figure class="mx-auto overflow-hidden rounded align-bottom md:max-w-lg">
+        <img src="/public/image.png" class="block" />
+      </figure>
+      <p>
+        <b>AVSS 2023</b> is the 19th edition of the the <b
+          >IEEE International Conference on Advanced Video and Signal-Based
+          Surveillance</b
+        >. AVSS is the premier international conference in the field of video
+        and signal-based surveillance. The goal is to provide a game-changing
+        and cross-disciplinary forum that brings together experts from academia,
+        industry, and government to advance the frontiers of theories, methods,
+        systems, and applications.
+      </p>
+      <p>
+        AVSS is sponsored by the
+        <a target="_blank" href="https://www.computer.org/web/guest/"
+          >IEEE Computer Society</a
+        > (PAMI TC) and the <a
+          target="_blank"
+          href="https://signalprocessingsociety.org/"
+          >IEEE Signal Processing Society</a
+        >
+        (IVMSP TC). There will be a <a
+          target="_blank"
+          href="https://www.cs.albany.edu/AVSS2019/program.html"
+          >main conference</a
+        >
+        as well as multiple associated <a
+          target="_blank"
+          href="https://www.cs.albany.edu/AVSS2019/workshops.html">workshops</a
+        >.
+      </p>
+    </article>
   </main>
 </Layout>
 
 <style>
-  body {
-    height: 100vh;
-    display: grid;
-    place-items: center;
+  /* gradient underline under the a tag using after */
+  a {
+    @apply relative inline-block bg-gradient-to-l from-red-500 via-rose-500 to-pink-500 bg-clip-text font-bold text-transparent;
   }
-  main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 60ch;
+  a::after {
+    content: "";
+    @apply absolute left-0 bottom-0 h-0.5 w-full origin-left scale-x-0 bg-gradient-to-l from-red-500 via-rose-500 to-pink-500 transition-transform duration-300 ease-out;
   }
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0.4rem;
-  }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
+  a:hover::after {
+    @apply scale-x-100;
   }
 </style>
