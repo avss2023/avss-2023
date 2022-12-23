@@ -10,71 +10,75 @@ const { title } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <GoogleAnalytics id="G-L93RZNFRF1" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
-  <body class="bg-netural-100 relative bg-neutral-100">
-    <header
-      class="fixed right-0 top-0 left-0 flex flex-row items-center bg-gradient-to-b px-6 py-4 backdrop-blur-lg"
-    >
-      <a href="#article" class="sr-only focus:not-sr-only"
-        ><span
-          class="absolute top-5 left-5 right-5 flex justify-center rounded-lg bg-yellow-400 py-4 text-4xl text-neutral-900"
-          >Skip to content</span
-        >
-      </a>
-      <nav class="flex w-full flex-col lg:flex-row">
-        <div class="w-20 flex-shrink-0">
-          <img src="/logo.png" />
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <GoogleAnalytics id="G-L93RZNFRF1" />
+      <meta name="generator" content={Astro.generator} />
+      <title>{title}</title>
+    </head>
+    <body class="bg-netural-100 relative bg-neutral-100">
+      <header
+        class="fixed right-0 top-0 left-0 flex flex-row items-center bg-gradient-to-b px-6 py-4 backdrop-blur-lg"
+      >
+        <a href="#article" class="sr-only focus:not-sr-only"
+          ><span
+            class="absolute top-5 left-5 right-5 flex justify-center rounded-lg bg-yellow-400 py-4 text-4xl text-neutral-900"
+            >Skip to content</span
+          >
+        </a>
+        <nav class="flex w-full flex-col lg:flex-row">
+          <div class="w-20 flex-shrink-0">
+            <img src="/logo.png" />
+          </div>
+          <ul
+            class="flex grow flex-col items-center justify-end gap-4 font-bold text-primary lg:flex-row"
+          >
+            <li>Home</li>
+            <li>News</li>
+            <li>Organization</li>
+            <li>Program</li>
+            <li>Calls</li>
+            <li>Submission</li>
+            <li>Information</li>
+            <li>Attend</li>
+            <li>Sponsors</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+      </header>
+
+      <slot />
+
+      <footer class="bg-neutral-300 px-6 py-4">
+        <div class="flex flex-row justify-between">
+          <div class="flex h-40 flex-row space-x-4"></div>
         </div>
-        <ul
-          class="flex grow flex-col items-center justify-end gap-4 font-bold text-primary lg:flex-row"
-        >
-          <li>Home</li>
-          <li>News</li>
-          <li>Organization</li>
-          <li>Program</li>
-          <li>Calls</li>
-          <li>Submission</li>
-          <li>Information</li>
-          <li>Attend</li>
-          <li>Sponsors</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
-    </header>
+      </footer>
+      <style is:global>
+        *,
+        *::before,
+        *::after {
+          @apply m-0 box-border p-0;
+          @apply m-0 box-border p-0;
+        }
+        html {
+          @apply scroll-smooth font-sans;
+          @apply scroll-smooth font-sans;
+        }
 
-    <slot />
-
-    <footer class="bg-neutral-300 px-6 py-4">
-      <div class="flex flex-row justify-between">
-        <div class="flex h-40 flex-row space-x-4"></div>
-      </div>
-    </footer>
-    <style is:global>
-      *,
-      *::before,
-      *::after {
-        @apply m-0 box-border p-0;
-      }
-      html {
-        @apply scroll-smooth font-sans;
-      }
-
-      main {
-        @apply min-h-full w-full bg-neutral-100 text-neutral-900;
-        /* background-image: radial-gradient(rgba(55, 55, 55, 0.2) 9%, transparent 9%);
+        main {
+          @apply min-h-full w-full bg-neutral-100 text-neutral-900;
+          /* background-image: radial-gradient(rgba(55, 55, 55, 0.2) 9%, transparent 9%);
     background-position: 0% 0%;
     background-size: 2rem 2rem;
     position: absolute;
     left: 0px;
     top: 0px; */
-      }
-    </style>
-  </body>
+        }
+      </style>
+    </body>
+  </html>
 </html>
