@@ -1,25 +1,34 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+
+const posts = [
+  { title: "This Was the Perfect World Cup for Our Strange Era", href: "" },
+  { title: "Falling a Little Bit in Love With the Dark", href: "" },
+  {
+    title: "Drone Attacks Overnight Target Kyiv and 2 Other Ukrainian Regions",
+    href: "",
+  },
+  { title: "Twitter Users Say Elon Musk Should Quit as C.E.O.", href: "" },
+  { title: "Qatar Got the World Cup It Wanted", href: "" },
+];
 ---
 
-<Layout title="AVSS2023 Welcome">
-  <main>
-    <h1 class="py-8 text-center text-6xl font-bold">
-      Welcome to <span
-        class="inline-block bg-gradient-to-l from-red-500 via-rose-500 to-pink-500 bg-clip-text font-bold text-transparent"
-        >AVSS 2023</span
-      >
-    </h1>
+<Layout title="Welcom :: AVSS2023">
+  <div class="grid grid-cols-1 gap-x-6 gap-y-12 md:grid-cols-2">
+    <Card title="NEWS" posts={posts} href="news" />
+    <Card title="PROGRAM" posts={posts} href="program" />
+    <Card title="CALLS" posts={posts} href="calls" />
+    <Card title="SUBMISSION" posts={posts} href="submission" />
+    <Card title="INFORMATION" posts={posts} href="information" />
+    <Card title="ATTEND" posts={posts} href="attend" />
     <article
       id="article"
-      class="mx-auto grid w-full max-w-2xl gap-6 px-4 pb-12 text-lg md:px-2"
+      class="mx-auto grid w-full max-w-2xl gap-4 px-4 pb-8 font-light md:px-2"
     >
-      <figure class="mx-auto overflow-hidden rounded align-bottom md:max-w-lg">
-        <img src="/image.png" class="block" alt="banner image" />
-      </figure>
       <p>
-        <b>AVSS 2023</b> is the 19th edition of the <b
+        <b class="text-2xl font-semibold">AVSS 2023</b> is the 19th edition of the
+        <b
           >IEEE International Conference on Advanced Video and Signal-Based
           Surveillance</b
         >. AVSS is the premier international conference in the field of video
@@ -48,19 +57,33 @@ import Card from "../components/Card.astro";
         >.
       </p>
     </article>
-  </main>
-</Layout>
+    <figure
+      class="relative mx-auto min-h-[200px] w-full max-w-[500px] grayscale md:max-w-[500px]"
+    >
+      <img
+        src="83.png"
+        alt="illustration of 83 tower"
+        class="scale absolute right-8 -bottom-36 -z-20 md:scale-100"
+      />
+      <img
+        src="city.png"
+        alt="illustration of city"
+        class="absolute bottom-[-7.5rem] -left-2 -z-10 md:left-4"
+      />
+    </figure>
+  </div>
 
-<style>
-  /* gradient underline under the a tag using after */
-  a {
-    @apply relative inline-block bg-gradient-to-l from-red-500 via-rose-500 to-pink-500 bg-clip-text font-bold text-transparent;
-  }
-  a::after {
-    content: "";
-    @apply absolute left-0 bottom-0 h-0.5 w-full origin-left scale-x-0 bg-gradient-to-l from-red-500 via-rose-500 to-pink-500 transition-transform duration-300 ease-out;
-  }
-  a:hover::after {
-    @apply scale-x-100;
-  }
-</style>
+  <style>
+    /* gradient underline under the a tag using after */
+    a {
+      @apply relative inline-block bg-gradient-to-l from-red-500 via-rose-500 to-pink-500 bg-clip-text font-semibold text-transparent;
+    }
+    a::after {
+      content: "";
+      @apply absolute left-0 bottom-0 h-0.5 w-full origin-left scale-x-0 bg-gradient-to-l from-red-500 via-rose-500 to-pink-500 transition-transform duration-300 ease-out;
+    }
+    a:hover::after {
+      @apply scale-x-100;
+    }
+  </style>
+</Layout>
