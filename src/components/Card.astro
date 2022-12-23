@@ -12,14 +12,16 @@ export type Props = {
 const { href, title, posts } = Astro.props;
 ---
 
-<div class="link-card overflow-hidden rounded-lg shadow-lg">
+<div
+  class="link-card overflow-hidden rounded-lg shadow-lg outline-neutral-200 transition-all duration-500 ease-out hover:shadow-2xl hover:outline hover:outline-2"
+>
   <a
     class="group block bg-primary px-6 py-4 text-2xl font-semibold text-neutral-100"
     href={href}
     class="group"
   >
     <div
-      class="flex origin-left flex-row gap-2 transition-transform duration-300 ease-out group-focus-within:scale-125 group-hover:scale-125 group-focus:scale-125"
+      class="flex origin-left flex-row gap-2 transition-transform duration-150 ease-out group-focus-within:scale-110 group-hover:scale-110 group-focus:scale-110"
     >
       <h2 class="">
         {title}

@@ -30,13 +30,16 @@ const { title } = Astro.props;
           >
         </a>
         <nav class="flex w-full flex-col lg:flex-row">
-          <div class="w-20 flex-shrink-0">
-            <img src="/logo.png" />
+          <div
+            class="w-20 flex-shrink-0 rounded-lg p-2 outline-neutral-200 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:outline"
+          >
+            <a href="/">
+              <img src="/logo.png" />
+            </a>
           </div>
           <ul
-            class="hidden grow flex-col items-center justify-end gap-4 font-bold text-primary lg:flex lg:flex-row"
+            class="hidden grow flex-col items-center justify-end gap-6 font-bold text-primary lg:flex lg:flex-row"
           >
-            <li>Home</li>
             <li>News</li>
             <li>Organization</li>
             <li>Program</li>
@@ -67,7 +70,7 @@ const { title } = Astro.props;
       </main>
 
       <footer
-        class="relative z-10 bg-neutral-800 px-6 py-12 text-sm text-neutral-100"
+        class="relative z-10 bg-neutral-800 px-6 py-8 text-sm text-neutral-100"
       >
         <div class="mx-auto grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-2">
           <section class="flex flex-row flex-wrap gap-4 font-semibold">
