@@ -40,15 +40,15 @@ const { title } = Astro.props;
           <ul
             class="hidden grow flex-col items-center justify-end gap-6 font-bold text-primary lg:flex lg:flex-row"
           >
-            <li><a href="">News</a></li>
-            <li><a href="">Organization</a></li>
-            <li><a href="">Program</a></li>
-            <li><a href="">Calls</a></li>
-            <li><a href="">Submission</a></li>
-            <li><a href="">Information</a></li>
-            <li><a href="">Attend</a></li>
-            <li><a href="">Sponsors</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="news">News</a></li>
+            <li><a href="organization">Organization</a></li>
+            <li><a href="program">Program</a></li>
+            <li><a href="calls">Calls</a></li>
+            <li><a href="submission">Submission</a></li>
+            <li><a href="information">Information</a></li>
+            <li><a href="attend">Attend</a></li>
+            <li><a href="sponsors">Sponsors</a></li>
+            <li><a href="contact">Contact</a></li>
           </ul>
         </nav>
       </header>
@@ -66,7 +66,9 @@ const { title } = Astro.props;
             class="absolute left-0 right-0 bottom-6 mx-auto my-auto h-2/3 w-2/3 object-contain"
           />
         </section>
-        <slot />
+        <div class="mx-auto min-h-[300px] max-w-5xl py-10 px-4">
+          <slot />
+        </div>
       </main>
 
       <footer
