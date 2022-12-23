@@ -1,0 +1,66 @@
+---
+import { GoogleAnalytics } from "astro-google-analytics";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <GoogleAnalytics id="G-L93RZNFRF1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-netural-100 relative bg-neutral-100 dark:bg-neutral-900">
+    <header
+      class="sticky right-0 top-0 left-0 flex h-24 flex-row items-center bg-gradient-to-b from-neutral-100/70 via-pink-200/70 to-pink-500/70 px-6 backdrop-blur-lg dark:from-neutral-900/80 dark:to-pink-800/80"
+    >
+      <a href="#article" class="sr-only focus:not-sr-only"
+        ><span
+          class="justify-ente absolute top-5 left-5 right-5 flex justify-center rounded-lg bg-yellow-400 py-4 text-4xl text-neutral-900"
+          >Skip to content</span
+        >
+      </a>
+      <nav class="">
+        <div class="font-mono text-3xl font-semibold dark:text-neutral-50">
+          <img src="/logo.png" />
+        </div>
+      </nav>
+    </header>
+
+    <slot />
+
+    <footer class="bg-neutral-300 px-6 py-4 dark:bg-neutral-800">
+      <div class="flex flex-row justify-between">
+        <div class="flex h-40 flex-row space-x-4"></div>
+      </div>
+    </footer>
+    <style is:global>
+      *,
+      *::before,
+      *::after {
+        @apply m-0 box-border p-0;
+      }
+      html {
+        @apply scroll-smooth font-sans;
+      }
+
+      main {
+        @apply min-h-full w-full bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-50;
+        /* background-image: radial-gradient(rgba(55, 55, 55, 0.2) 9%, transparent 9%);
+    background-position: 0% 0%;
+    background-size: 2rem 2rem;
+    position: absolute;
+    left: 0px;
+    top: 0px; */
+      }
+    </style>
+  </body>
+</html>
