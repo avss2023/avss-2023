@@ -21,7 +21,7 @@ const { title } = Astro.props;
     </head>
     <body class="bg-netural-100 relative bg-neutral-100">
       <header
-        class="fixed right-0 top-0 left-0 flex flex-row items-center bg-gradient-to-b px-6 py-4 backdrop-blur-lg"
+        class="slate-100/50 fixed right-0 top-0 left-0 z-10 flex flex-row items-center bg-gradient-to-b from-neutral-100 via-neutral-100/80 to-transparent px-6 py-4"
       >
         <a href="#article" class="sr-only focus:not-sr-only"
           ><span
@@ -34,7 +34,7 @@ const { title } = Astro.props;
             <img src="/logo.png" />
           </div>
           <ul
-            class="flex grow flex-col items-center justify-end gap-4 font-bold text-primary lg:flex-row"
+            class="hidden grow flex-col items-center justify-end gap-4 font-bold text-primary lg:flex lg:flex-row"
           >
             <li>Home</li>
             <li>News</li>
@@ -50,9 +50,23 @@ const { title } = Astro.props;
         </nav>
       </header>
 
-      <slot />
+      <main>
+        <section class="relative">
+          <img
+            src="/hero.png"
+            alt="Photo of Daegu in Red"
+            class="h-[55vh] max-h-[550px] w-full object-cover"
+          />
+          <img
+            src="/hero-logo.png"
+            alt="logo of AVSS 2023 daegu"
+            class="absolute left-0 right-0 bottom-6 mx-auto my-auto h-2/3 w-2/3 object-contain"
+          />
+        </section>
+        <slot />
+      </main>
 
-      <footer class="bg-neutral-300 px-6 py-4">
+      <footer class="bg-neutral-800 px-6 py-4">
         <div class="flex flex-row justify-between">
           <div class="flex h-40 flex-row space-x-4"></div>
         </div>
