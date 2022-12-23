@@ -29,14 +29,12 @@ const { href, title, posts } = Astro.props;
       <span>&rarr;</span>
     </div>
   </a>
-  <ul class="divide-y-2 divide-neutral-300 py-3 px-3">
+  <ul class="divide-y-2 divide-neutral-300 py-1 px-3 text-sm">
     {
       posts.map((post) => (
-        <li class="transition-colors duration-300 ease-out focus-within:bg-neutral-200 hover:bg-neutral-200 focus:bg-neutral-200 active:bg-neutral-400">
+        <li class="truncate py-3 px-3 transition-all duration-100 ease-in-out focus-within:font-bold focus-within:underline hover:font-bold hover:underline focus:font-bold focus:underline">
           <a href={post.href}>
-            <p class="truncate py-3 px-3 focus-within:underline hover:underline focus:underline">
-              {post.title}
-            </p>
+            <p>{post.title}</p>
           </a>
         </li>
       ))
