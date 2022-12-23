@@ -18,28 +18,40 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-netural-100 relative bg-neutral-100 dark:bg-neutral-900">
+  <body class="bg-netural-100 relative bg-neutral-100">
     <header
-      class="sticky right-0 top-0 left-0 flex h-24 flex-row items-center bg-gradient-to-b from-neutral-100/70 via-pink-200/70 to-pink-500/70 px-6 backdrop-blur-lg dark:from-neutral-900/80 dark:to-pink-800/80"
+      class="fixed right-0 top-0 left-0 flex flex-row items-center bg-gradient-to-b px-6 py-4 backdrop-blur-lg"
     >
       <a href="#article" class="sr-only focus:not-sr-only"
         ><span
-          class="justify-ente absolute top-5 left-5 right-5 flex justify-center rounded-lg bg-yellow-400 py-4 text-4xl text-neutral-900"
+          class="absolute top-5 left-5 right-5 flex justify-center rounded-lg bg-yellow-400 py-4 text-4xl text-neutral-900"
           >Skip to content</span
         >
       </a>
-      <nav class="">
-        <div class="font-mono text-3xl font-semibold dark:text-neutral-50">
-          <span class="block leading-none">AVSS</span><span
-            class="block leading-none">2023</span
-          >
+      <nav class="flex w-full flex-col lg:flex-row">
+        <div class="w-20 flex-shrink-0">
+          <img src="/logo.png" />
         </div>
+        <ul
+          class="flex grow flex-col items-center justify-end gap-4 font-bold text-primary lg:flex-row"
+        >
+          <li>Home</li>
+          <li>News</li>
+          <li>Organization</li>
+          <li>Program</li>
+          <li>Calls</li>
+          <li>Submission</li>
+          <li>Information</li>
+          <li>Attend</li>
+          <li>Sponsors</li>
+          <li>Contact</li>
+        </ul>
       </nav>
     </header>
 
     <slot />
 
-    <footer class="bg-neutral-300 px-6 py-4 dark:bg-neutral-800">
+    <footer class="bg-neutral-300 px-6 py-4">
       <div class="flex flex-row justify-between">
         <div class="flex h-40 flex-row space-x-4"></div>
       </div>
@@ -55,7 +67,7 @@ const { title } = Astro.props;
       }
 
       main {
-        @apply min-h-full w-full bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-50;
+        @apply min-h-full w-full bg-neutral-100 text-neutral-900;
         /* background-image: radial-gradient(rgba(55, 55, 55, 0.2) 9%, transparent 9%);
     background-position: 0% 0%;
     background-size: 2rem 2rem;
