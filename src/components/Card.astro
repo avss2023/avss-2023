@@ -21,7 +21,7 @@ const { href, title, posts } = Astro.props;
     class="group"
   >
     <div
-      class="flex origin-left flex-row gap-2 transition-transform duration-150 ease-out group-focus-within:scale-110 group-hover:scale-110 group-focus:scale-110"
+      class="flex origin-left flex-row gap-2 transition-transform duration-150 ease-out active:scale-110 group-focus-within:scale-110 group-hover:scale-110 group-focus:scale-110"
     >
       <h2 class="">
         {title}
@@ -32,7 +32,7 @@ const { href, title, posts } = Astro.props;
   <ul class="divide-y-2 divide-neutral-300 py-1 px-3 text-sm">
     {
       posts.map((post) => (
-        <li class="py-3 px-3 transition-all duration-100 ease-in-out focus-within:font-bold focus-within:underline hover:font-bold hover:underline focus:font-bold focus:underline">
+        <li class="py-3 px-3 transition-all duration-100 ease-in-out focus-within:font-bold focus-within:underline hover:font-bold hover:underline focus:font-bold focus:underline active:font-bold active:underline">
           <a href={post.href}>
             <p class="truncate ">{post.title}</p>
           </a>
