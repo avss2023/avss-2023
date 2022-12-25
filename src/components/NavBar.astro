@@ -1,0 +1,101 @@
+---
+import MenuIcon from "./MenuIcon.astro";
+---
+
+<nav class="navbar flex w-full flex-col px-10 py-4 lg:flex-row">
+  <div class="flex items-center justify-between">
+    <div
+      class="w-20 flex-shrink-0 rounded-lg p-2 outline-neutral-200 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:outline"
+    >
+      <a href="/">
+        <img src="/logo.png" />
+      </a>
+    </div>
+    <div
+      class="cursor-pointer rounded-lg p-1 outline-neutral-200 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:outline"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        class="close-icon hidden h-8 w-8 text-primary lg:hidden"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        class="menu-icon h-8 w-8 text-primary lg:hidden"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+      </svg>
+    </div>
+  </div>
+  <ul
+    class="navlist hidden grow flex-col items-center justify-end gap-6 font-bold text-primary lg:flex lg:flex-row"
+  >
+    <li>
+      <a class="hover:underline" href="news">News</a>
+    </li>
+    <li>
+      <a class="hover:underline" href="organization">Organization</a>
+    </li>
+    <li>
+      <a class="hover:underline" href="program">Program</a>
+    </li>
+    <li>
+      <a class="hover:underline" href="calls">Calls</a>
+    </li>
+    <li>
+      <a class="hover:underline" href="submission">Submission</a>
+    </li>
+    <li>
+      <a class="hover:underline" href="information">Information</a>
+    </li>
+    <li>
+      <a class="hover:underline" href="attend">Attend</a>
+    </li>
+    <li>
+      <a class="hover:underline" href="sponsors">Sponsors</a>
+    </li>
+    <li>
+      <a class="hover:underline" href="contact">Contact</a>
+    </li>
+  </ul>
+
+  <script>
+    const navbar = document.querySelector(".navbar");
+    const navList = document.querySelector(".navlist");
+    const menuIcon = document.querySelector(".menu-icon");
+    const closeIcon = document.querySelector(".close-icon");
+
+    menuIcon?.addEventListener("click", () => {
+      navList?.classList.remove("hidden");
+      navList?.classList.add("flex");
+      menuIcon?.classList.add("hidden");
+      closeIcon?.classList.remove("hidden");
+      navbar?.classList.add("backdrop-blur");
+      navbar?.classList.add("bg-neutral-100/80");
+    });
+
+    closeIcon?.addEventListener("click", () => {
+      navList?.classList.add("hidden");
+      navList?.classList.remove("flex");
+      menuIcon?.classList.remove("hidden");
+      closeIcon?.classList.add("hidden");
+      navbar?.classList.remove("backdrop-blur");
+      navbar?.classList.remove("bg-neutral-100/80");
+    });
+  </script>
+</nav>
