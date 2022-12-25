@@ -29,7 +29,7 @@ const { href, title, posts } = Astro.props;
       <span>&rarr;</span>
     </div>
   </a>
-  <ul class="divide-y-2 divide-neutral-300 py-1 px-3 text-sm">
+  <ul class="min-h-[244px] divide-y-2 divide-neutral-300 py-2 px-3 text-sm">
     {
       posts.map((post) => (
         <li class="py-3 px-3 transition-all duration-100 ease-in-out focus-within:font-bold focus-within:underline hover:font-bold hover:underline focus:font-bold focus:underline active:font-bold active:underline">
