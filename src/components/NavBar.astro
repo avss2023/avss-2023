@@ -46,31 +46,31 @@ import MenuIcon from "./MenuIcon.astro";
     class="navlist hidden grow flex-col items-center justify-end gap-6 font-bold text-primary lg:flex lg:flex-row"
   >
     <li>
-      <a href="news">News</a>
+      <a class="hover:underline" href="news">News</a>
     </li>
     <li>
-      <a href="organization">Organization</a>
+      <a class="hover:underline" href="organization">Organization</a>
     </li>
     <li>
-      <a href="program">Program</a>
+      <a class="hover:underline" href="program">Program</a>
     </li>
     <li>
-      <a href="calls">Calls</a>
+      <a class="hover:underline" href="calls">Calls</a>
     </li>
     <li>
-      <a href="submission">Submission</a>
+      <a class="hover:underline" href="submission">Submission</a>
     </li>
     <li>
-      <a href="information">Information</a>
+      <a class="hover:underline" href="information">Information</a>
     </li>
     <li>
-      <a href="attend">Attend</a>
+      <a class="hover:underline" href="attend">Attend</a>
     </li>
     <li>
-      <a href="sponsors">Sponsors</a>
+      <a class="hover:underline" href="sponsors">Sponsors</a>
     </li>
     <li>
-      <a href="contact">Contact</a>
+      <a class="hover:underline" href="contact">Contact</a>
     </li>
   </ul>
 
@@ -86,7 +86,7 @@ import MenuIcon from "./MenuIcon.astro";
       menuIcon?.classList.add("hidden");
       closeIcon?.classList.remove("hidden");
       navbar?.classList.add("backdrop-blur");
-      navbar?.classList.add("bg-neutral-100/50");
+      navbar?.classList.add("bg-neutral-100/80");
     });
 
     closeIcon?.addEventListener("click", () => {
@@ -95,7 +95,7 @@ import MenuIcon from "./MenuIcon.astro";
       menuIcon?.classList.remove("hidden");
       closeIcon?.classList.add("hidden");
       navbar?.classList.remove("backdrop-blur");
-      navbar?.classList.remove("bg-neutral-100/50");
+      navbar?.classList.remove("bg-neutral-100/80");
     });
   </script>
 </nav>
