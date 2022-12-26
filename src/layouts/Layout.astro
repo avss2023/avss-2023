@@ -22,9 +22,13 @@ const { title } = Astro.props;
       <meta name="generator" content={Astro.generator} />
       <title>{title}</title>
     </head>
-    <body class="bg-netural-100 relative bg-neutral-100">
-      <Header />
-      <main>
+    <body class="relative bg-neutral-100">
+      <header
+        class="fixed right-0 top-0 left-0 z-20 flex flex-row items-center bg-gradient-to-b from-neutral-100 via-neutral-100/80 to-transparent"
+      >
+        <Header />
+      </header>
+      <main class="relative">
         <Hero />
         <div class="mx-auto min-h-[300px] max-w-5xl py-10 px-4">
           <slot />
