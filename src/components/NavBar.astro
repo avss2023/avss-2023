@@ -83,34 +83,55 @@ import MenuIcon from "./MenuIcon.astro";
     const menuBtn = document.querySelector(".menu-btn") as HTMLElement;
     const menuIcon = document.querySelector(".menu-icon") as HTMLElement;
     const closeIcon = document.querySelector(".close-icon") as HTMLElement;
+    const isOpen = () => menuBtn.dataset.open;
 
     menuBtn.addEventListener("click", () => {
-      menuBtn.dataset.open === "false"
-        ? (menuBtn.dataset.open = "true")
-        : (menuBtn.dataset.open = "false");
+      menuBtn.dataset.open = isOpen() === "false" ? "true" : "false";
 
       // show closeIcon
-      if (menuBtn.dataset.open === "true") {
+      if (isOpen() === "true") {
         menuIcon.classList.add("disappear");
-
-        navList.classList.remove("hidden");
-        navList.classList.add("flex");
-        navbar.classList.add("backdrop-blur");
-        navbar.classList.add("bg-neutral-100/80");
-      }
-      // show menuIcon
-      if (menuBtn.dataset.open === "false") {
+        navbar.classList.add("blur-in");
+      } else {
         closeIcon.classList.add("disappear");
+        navList.classList.add("rollup");
+      }
+    });
 
-        navList.classList.add("hidden");
-        navList.classList.remove("flex");
-        navbar.classList.remove("backdrop-blur");
-        navbar.classList.remove("bg-neutral-100/80");
+    navbar.addEventListener("animationend", (e) => {
+      if (e.animationName === "blur") {
+        if (isOpen() === "true") {
+          navbar.classList.remove("blur-in");
+          navbar.classList.add("backdrop-blur");
+          navbar.classList.add("bg-neutral-100/80");
+
+          navList.classList.add("rolldown");
+          navList.classList.add("flex");
+          navList.classList.remove("hidden");
+        } else {
+          navbar.classList.remove("blur-out");
+          navbar.classList.remove("backdrop-blur");
+          navbar.classList.remove("bg-neutral-100/80");
+        }
+      }
+    });
+
+    navList.addEventListener("animationend", (e) => {
+      if (e.animationName === "rolldown") {
+        if (isOpen() === "true") {
+          navList.classList.remove("rolldown");
+        } else {
+          navList.classList.remove("rollup");
+          navList.classList.add("hidden");
+          navList.classList.remove("flex");
+
+          navbar.classList.add("blur-out");
+        }
       }
     });
 
     menuIcon.addEventListener("animationend", () => {
-      if (menuBtn.dataset.open === "true") {
+      if (isOpen() === "true") {
         menuIcon.classList.add("hidden");
         closeIcon.classList.remove("hidden");
         closeIcon.classList.add("appear");
@@ -121,7 +142,7 @@ import MenuIcon from "./MenuIcon.astro";
     });
 
     closeIcon.addEventListener("animationend", () => {
-      if (menuBtn.dataset.open === "false") {
+      if (isOpen() === "false") {
         closeIcon.classList.add("hidden");
         menuIcon.classList.remove("hidden");
         menuIcon.classList.add("appear");
@@ -137,23 +158,63 @@ import MenuIcon from "./MenuIcon.astro";
   @keyframes appear {
     0% {
       display: none;
+      scale: 0.8;
       opacity: 0;
-      transform: scale(0.9);
     }
     10% {
       display: block;
+      scale: 0.8;
       opacity: 0;
-      transform: scale(0.9);
+    }
+    90% {
+      scale: 1.1;
+      opacity: 1;
     }
     100% {
+      scale: 1;
       opacity: 1;
-      transform: scale(1);
     }
   }
+  @keyframes rolldown {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      height: 100%;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes blur {
+    0% {
+      background-color: inherit;
+      backdrop-filter: blur(0px);
+      height: 100px;
+    }
+    100% {
+      background-color: rgba(245, 245, 245, 0.8);
+      backdrop-filter: blur(8px);
+      height: 510px;
+    }
+  }
+
   .appear {
     animation: appear 0.1s ease-in forwards;
   }
   .disappear {
     animation: appear 0.1s ease-in reverse forwards;
+  }
+  .blur-in {
+    animation: blur 0.2s ease forwards;
+  }
+  .blur-out {
+    animation: blur 0.2s ease reverse forwards;
+  }
+  .rolldown {
+    animation: rolldown 0.1s ease-in forwards;
+  }
+  .rollup {
+    animation: rolldown 0.1s ease-in reverse forwards;
   }
 </style>
