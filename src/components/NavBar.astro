@@ -180,8 +180,11 @@ import MenuIcon from "./MenuIcon.astro";
       opacity: 0;
       transform: translateY(-10px);
     }
+    90% {
+      opacity: 1;
+      transform: translateY(5px);
+    }
     100% {
-      height: 100%;
       opacity: 1;
       transform: translateY(0);
     }
@@ -212,9 +215,9 @@ import MenuIcon from "./MenuIcon.astro";
     animation: blur 0.2s ease reverse forwards;
   }
   .rolldown {
-    animation: rolldown 0.1s ease-in forwards;
+    animation: rolldown 0.2s ease-in forwards;
   }
   .rollup {
-    animation: rolldown 0.1s ease-in reverse forwards;
+    animation: rolldown 0.2s ease-in reverse forwards;
   }
 </style>
