@@ -1,15 +1,21 @@
 ---
 ---
 
-<section class="relative w-screen overflow-hidden">
+<section class="relative overflow-hidden">
   <img
     src="/hero.png"
     alt="Photo of Daegu in Red"
-    class="h-[55vh] max-h-[550px] translate-x-2 scale-110 object-cover"
+    aria-hidden="true"
+    class="absolute h-[55vh] max-h-[550px] w-full translate-x-2 scale-110 overflow-hidden bg-gradient-to-b from-red-50 via-red-100 to-red-400 object-cover blur-md"
+  />
+  <img
+    src="/hero.png"
+    alt="Photo of Daegu in Red"
+    class="bg-gradient- mx-auto h-[55vh] max-h-[550px] w-full max-w-7xl translate-x-2 scale-110 object-cover blur-[1px]"
   />
   <img
     src="/hero-logo.png"
     alt="logo of AVSS 2023 daegu"
-    class="absolute right-0 left-0 bottom-8 mx-auto my-auto h-2/3 w-2/3 object-contain"
+    class="absolute right-0 left-0 bottom-8 mx-auto my-auto h-2/3 w-2/3 object-contain drop-shadow-2xl"
   />
 </section>
