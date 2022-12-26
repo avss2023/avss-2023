@@ -12,7 +12,8 @@ import MenuIcon from "./MenuIcon.astro";
       </a>
     </div>
     <div
-      class="cursor-pointer rounded-lg p-1 outline-neutral-200 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:outline"
+      data-open="false"
+      class="menu-btn h-10 w-10 cursor-pointer rounded-lg p-1 outline-neutral-200 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:outline"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -75,27 +76,82 @@ import MenuIcon from "./MenuIcon.astro";
   </ul>
 
   <script>
-    const navbar = document.querySelector(".navbar");
-    const navList = document.querySelector(".navlist");
-    const menuIcon = document.querySelector(".menu-icon");
-    const closeIcon = document.querySelector(".close-icon");
+    const navbar = document.querySelector(".navbar") as HTMLElement;
+    const navList = document.querySelector(".navlist") as HTMLElement;
+    const menuBtn = document.querySelector(".menu-btn") as HTMLElement;
+    const menuIcon = document.querySelector(".menu-icon") as HTMLElement;
+    const closeIcon = document.querySelector(".close-icon") as HTMLElement;
 
-    menuIcon?.addEventListener("click", () => {
-      navList?.classList.remove("hidden");
-      navList?.classList.add("flex");
-      menuIcon?.classList.add("hidden");
-      closeIcon?.classList.remove("hidden");
-      navbar?.classList.add("backdrop-blur");
-      navbar?.classList.add("bg-neutral-100/80");
+    menuBtn.addEventListener("click", () => {
+      menuBtn.dataset.open === "false"
+        ? (menuBtn.dataset.open = "true")
+        : (menuBtn.dataset.open = "false");
+
+      // show closeIcon
+      if (menuBtn.dataset.open === "true") {
+        menuIcon.classList.add("disappear");
+
+        navList.classList.remove("hidden");
+        navList.classList.add("flex");
+        navbar.classList.add("backdrop-blur");
+        navbar.classList.add("bg-neutral-100/80");
+      }
+      // show menuIcon
+      if (menuBtn.dataset.open === "false") {
+        closeIcon.classList.add("disappear");
+
+        navList.classList.add("hidden");
+        navList.classList.remove("flex");
+        navbar.classList.remove("backdrop-blur");
+        navbar.classList.remove("bg-neutral-100/80");
+      }
     });
 
-    closeIcon?.addEventListener("click", () => {
-      navList?.classList.add("hidden");
-      navList?.classList.remove("flex");
-      menuIcon?.classList.remove("hidden");
-      closeIcon?.classList.add("hidden");
-      navbar?.classList.remove("backdrop-blur");
-      navbar?.classList.remove("bg-neutral-100/80");
+    menuIcon.addEventListener("animationend", () => {
+      if (menuBtn.dataset.open === "true") {
+        menuIcon.classList.add("hidden");
+        closeIcon.classList.remove("hidden");
+        closeIcon.classList.add("appear");
+      }
+      menuIcon.classList.remove("appear");
+      menuIcon.classList.remove("disappear");
+      closeIcon.classList.remove("disappear");
+    });
+
+    closeIcon.addEventListener("animationend", () => {
+      if (menuBtn.dataset.open === "false") {
+        closeIcon.classList.add("hidden");
+        menuIcon.classList.remove("hidden");
+        menuIcon.classList.add("appear");
+      }
+      closeIcon.classList.remove("appear");
+      closeIcon.classList.remove("disappear");
+      menuIcon.classList.remove("disappear");
     });
   </script>
 </nav>
+
+<style>
+  @keyframes appear {
+    0% {
+      display: none;
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    10% {
+      display: block;
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .appear {
+    animation: appear 0.1s ease-in forwards;
+  }
+  .disappear {
+    animation: appear 0.1s ease-in reverse forwards;
+  }
+</style>
