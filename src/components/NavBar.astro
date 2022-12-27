@@ -48,31 +48,31 @@ import MenuIcon from "./MenuIcon.astro";
   <ul
     class="navlist hidden grow flex-col items-center justify-end gap-6 font-bold text-primary lg:flex lg:flex-row"
   >
-    <li>
+    <li data-item="1">
       <a class="hover:underline" href="news">News</a>
     </li>
-    <li>
+    <li data-item="2">
       <a class="hover:underline" href="organization">Organization</a>
     </li>
-    <li>
+    <li data-item="3">
       <a class="hover:underline" href="program">Program</a>
     </li>
-    <li>
+    <li data-item="4">
       <a class="hover:underline" href="calls">Calls</a>
     </li>
-    <li>
+    <li data-item="5">
       <a class="hover:underline" href="submission">Submission</a>
     </li>
-    <li>
+    <li data-item="6">
       <a class="hover:underline" href="information">Information</a>
     </li>
-    <li>
+    <li data-item="7">
       <a class="hover:underline" href="attend">Attend</a>
     </li>
-    <li>
+    <li data-item="8">
       <a class="hover:underline" href="sponsors">Sponsors</a>
     </li>
-    <li>
+    <li data-item="9">
       <a class="hover:underline" href="contact">Contact</a>
     </li>
   </ul>
@@ -83,6 +83,9 @@ import MenuIcon from "./MenuIcon.astro";
     const menuBtn = document.querySelector(".menu-btn") as HTMLElement;
     const menuIcon = document.querySelector(".menu-icon") as HTMLElement;
     const closeIcon = document.querySelector(".close-icon") as HTMLElement;
+    const listItems = document.querySelectorAll(
+      "[data-item]"
+    ) as NodeListOf<HTMLElement>;
     const isOpen = () => menuBtn.dataset.open;
 
     menuBtn.addEventListener("click", () => {
@@ -105,9 +108,12 @@ import MenuIcon from "./MenuIcon.astro";
           navbar.classList.add("backdrop-blur");
           navbar.classList.add("bg-neutral-100/80");
 
-          navList.classList.add("rolldown");
           navList.classList.add("flex");
           navList.classList.remove("hidden");
+          navList.classList.add("rolldown");
+          listItems.forEach((item) => {
+            item.classList.add("appear");
+          });
         } else {
           navbar.classList.remove("blur-out");
           navbar.classList.remove("backdrop-blur");
