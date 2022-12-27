@@ -2,26 +2,37 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 
-const posts = [
-  { title: "TBA", href: "" },
-  { title: "TBA", href: "" },
-  {
-    title: "TBA",
-    href: "",
-  },
-  { title: "TBA", href: "" },
-  { title: "TBA", href: "" },
+export type ContentProps = {
+  left: string;
+  right: string | Array<string>;
+};
+const paperContents: Array<ContentProps> = [
+  { left: "Submission Deadline", right: "Jun 15, 2023" },
+  { left: "Author Notification", right: "Aug 15, 2023" },
+];
+
+const workshopContents: Array<ContentProps> = [
+  { left: "Workshop Proposals Deadline", right: "May 1, 2023" },
+  { left: "Tutorial Proposals Deadline", right: "May 1, 2023" },
+];
+
+const registrationContents: Array<ContentProps> = [
+  { left: "Early Bird / Author Registration", right: "Sep 7, 2023" },
+  { left: "Regular Registration", right: "Oct 7, 2023" },
+];
+
+const avssContent: Array<ContentProps> = [
+  { left: "Conference Dates", right: ["Nov 7, 2023", "Nov 9, 2023"] },
+  { left: "Workshop Date", right: "Nov 6, 2023" },
 ];
 ---
 
 <Layout title="Welcome :: AVSS2023">
   <div class="grid grid-cols-1 gap-x-6 gap-y-12 md:grid-cols-2">
-    <Card title="News" posts={posts} href="news" />
-    <Card title="Program" posts={posts} href="program" />
-    <Card title="Calls" posts={posts} href="calls" />
-    <Card title="Submission" posts={posts} href="submission" />
-    <Card title="Information" posts={posts} href="information" />
-    <Card title="Attend" posts={posts} href="attend" />
+    <Card title="Paper" contents={paperContents} />
+    <Card title="Workshop/Tutorial" contents={workshopContents} />
+    <Card title="Registration" contents={registrationContents} />
+    <Card title="AVSS 2023" contents={avssContent} />
     <article
       id="article"
       class="z-10 mx-auto grid w-full max-w-2xl gap-4 px-4 pb-8 font-light md:px-2"
