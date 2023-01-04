@@ -23,9 +23,7 @@ const { title, contents } = Astro.props;
       </h2>
     </div>
   </header>
-  <div
-    class="divide-y-2 divide-neutral-300 py-2 px-3 text-sm bg-white"
-  >
+  <div class="divide-y-2 divide-neutral-300 bg-white py-2 px-3 text-sm">
     {
       contents.map((content) => (
         <div class="flex flex-col gap-2 px-2 py-4">
@@ -33,18 +31,12 @@ const { title, contents } = Astro.props;
             {content.left}
           </div>
           <div class="text-3xl">
-            {typeof content.right ===
-            "string" ? (
+            {typeof content.right === "string" ? (
               content.right
             ) : (
               <div class="flex flex-row gap-2">
-                <div class="w-fit">
-                  {content.right[0]}
-                </div>
-                -
-                <div class="w-fit">
-                  {content.right[1]}
-                </div>
+                <div class="w-fit">{content.right[0]}</div>-
+                <div class="w-fit">{content.right[1]}</div>
               </div>
             )}
           </div>
