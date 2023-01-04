@@ -1,21 +1,27 @@
 ---
 ---
 
-<section class="relative overflow-hidden">
+<section class="relative isolate">
+  <div
+    class="absolute inset-0 isolate -z-10 h-[70vh] bg-gradient-to-b from-transparent via-transparent to-gray-100"
+  >
+  </div>
   <img
-    src="/hero.png"
-    alt="Photo of Daegu in Red"
-    aria-hidden="true"
-    class="absolute h-[55vh] max-h-[550px] w-full translate-x-2 scale-110 overflow-hidden bg-gradient-to-b from-red-50 via-red-100 to-red-400 object-cover blur-md"
-  />
-  <img
-    src="/hero.png"
-    alt="Photo of Daegu in Red"
-    class="bg-gradient- mx-auto h-[55vh] max-h-[550px] w-full max-w-7xl translate-x-2 scale-110 object-cover blur-[1px]"
+    src="/hero-solid.png"
+    alt="Photo of Daegu City"
+    class="absolute -z-20 h-[70vh] max-h-[800px] w-full bg-gray-800 object-cover"
   />
   <img
     src="/hero-logo.png"
     alt="logo of AVSS 2023 daegu"
-    class="absolute right-0 left-0 bottom-8 mx-auto my-auto h-2/3 w-2/3 object-contain drop-shadow-2xl"
+    class="mx-auto my-auto w-40 lg:w-64 object-contain pt-28 drop-shadow-2xl"
   />
+  <div class="mx-auto flex max-w-xl lg:max-w-4xl px-4 pt-8 drop-shadow">
+    <div class="w-8 border-4 border-r-0 border-white"></div>
+    <div class="flex-grow py-4 px-2 lg:py-8 text-center text-xl text-white lg:text-3xl">
+      <p class="block">The 19th International Conference</p>
+      <p class="block">on Advanced Video and Signal-Based Surveillance</p>
+    </div>
+    <div class="w-8 border-4 border-l-0 border-white"></div>
+  </div>
 </section>
