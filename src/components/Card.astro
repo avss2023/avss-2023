@@ -18,12 +18,14 @@ const { title, contents } = Astro.props;
     <div
       class="flex origin-left flex-row gap-2 transition-transform duration-150 ease-out group-focus-within:scale-110 group-hover:scale-110 group-focus:scale-110 group-active:scale-110"
     >
-      <h2 class="">
+      <h2>
         {title}
       </h2>
     </div>
   </header>
-  <div class="divide-y-2 divide-neutral-300 py-2 px-3 text-sm">
+  <div
+    class="divide-y-2 divide-neutral-300 py-2 px-3 text-sm bg-white"
+  >
     {
       contents.map((content) => (
         <div class="flex flex-col gap-2 px-2 py-4">
@@ -31,35 +33,20 @@ const { title, contents } = Astro.props;
             {content.left}
           </div>
           <div class="text-3xl">
-            {typeof content.right === "string" ? (
-              new Date(content.right).toLocaleDateString(undefined, {
-                year: "numeric",
-                month: "short",
-                day: "numeric",
-              })
+            {typeof content.right ===
+            "string" ? (
+              content.right
             ) : (
               <div class="flex flex-row gap-2">
                 <div class="w-fit">
-                  {
-                    new Date(content.right[0])
-                      .toLocaleDateString(undefined, {
-                        year: "numeric",
-                        month: "short",
-                        day: "numeric",
-                      })
-                      .split(",")[0]
-                  }
+                  {content.right[0]}
                 </div>
                 -
                 <div class="w-fit">
-                  {new Date(content.right[1]).toLocaleDateString(undefined, {
-                    year: "numeric",
-                    month: "short",
-                    day: "numeric",
-                  })}
+                  {content.right[1]}
                 </div>
               </div>
-            )}{" "}
+            )}
           </div>
         </div>
       ))
