@@ -1,5 +1,4 @@
 ---
-import MenuIcon from "./MenuIcon.astro";
 ---
 
 <nav
@@ -15,7 +14,7 @@ import MenuIcon from "./MenuIcon.astro";
     </div>
     <div
       data-open="false"
-      class="menu-btn h-10 w-10 cursor-pointer rounded-lg p-1 outline-neutral-200 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:outline"
+      class="menu-btn h-10 text-white w-10 cursor-pointer rounded-lg p-1 outline-neutral-200 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:outline lg:hidden"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +22,7 @@ import MenuIcon from "./MenuIcon.astro";
         viewBox="0 0 24 24"
         stroke-width="2"
         stroke="currentColor"
-        class="close-icon hidden h-8 w-8 text-primary lg:hidden"
+        class="close-icon hidden h-8 w-8 lg:hidden"
       >
         <path
           stroke-linecap="round"
@@ -36,7 +35,7 @@ import MenuIcon from "./MenuIcon.astro";
         viewBox="0 0 24 24"
         stroke-width="2"
         stroke="currentColor"
-        class="menu-icon h-8 w-8 text-primary lg:hidden"
+        class="menu-icon h-8 w-8 lg:hidden"
       >
         <path
           stroke-linecap="round"
@@ -46,7 +45,7 @@ import MenuIcon from "./MenuIcon.astro";
     </div>
   </div>
   <ul
-    class="navlist hidden grow flex-col items-center justify-end gap-6 font-bold text-primary lg:flex lg:flex-row"
+    class="navlist hidden grow flex-col items-center justify-end gap-6 py-4 font-bold text-white lg:flex lg:flex-row"
   >
     <li data-item="1">
       <a class="hover:underline" href="news">News</a>
@@ -106,7 +105,7 @@ import MenuIcon from "./MenuIcon.astro";
         if (isOpen() === "true") {
           navbar.classList.remove("blur-in");
           navbar.classList.add("backdrop-blur");
-          navbar.classList.add("bg-neutral-100/80");
+          navbar.classList.add("bg-gray-800/80");
 
           navList.classList.add("flex");
           navList.classList.remove("hidden");
@@ -117,7 +116,7 @@ import MenuIcon from "./MenuIcon.astro";
         } else {
           navbar.classList.remove("blur-out");
           navbar.classList.remove("backdrop-blur");
-          navbar.classList.remove("bg-neutral-100/80");
+          navbar.classList.remove("bg-gray-800/80");
         }
       }
     });
@@ -202,9 +201,9 @@ import MenuIcon from "./MenuIcon.astro";
       height: 100px;
     }
     100% {
-      background-color: rgba(245, 245, 245, 0.8);
+      background-color: #1f2937cc;
       backdrop-filter: blur(8px);
-      height: 510px;
+      height: 538px;
     }
   }
 
