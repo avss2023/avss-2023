@@ -82,80 +82,82 @@
     const menuBtn = document.querySelector(".menu-btn") as HTMLElement;
     const menuIcon = document.querySelector(".menu-icon") as HTMLElement;
     const closeIcon = document.querySelector(".close-icon") as HTMLElement;
-    const listItems = document.querySelectorAll(
+    /* const listItems = document.querySelectorAll(
       "[data-item]"
-    ) as NodeListOf<HTMLElement>;
+    ) as NodeListOf<HTMLElement>; */
     const isOpen = () => menuBtn.dataset.open;
 
-    menuBtn.addEventListener("click", () => {
+    const resetAnimation = () => {
+      menuIcon.classList.remove("disappear", "appear");
+      closeIcon.classList.remove("disappear", "appear");
+      navList.classList.remove("rollup", "rolldown");
+      navbar.classList.remove("blur-in", "blur-out");
+    };
+
+    const toggleOpenState = () => {
+      resetAnimation();
+
+      // the only dependency of this animation is isOpen state
       menuBtn.dataset.open = isOpen() === "false" ? "true" : "false";
 
-      // show closeIcon
-      if (isOpen() === "true") {
-        menuIcon.classList.add("disappear");
-        navbar.classList.add("blur-in");
-      } else {
-        closeIcon.classList.add("disappear");
-        navList.classList.add("rollup");
-      }
-    });
+      if (isOpen() === "true") menuIcon.classList.add("disappear");
+      else closeIcon.classList.add("disappear");
+    };
 
-    navbar.addEventListener("animationend", (e) => {
-      if (e.animationName === "blur") {
-        if (isOpen() === "true") {
-          navbar.classList.remove("blur-in");
-          navbar.classList.add("backdrop-blur");
-          navbar.classList.add("bg-gray-800/80");
-
-          navList.classList.add("flex");
-          navList.classList.remove("hidden");
-          navList.classList.add("rolldown");
-          listItems.forEach((item) => {
-            item.classList.add("appear");
-          });
-        } else {
-          navbar.classList.remove("blur-out");
-          navbar.classList.remove("backdrop-blur");
-          navbar.classList.remove("bg-gray-800/80");
-        }
-      }
-    });
-
-    navList.addEventListener("animationend", (e) => {
-      if (e.animationName === "rolldown") {
-        if (isOpen() === "true") {
-          navList.classList.remove("rolldown");
-        } else {
-          navList.classList.remove("rollup");
-          navList.classList.add("hidden");
-          navList.classList.remove("flex");
-
-          navbar.classList.add("blur-out");
-        }
-      }
-    });
-
-    menuIcon.addEventListener("animationend", () => {
+    const menuIconAnimation = () => {
       if (isOpen() === "true") {
         menuIcon.classList.add("hidden");
         closeIcon.classList.remove("hidden");
         closeIcon.classList.add("appear");
+        navbar.classList.add("blur-in");
       }
-      menuIcon.classList.remove("appear");
-      menuIcon.classList.remove("disappear");
+      menuIcon.classList.remove("disappear", "appear");
       closeIcon.classList.remove("disappear");
-    });
+    };
 
-    closeIcon.addEventListener("animationend", () => {
+    const closeIconAnimation = () => {
       if (isOpen() === "false") {
         closeIcon.classList.add("hidden");
         menuIcon.classList.remove("hidden");
         menuIcon.classList.add("appear");
+        navList.classList.add("rollup");
       }
-      closeIcon.classList.remove("appear");
-      closeIcon.classList.remove("disappear");
+      closeIcon.classList.remove("disappear", "appear");
       menuIcon.classList.remove("disappear");
-    });
+    };
+
+    const navbarAnimation = (e: AnimationEvent) => {
+      if (e.animationName === "blur") {
+        if (isOpen() === "true") {
+          navbar.classList.add("backdrop-blur", "bg-neutral-800/80");
+          navList.classList.add("flex", "rolldown");
+          navList.classList.remove("hidden");
+        } else {
+          navbar.classList.remove(
+            "blur-out",
+            "backdrop-blur",
+            "bg-neutral-800/80"
+          );
+        }
+      }
+    };
+
+    const navListAnimation = (e: AnimationEvent) => {
+      if (e.animationName === "rolldown") {
+        if (isOpen() === "true") {
+        } else {
+          navList.classList.add("hidden");
+          navList.classList.remove("flex");
+          navbar.classList.add("blur-out");
+        }
+      }
+    };
+
+    menuBtn.addEventListener("click", toggleOpenState);
+    menuIcon.addEventListener("animationend", menuIconAnimation);
+    closeIcon.addEventListener("animationend", closeIconAnimation);
+    navbar.addEventListener("animationend", navbarAnimation);
+    navList.addEventListener("animationend", navListAnimation);
   </script>
 </nav>
 
@@ -183,11 +185,11 @@
   @keyframes rolldown {
     0% {
       opacity: 0;
-      transform: translateY(-10px);
+      transform: translateY(-8px);
     }
     80% {
       opacity: 0.8;
-      transform: translateY(5px);
+      transform: translateY(3px);
     }
     100% {
       opacity: 1;
@@ -201,7 +203,7 @@
       height: 100px;
     }
     100% {
-      background-color: #1f2937cc;
+      background-color: #262626cc;
       backdrop-filter: blur(8px);
       height: 538px;
     }
@@ -223,6 +225,6 @@
     animation: rolldown 0.2s ease-in forwards;
   }
   .rollup {
-    animation: rolldown 0.2s ease-in reverse forwards;
+    animation: rolldown 0.1s ease-in reverse forwards;
   }
 </style>
