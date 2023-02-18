@@ -1,0 +1,22 @@
+---
+import type { ProfileInterface } from "./profiles";
+
+const { profiles } = Astro.props as { profiles: ProfileInterface[] };
+---
+
+<ul class="ml-6">
+  {
+    profiles.map((profile) => {
+      const hasDescription = profile.description !== "";
+      return (
+        <li class="list-disc">
+          <span class="font-bold">{profile.name}</span>
+
+          {hasDescription && (
+            <span class="text-gray-500"> - {profile.description}</span>
+          )}
+        </li>
+      );
+    })
+  }
+</ul>
