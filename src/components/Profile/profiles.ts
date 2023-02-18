@@ -228,6 +228,36 @@ const europeLiaison: ChairsInterface = {
   ],
 };
 
+// Shu Hu, Carnegie Mellon University, USA
+// Chih-Chung Hsu, National Cheng Kung University, Taiwan
+// Jun-Wei Hsieh, National Yang Ming Chiao Tung University, Taiwan
+
+const areaChairs: ChairsInterface = {
+  roll: "Area Chairs",
+  profiles: [
+    {
+      name: "Shu Hu",
+      description: "Carnegie Mellon University, USA",
+      profileImage: "committee/shu-hu.png",
+    },
+    {
+      name: "Chih-Chung Hsu",
+      description: "National Cheng Kung University, Taiwan",
+      profileImage: "committee/chih-chung-hsu.png",
+    },
+    {
+      name: "Jun-Wei Hsieh",
+      description: "National Yang Ming Chiao Tung University, Taiwan",
+      profileImage: "committee/jun-wei-hsieh.png",
+    },
+    {
+      name: "...",
+      description: "",
+      profileImage: "committee/placeholder.png",
+    },
+  ],
+};
+
 const committee: ChairsInterface[] = [
   generalChairs,
   honoraryChairs,
@@ -243,6 +273,7 @@ const committee: ChairsInterface[] = [
   americaLiaison,
   asiaLiaison,
   europeLiaison,
+  areaChairs,
 ];
 
 export default committee;

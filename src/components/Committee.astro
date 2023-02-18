@@ -1,27 +1,19 @@
 ---
-import Profile from "./Profile/Profile.astro";
+import ProfilesOrList from "./Profile/ProfilesOrList.astro";
 import committee from "./Profile/profiles";
 ---
 
 {
   committee.map((chair) => {
     return (
-      <section>
-        <h3 class="mt-6 mb-4 text-2xl font-bold sm:mt-8 sm:text-3xl">
-          {chair.roll}
-        </h3>
-        <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-          {chair.profiles.map((profile) => {
-            return (
-              <Profile
-                name={profile.name}
-                description={profile.description}
-                profileImage={profile.profileImage}
-              />
-            );
-          })}
-        </div>
-      </section>
+      <>
+        <section>
+          <h3 class="mt-6 mb-4 text-2xl font-bold sm:mt-8 sm:text-3xl">
+            {chair.roll}
+          </h3>
+          <ProfilesOrList {...chair} />
+        </section>
+      </>
     );
   })
 }

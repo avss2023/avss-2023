@@ -1,14 +1,10 @@
 ---
 import ProfileImage from "./ProfileImage.astro";
+import type { ProfileInterface } from "./profiles";
 
-interface ProfileImageInterface {
-  name: string;
-  description: string;
-  profileImage: string;
-}
-
-const { name, description, profileImage } =
-  Astro.props as ProfileImageInterface;
+const { name, description, profileImage } = {
+  ...Astro.props,
+} as ProfileInterface;
 ---
 
 <div
@@ -16,5 +12,5 @@ const { name, description, profileImage } =
 >
   <ProfileImage imageSrc={profileImage} altText={name} />
   <p class="text-center text-2xl font-bold">{name}</p>
-  <p class="text-center">{description}</p>
+  <p class="text-center text-gray-500">{description}</p>
 </div>
