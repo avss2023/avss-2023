@@ -238,22 +238,17 @@ const areaChairs: ChairsInterface = {
     {
       name: "Shu Hu",
       description: "Carnegie Mellon University, USA",
-      profileImage: "/committee/shu-hu.png",
+      profileImage: "",
     },
     {
       name: "Chih-Chung Hsu",
       description: "National Cheng Kung University, Taiwan",
-      profileImage: "/committee/chih-chung-hsu.png",
+      profileImage: "",
     },
     {
       name: "Jun-Wei Hsieh",
       description: "National Yang Ming Chiao Tung University, Taiwan",
       profileImage: "/committee/jun-wei-hsieh.png",
-    },
-    {
-      name: "...",
-      description: "",
-      profileImage: "/committee/placeholder.png",
     },
   ],
 };
