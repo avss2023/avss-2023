@@ -195,6 +195,38 @@ const challengeChairs: ChairsInterface = {
   ],
 };
 
+const americaLiaison: ChairsInterface = {
+  roll: "America Liaison",
+  profiles: [
+    {
+      name: "Ming-Ching Chang",
+      description: "University at Albany - SUNY,  USA",
+      profileImage: "committee/ming-ching-chang.png",
+    },
+  ],
+};
+
+const asiaLiaison: ChairsInterface = {
+  roll: "Asia Liaison",
+  profiles: [
+    {
+      name: "Jiwen Lu",
+      description: "Tsinghua University, China",
+      profileImage: "committee/jiwen-lu.png",
+    },
+  ],
+};
+
+const europeLiaison: ChairsInterface = {
+  roll: "Europe Liaison",
+  profiles: [
+    {
+      name: "Julian Fierrez",
+      description: "Universidad Autonoma de Madrid, Spain",
+      profileImage: "committee/julian-fierrez.png",
+    },
+  ],
+};
 
 const committee: ChairsInterface[] = [
   generalChairs,
@@ -208,6 +240,9 @@ const committee: ChairsInterface[] = [
   tutorialChairs,
   industrialChairs,
   challengeChairs,
+  americaLiaison,
+  asiaLiaison,
+  europeLiaison,
 ];
 
 export default committee;
