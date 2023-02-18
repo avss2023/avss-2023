@@ -32,7 +32,9 @@ const committee: ChairsInterface[] = [
   committee.map((chair) => {
     return (
       <section>
-        <h3 class="mt-8 mb-4 text-3xl font-bold">{chair.roll}</h3>
+        <h3 class="mt-6 mb-4 text-2xl font-bold sm:mt-8 sm:text-3xl">
+          {chair.roll}
+        </h3>
         <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
           {chair.profiles.map((profile) => {
             return (

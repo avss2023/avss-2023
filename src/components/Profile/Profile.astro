@@ -12,11 +12,9 @@ const { name, description, profileImage } =
 ---
 
 <div
-  class="flex items-center gap-2 rounded-lg border-2 bg-white px-4 py-5 sm:items-start"
+  class="flex flex-col items-center gap-2 rounded-lg border-2 bg-white px-4 py-6"
 >
   <ProfileImage imageSrc={profileImage} altText={name} />
-  <div>
-    <span class="self-end text-2xl font-bold sm:text-xl">{name}</span>
-    <p>{description}</p>
-  </div>
+  <p class="text-center text-2xl font-bold">{name}</p>
+  <p class="text-center">{description}</p>
 </div>
