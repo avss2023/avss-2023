@@ -1,17 +1,17 @@
 ---
-import ProfilesOrList from "./Profile/ProfilesOrList.astro";
 import committee from "./Profile/profiles";
+import Profiles from "./Profile/Profiles.astro";
 ---
 
 {
   committee.map((chair) => {
     return (
       <>
-        <section>
-          <h3 class="mt-6 mb-4 text-2xl font-bold sm:mt-8 sm:text-3xl">
+        <section class="px-4">
+          <h3 class="mt-8 mb-6 text-3xl font-bold sm:mt-8 sm:text-3xl">
             {chair.roll}
           </h3>
-          <ProfilesOrList {...chair} />
+          <Profiles {...chair} />
         </section>
       </>
     );
