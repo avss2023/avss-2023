@@ -5,7 +5,7 @@ const financialChairs: ChairsInterface = {
   profiles: [
     {
       name: "Deokwoo Lee",
-      description: "Keimyung University, S. Korea",
+      description: "Keimyung University, S.Korea",
       profileImage: "",
     },
     {
