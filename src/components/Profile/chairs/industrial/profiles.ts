@@ -6,12 +6,12 @@ const industrialChairs: ChairsInterface = {
     {
       name: "Peter Tu",
       description: "GE Global Research, USA",
-      profileImage: "",
+      profileImage: "committee/peter-tu.png",
     },
     {
       name: "Lipeng Ke",
       description: "Amazon Lab126, USA",
-      profileImage: "",
+      profileImage: "committee/lipeng-ke.png",
     },
   ],
 };

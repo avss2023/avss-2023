@@ -6,12 +6,12 @@ const honoraryChairs: ChairsInterface = {
     {
       name: "Dong Seog Han",
       description: "KNU, S.Korea",
-      profileImage: "",
+      profileImage: "committee/dongseog-han.png",
     },
     {
       name: "Eun Chang Choi",
       description: "ETRI, S.Korea",
-      profileImage: "",
+      profileImage: "committee/eunchang-choi.png",
     },
   ],
 };

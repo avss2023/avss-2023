@@ -1,22 +1,25 @@
 import type { ChairsInterface } from "../types";
+/**
+ *
+ * Hyun Jong Yang
+ * POSTECH, S. Korea
+ *
+ * Federica Battisti
+ * University of Padua, Italy
+ */
 
 const workshopChairs: ChairsInterface = {
   roll: "Workshop Chairs",
   profiles: [
     {
-      name: "Jong Taek Lee",
-      description: "KNU, S.Korea",
-      profileImage: "",
+      name: "Hyunjong Yang",
+      description: "POSTECH, S. Korea",
+      profileImage: "committee/hyunjong-yang.png",
     },
     {
-      name: "Byoung Chul Ko",
-      description: "Keimyung University, S.Korea",
-      profileImage: "",
-    },
-    {
-      name: "Arslan Basharat",
-      description: "Kitware Inc, USA",
-      profileImage: "",
+      name: "Federica Battisti",
+      description: "University of Padua, Italy",
+      profileImage: "committee/federica-battisti.png",
     },
   ],
 };

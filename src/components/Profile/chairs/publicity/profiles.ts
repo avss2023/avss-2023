@@ -6,17 +6,17 @@ const publicityChairs: ChairsInterface = {
     {
       name: "Jiaying Liu",
       description: "Peking University, China",
-      profileImage: "",
+      profileImage: "committee/jiaying-liu.png",
     },
     {
       name: "Wei Qi Yan",
       description: "AUT, New Zealand",
-      profileImage: "",
+      profileImage: "committee/wei-qi-yan.png",
     },
     {
       name: "Ruben Tolosana",
       description: "Universidad Autonoma de Madrid, Spain",
-      profileImage: "",
+      profileImage: "committee/ruben-tolosana.png",
     },
   ],
 };

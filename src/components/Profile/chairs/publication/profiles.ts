@@ -6,7 +6,7 @@ const publicationChairs: ChairsInterface = {
     {
       name: "Srirangaraj Setlur",
       description: "University of Buffalo, USA",
-      profileImage: "",
+      profileImage: "committee/srirangaraj-setlur.png",
     },
   ],
 };

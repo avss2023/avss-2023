@@ -6,12 +6,12 @@ const tutorialChairs: ChairsInterface = {
     {
       name: "ChangIck Kim",
       description: "KAIST, S.Korea",
-      profileImage: "",
+      profileImage: "committee/changick-kim.png",
     },
     {
       name: "Gaoang Wang",
       description: "ZJU-UIUC Institute, China",
-      profileImage: "",
+      profileImage: "committee/gaoang-wang.png",
     },
   ],
 };

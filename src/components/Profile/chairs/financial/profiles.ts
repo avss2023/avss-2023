@@ -6,12 +6,12 @@ const financialChairs: ChairsInterface = {
     {
       name: "Deokwoo Lee",
       description: "Keimyung University, S.Korea",
-      profileImage: "",
+      profileImage: "committee/deokwoo-lee.png",
     },
     {
       name: "Jun-Wei Hsieh",
       description: "NYCU, Taiwan",
-      profileImage: "",
+      profileImage: "committee/jun-wei-hsieh.png",
     },
   ],
 };
