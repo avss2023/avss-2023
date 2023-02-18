@@ -24,15 +24,17 @@ const { title } = Astro.props;
     </head>
     <body class="relative bg-gray-100">
       <header
-        class="via-neutral-900/70 fixed right-0 top-0 left-0 z-20 flex flex-row items-center bg-gradient-to-b from-neutral-800/90 to-transparent"
+        class="fixed right-0 top-0 left-0 z-20 flex flex-row items-center bg-gradient-to-b from-neutral-800/90 via-neutral-900/70 to-transparent"
       >
         <Header />
       </header>
-      <main class="relative">
+      <section class="relative">
         <Hero />
-        <div class="isolate z-0 mx-auto min-h-[300px] max-w-5xl py-10 px-4">
-          <slot />
-        </div>
+      </section>
+      <main
+        class="isolate z-0 mx-auto min-h-[300px] max-w-5xl bg-transparent py-10 px-4"
+      >
+        <slot />
       </main>
       <Footer />
     </body>
