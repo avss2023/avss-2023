@@ -11,8 +11,12 @@ const { name, description, profileImage } =
   Astro.props as ProfileImageInterface;
 ---
 
-<div>
+<div
+  class="flex items-center gap-2 rounded-lg border-2 bg-white px-4 py-5 sm:items-start"
+>
   <ProfileImage imageSrc={profileImage} altText={name} />
-  <h4>{name}</h4>
-  <p>{description}</p>
+  <div>
+    <span class="self-end text-2xl font-bold sm:text-xl">{name}</span>
+    <p>{description}</p>
+  </div>
 </div>
