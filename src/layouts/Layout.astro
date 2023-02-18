@@ -43,11 +43,15 @@ const { title } = Astro.props;
       *::before,
       *::after {
         @apply m-0 box-border p-0;
-        @apply m-0 box-border p-0;
       }
       html {
-        @apply scroll-smooth font-sans;
-        @apply scroll-smooth font-sans;
+        scroll-behavior: smooth;
+        scroll-padding-top: 200px;
+      }
+
+      :target {
+        outline: red solid 5px;
+        outline-offset: 5px;
       }
 
       main {
