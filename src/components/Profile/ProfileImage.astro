@@ -4,7 +4,7 @@ import DefaultImage from "./DefaultImage.astro";
 const { imageSrc, altText } = Astro.props;
 ---
 
-<div class="w-24">
+<div class="aspect-square w-24 overflow-hidden rounded-full lg:text-3xl">
   {
     imageSrc ? (
       <img src={imageSrc} alt={altText} class="w-full" />
