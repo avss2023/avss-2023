@@ -1,4 +1,5 @@
 ---
+import { Image } from "@astrojs/image/components";
 import DefaultImage from "./DefaultImage.astro";
 
 const { imageSrc, altText } = Astro.props;
@@ -9,10 +10,13 @@ const { imageSrc, altText } = Astro.props;
 >
   {
     imageSrc ? (
-      <img
+      <Image
         src={imageSrc}
         alt={altText}
         class="aspect-square w-36 object-cover"
+        aspectRatio="1/1"
+        width="150"
+        format="webp"
       />
     ) : (
       <DefaultImage />

@@ -1,4 +1,5 @@
 ---
+import { Image } from "@astrojs/image/components";
 ---
 
 <nav
@@ -9,7 +10,14 @@
       class="w-20 flex-shrink-0 rounded-lg p-2 outline-neutral-200 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:outline"
     >
       <a href="/">
-        <img src="/logo.png" />
+        <Image
+          src="/logo.png"
+          alt="logo of AVSS 2023"
+          width="64"
+          aspectRatio="64∶49"
+          format="webp"
+          quality="100"
+        />
       </a>
     </div>
     <div
