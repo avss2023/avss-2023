@@ -1,0 +1,50 @@
+---
+import type { ChairsInterface } from "./Profile/chairs/types";
+import challengeChairs from "./Profile/chairs/challenge";
+import financialChairs from "./Profile/chairs/financial";
+import generalChairs from "./Profile/chairs/general";
+import honoraryChairs from "./Profile/chairs/honarary";
+import industrialChairs from "./Profile/chairs/industrial";
+import programChairs from "./Profile/chairs/program";
+import publicationChairs from "./Profile/chairs/publication";
+import publicityChairs from "./Profile/chairs/publicity";
+import tutorialChairs from "./Profile/chairs/tutorial";
+import websiteAndRestrationChairs from "./Profile/chairs/websiteAndRegistration";
+import workshopChairs from "./Profile/chairs/workshop";
+import Profile from "./Profile/Profile.astro";
+
+const committee: ChairsInterface[] = [
+  generalChairs,
+  honoraryChairs,
+  programChairs,
+  publicationChairs,
+  financialChairs,
+  publicityChairs,
+  websiteAndRestrationChairs,
+  workshopChairs,
+  tutorialChairs,
+  industrialChairs,
+  challengeChairs,
+];
+---
+
+{
+  committee.map((chair) => {
+    return (
+      <section>
+        <h3 class="text-2xl font-bold">{chair.roll}</h3>
+        <div class="flex flex-wrap">
+          {chair.profiles.map((profile) => {
+            return (
+              <Profile
+                name={profile.name}
+                description={profile.description}
+                profileImage={profile.profileImage}
+              />
+            );
+          })}
+        </div>
+      </section>
+    );
+  })
+}
