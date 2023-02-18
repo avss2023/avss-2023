@@ -8,9 +8,11 @@ const { name, description, profileImage } = {
 ---
 
 <div
-  class="mx-auto flex w-full max-w-[336px] flex-col items-center gap-2 rounded-lg border-2 bg-white px-4 py-6"
+  class="mx-auto grid w-full max-w-[364px] grid-rows-[auto_1fr] items-start justify-center gap-2 rounded-lg border-2 bg-white px-4 py-10 sm:max-w-none sm:flex-col"
 >
   <ProfileImage imageSrc={profileImage} altText={name} />
-  <p class="text-center text-2xl font-bold">{name}</p>
-  <p class="text-center text-gray-500">{description}</p>
+  <div class="grow">
+    <p class="text-center text-2xl font-bold">{name}</p>
+    <p class="max-w-[225px] text-center text-gray-500">{description}</p>
+  </div>
 </div>
