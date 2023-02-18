@@ -6,12 +6,12 @@ const websiteAndRestrationChairs: ChairsInterface = {
     {
       name: "Heeseok Oh",
       description: "Hansung University, S.Korea",
-      profileImage: "",
+      profileImage: "committee/heeseok-oh.png",
     },
     {
       name: "Yiwei Fu",
       description: "GE Research, USA",
-      profileImage: "",
+      profileImage: "committee/yiwei-fu.png",
     },
   ],
 };

@@ -6,22 +6,22 @@ const programChairs: ChairsInterface = {
     {
       name: "Kwang-Ju Kim",
       description: "ETRI, S.Korea",
-      profileImage: "",
+      profileImage: "committee/kwangju-kim.png",
     },
     {
       name: "Jong Taek Lee",
       description: "KNU, S.Korea",
-      profileImage: "",
+      profileImage: "committee/jongtaek-lee.png",
     },
     {
       name: "Byoung Chul Ko",
       description: "Keimyung University, S.Korea",
-      profileImage: "",
+      profileImage: "committee/byoungchul-ko.png",
     },
     {
       name: "Arslan Basharat",
       description: "Kitware Inc, USA",
-      profileImage: "",
+      profileImage: "committee/arslan-basharat.png",
     },
   ],
 };

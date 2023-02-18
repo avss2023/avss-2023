@@ -6,12 +6,12 @@ const challengeChairs: ChairsInterface = {
     {
       name: "Zheng Tang",
       description: "Nvidia Metropolis, USA",
-      profileImage: "",
+      profileImage: "committee/zheng-tang.png",
     },
     {
       name: "Weiyao Lin",
       description: "SJTU, China",
-      profileImage: "",
+      profileImage: "committee/weiyao-lin.png",
     },
   ],
 };

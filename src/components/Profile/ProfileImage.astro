@@ -5,11 +5,15 @@ const { imageSrc, altText } = Astro.props;
 ---
 
 <div
-  class="aspect-square w-36 shrink-0 overflow-hidden rounded-full bg-gray-300 lg:text-3xl"
+  class="aspect-square w-36 shrink-0 overflow-hidden rounded-full border-4 bg-gray-300 lg:text-3xl"
 >
   {
     imageSrc ? (
-      <img src={imageSrc} alt={altText} class="w-full" />
+      <img
+        src={imageSrc}
+        alt={altText}
+        class="aspect-square w-36 object-cover"
+      />
     ) : (
       <DefaultImage />
     )

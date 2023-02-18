@@ -6,12 +6,12 @@ const generalChairs: ChairsInterface = {
     {
       name: "Jeng-Neung Hwang",
       description: "University of Washington, USA",
-      profileImage: "",
+      profileImage: "committee/jengneung-hwang.png",
     },
     {
       name: "Michael S. Ryoo",
       description: "Stony Brook University & Google Brain, USA",
-      profileImage: "",
+      profileImage: "committee/michael-ryoo.png",
     },
   ],
 };
