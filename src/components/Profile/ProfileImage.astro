@@ -1,0 +1,15 @@
+---
+import DefaultImage from "./DefaultImage.astro";
+
+const { imageSrc, altText } = Astro.props;
+---
+
+<div class="w-24">
+  {
+    imageSrc ? (
+      <img src={imageSrc} alt={altText} class="w-full" />
+    ) : (
+      <DefaultImage />
+    )
+  }
+</div>
