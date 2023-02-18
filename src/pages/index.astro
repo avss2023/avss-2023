@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import { Image } from "@astrojs/image/components";
 
 export type ContentProps = {
   left: string;
@@ -73,15 +74,21 @@ const avssContent: Array<ContentProps> = [
     <figure
       class="relative mx-auto min-h-[200px] w-full max-w-[450px] grayscale md:max-w-[500px]"
     >
-      <img
+      <Image
         src="83.png"
         alt="illustration of 83 tower"
         class="absolute right-8 -bottom-36 -z-30 md:scale-100"
+        aspectRatio="69∶440"
+        height="440"
+        format="webp"
       />
-      <img
+      <Image
         src="city.png"
         alt="illustration of city"
         class="absolute bottom-[-7.5rem] -left-2 -z-10 md:left-4"
+        aspectRatio="53∶28"
+        height="196"
+        format="webp"
       />
     </figure>
   </div>

@@ -1,4 +1,5 @@
 ---
+import { Image } from "@astrojs/image/components";
 ---
 
 <footer
@@ -16,10 +17,38 @@
       <div
         class="flex flex-row flex-wrap items-center gap-4 gap-y-2 px-2 sm:px-0"
       >
-        <img src="etri.png" alt="etri logo" class="h-4" />
-        <img src="knu.png" alt="knu logo" class="h-5" />
-        <img src="daegu.png" alt="daegu logo" class="h-5" />
-        <img src="kmu.png" alt="kmu ai fusion research institute" class="h-6" />
+        <Image
+          format="webp"
+          height="16"
+          width="75"
+          src="etri.png"
+          alt="etri logo"
+          class="h-4"
+        />
+        <Image
+          format="webp"
+          height="16"
+          width="75"
+          src="knu.png"
+          alt="knu logo"
+          class="h-5"
+        />
+        <Image
+          format="webp"
+          height="16"
+          width="90"
+          src="daegu.png"
+          alt="daegu logo"
+          class="h-5"
+        />
+        <Image
+          format="webp"
+          height="16"
+          width="80"
+          src="kmu.png"
+          alt="kmu ai fusion research institute"
+          class="h-6"
+        />
       </div>
     </section>
     <section class="flex flex-row flex-wrap gap-4 gap-y-2 lg:col-span-2">
