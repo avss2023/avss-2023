@@ -1,4 +1,4 @@
-import type { ChairsInterface } from "./types";
+import type { ChairsInterface } from "../types";
 
 const websiteAndRestrationChairs: ChairsInterface = {
   roll: "Website and Registration Chairs",
