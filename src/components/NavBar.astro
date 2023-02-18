@@ -106,7 +106,6 @@ import { Image } from "@astrojs/image/components";
     const resetAnimation = () => {
       menuIcon.classList.remove("disappear", "appear");
       closeIcon.classList.remove("disappear", "appear");
-      navList.classList.remove("rollup", "rolldown");
       navbar.classList.remove("blur-in", "blur-out");
     };
 
@@ -136,7 +135,7 @@ import { Image } from "@astrojs/image/components";
         closeIcon.classList.add("hidden");
         menuIcon.classList.remove("hidden");
         menuIcon.classList.add("appear");
-        navList.classList.add("rollup");
+        navList.classList.add("fade-out");
       }
       closeIcon.classList.remove("disappear", "appear");
       menuIcon.classList.remove("disappear");
@@ -146,7 +145,7 @@ import { Image } from "@astrojs/image/components";
       if (e.animationName === "blur") {
         if (isOpen() === "true") {
           navbar.classList.add("backdrop-blur", "bg-neutral-800/80");
-          navList.classList.add("flex", "rolldown");
+          navList.classList.add("flex", "fade-in");
           navList.classList.remove("hidden");
         } else {
           navbar.classList.remove(
@@ -159,13 +158,14 @@ import { Image } from "@astrojs/image/components";
     };
 
     const navListAnimation = (e: AnimationEvent) => {
-      if (e.animationName === "rolldown") {
+      if (e.animationName === "fade") {
         if (isOpen() === "true") {
         } else {
           navList.classList.add("hidden");
           navList.classList.remove("flex");
           navbar.classList.add("blur-out");
         }
+        navList.classList.remove("fade-in", "fade-out");
       }
     };
 
@@ -198,20 +198,6 @@ import { Image } from "@astrojs/image/components";
       opacity: 1;
     }
   }
-  @keyframes rolldown {
-    0% {
-      opacity: 0;
-      transform: translateY(-8px);
-    }
-    80% {
-      opacity: 0.8;
-      transform: translateY(3px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
   @keyframes blur {
     0% {
       background-color: inherit;
@@ -221,15 +207,23 @@ import { Image } from "@astrojs/image/components";
     100% {
       background-color: #262626cc;
       backdrop-filter: blur(8px);
-      height: 538px;
+      height: 524px;
+    }
+  }
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 
   .appear {
-    animation: appear 0.1s ease-in forwards;
+    animation: appear 0.2s ease-in forwards;
   }
   .disappear {
-    animation: appear 0.1s ease-in reverse forwards;
+    animation: appear 0.2s ease-in reverse forwards;
   }
   .blur-in {
     animation: blur 0.2s ease forwards;
@@ -237,10 +231,10 @@ import { Image } from "@astrojs/image/components";
   .blur-out {
     animation: blur 0.2s ease reverse forwards;
   }
-  .rolldown {
-    animation: rolldown 0.2s ease-in forwards;
+  .fade-in {
+    animation: fade 0.2s ease forwards;
   }
-  .rollup {
-    animation: rolldown 0.1s ease-in reverse forwards;
+  .fade-out {
+    animation: fade 0.1s ease reverse forwards;
   }
 </style>
