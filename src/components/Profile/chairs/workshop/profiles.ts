@@ -5,12 +5,12 @@ const workshopChairs: ChairsInterface = {
   profiles: [
     {
       name: "Jong Taek Lee",
-      description: "KNU, S. Korea",
+      description: "KNU, S.Korea",
       profileImage: "",
     },
     {
       name: "Byoung Chul Ko",
-      description: "Keimyung University, S. Korea",
+      description: "Keimyung University, S.Korea",
       profileImage: "",
     },
     {

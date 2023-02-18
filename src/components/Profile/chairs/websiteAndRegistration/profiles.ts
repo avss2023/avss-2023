@@ -5,7 +5,7 @@ const websiteAndRestrationChairs: ChairsInterface = {
   profiles: [
     {
       name: "Heeseok Oh",
-      description: "Hansung University, S. Korea",
+      description: "Hansung University, S.Korea",
       profileImage: "",
     },
     {

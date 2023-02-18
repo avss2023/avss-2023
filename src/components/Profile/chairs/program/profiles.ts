@@ -5,17 +5,17 @@ const programChairs: ChairsInterface = {
   profiles: [
     {
       name: "Kwang-Ju Kim",
-      description: "ETRI, S. Korea",
+      description: "ETRI, S.Korea",
       profileImage: "",
     },
     {
       name: "Jong Taek Lee",
-      description: "KNU, S. Korea",
+      description: "KNU, S.Korea",
       profileImage: "",
     },
     {
       name: "Byoung Chul Ko",
-      description: "Keimyung University, S. Korea",
+      description: "Keimyung University, S.Korea",
       profileImage: "",
     },
     {

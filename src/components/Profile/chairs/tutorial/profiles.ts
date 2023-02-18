@@ -5,7 +5,7 @@ const tutorialChairs: ChairsInterface = {
   profiles: [
     {
       name: "ChangIck Kim",
-      description: "KAIST, S. Korea",
+      description: "KAIST, S.Korea",
       profileImage: "",
     },
     {

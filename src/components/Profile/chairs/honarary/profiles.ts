@@ -5,12 +5,12 @@ const honoraryChairs: ChairsInterface = {
   profiles: [
     {
       name: "Dong Seog Han",
-      description: "KNU, S. Korea",
+      description: "KNU, S.Korea",
       profileImage: "",
     },
     {
       name: "Eun Chang Choi",
-      description: "ETRI, S. Korea",
+      description: "ETRI, S.Korea",
       profileImage: "",
     },
   ],
