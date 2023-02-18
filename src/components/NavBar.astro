@@ -1,6 +1,42 @@
 ---
 import { Image } from "@astrojs/image/components";
 import CloseIcon from "./NavBar/CloseIcon.astro";
+import MenuIcon from "./NavBar/MenuIcon.astro";
+
+interface NavItem {
+  name: string;
+  href: string;
+  hover?: NavItem[];
+}
+
+const navItems: NavItem[] = [
+  { name: "News", href: "news" },
+  { name: "Organization", href: "organization" },
+  { name: "Program", href: "program" },
+  {
+    name: "Calls",
+    href: "calls",
+    hover: [
+      {
+        name: "Call For Papers",
+        href: "call-for-papers",
+      },
+      {
+        name: "Call For Workshops",
+        href: "call-for-workshops",
+      },
+      {
+        name: "Call For Tutorials",
+        href: "call-for-tutorials",
+      },
+    ],
+  },
+  { name: "Submission", href: "submission" },
+  { name: "Information", href: "information" },
+  { name: "Attend", href: "attend" },
+  { name: "Sponsors", href: "sponsors" },
+  { name: "Contact", href: "contact" },
+];
 ---
 
 <nav
@@ -8,7 +44,7 @@ import CloseIcon from "./NavBar/CloseIcon.astro";
 >
   <div class="flex items-center justify-between">
     <div
-      class="w-fit flex-shrink-0 rounded-lg p-2 outline-neutral-200 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:outline"
+      class="z-10 w-fit flex-shrink-0 rounded-lg p-2 outline-neutral-200 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:outline"
     >
       <a href="/">
         <Image
@@ -24,40 +60,57 @@ import CloseIcon from "./NavBar/CloseIcon.astro";
     </div>
     <div
       data-open="false"
-      class="menu-btn h-10 w-10 cursor-pointer rounded-lg p-1 text-white outline-neutral-200 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:outline lg:hidden"
+      class="menu-btn z-10 h-10 w-10 cursor-pointer rounded-lg p-1 text-white outline-neutral-200 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:outline lg:hidden"
     >
       <CloseIcon className="close-icon hidden h-8 w-8 lg:hidden" />
       <MenuIcon className="menu-icon h-8 w-8 lg:hidden" />
     </div>
   </div>
   <ul
-    class="navlist hidden grow flex-col items-center justify-end gap-6 py-4 font-bold text-white lg:flex lg:flex-row"
+    class="navlist relative -top-12 hidden grow flex-col items-center justify-end font-bold text-white lg:top-0 lg:flex lg:flex-row lg:gap-6"
   >
-    <li data-item="1">
+    <li data-item="1" class="py-3">
       <a class="hover:underline" href="news">News</a>
     </li>
-    <li data-item="2">
+    <li data-item="2" class="py-3">
       <a class="hover:underline" href="organization">Organization</a>
     </li>
-    <li data-item="3">
+    <li data-item="3" class="py-3">
       <a class="hover:underline" href="program">Program</a>
     </li>
-    <li data-item="4">
+    <li data-item="4" class="group relative py-3">
       <a class="hover:underline" href="calls">Calls</a>
+      <div
+        class="opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100"
+      >
+        <ul
+          class="absolute top-12 left-12 hidden w-56 -translate-x-1/2 gap-2 rounded-lg border-2 bg-black/80 px-4 py-3 shadow-lg group-hover:block"
+        >
+          <li data-item="4.1" class="my-2">
+            <a class="hover:underline" href="calls"> Call For Papers</a>
+          </li>
+          <li data-item="4.2" class="my-2">
+            <a class="hover:underline" href="calls"> Call For Workshops</a>
+          </li>
+          <li data-item="4.3" class="my-2">
+            <a class="hover:underline" href="calls"> Call For Tutorials</a>
+          </li>
+        </ul>
+      </div>
     </li>
-    <li data-item="5">
+    <li data-item="5" class="py-3">
       <a class="hover:underline" href="submission">Submission</a>
     </li>
-    <li data-item="6">
+    <li data-item="6" class="py-3">
       <a class="hover:underline" href="information">Information</a>
     </li>
-    <li data-item="7">
+    <li data-item="7" class="py-3">
       <a class="hover:underline" href="attend">Attend</a>
     </li>
-    <li data-item="8">
+    <li data-item="8" class="py-3">
       <a class="hover:underline" href="sponsors">Sponsors</a>
     </li>
-    <li data-item="9">
+    <li data-item="9" class="py-3">
       <a class="hover:underline" href="contact">Contact</a>
     </li>
   </ul>
@@ -177,7 +230,7 @@ import CloseIcon from "./NavBar/CloseIcon.astro";
     100% {
       background-color: #262626cc;
       backdrop-filter: blur(8px);
-      height: 524px;
+      height: 516px;
     }
   }
   @keyframes fade {
