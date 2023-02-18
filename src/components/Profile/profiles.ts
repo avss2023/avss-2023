@@ -15,12 +15,12 @@ const generalChairs: ChairsInterface = {
     {
       name: "Jeng-Neung Hwang",
       description: "University of Washington, USA",
-      profileImage: "committee/jengneung-hwang.png",
+      profileImage: "/committee/jengneung-hwang.png",
     },
     {
       name: "Michael S. Ryoo",
       description: "Stony Brook University & Google Brain, USA",
-      profileImage: "committee/michael-ryoo.png",
+      profileImage: "/committee/michael-ryoo.png",
     },
   ],
 };
@@ -31,12 +31,12 @@ const honoraryChairs: ChairsInterface = {
     {
       name: "Dong Seog Han",
       description: "KNU, S.Korea",
-      profileImage: "committee/dongseog-han.png",
+      profileImage: "/committee/dongseog-han.png",
     },
     {
       name: "Eun Chang Choi",
       description: "ETRI, S.Korea",
-      profileImage: "committee/eunchang-choi.png",
+      profileImage: "/committee/eunchang-choi.png",
     },
   ],
 };
@@ -47,22 +47,22 @@ const programChairs: ChairsInterface = {
     {
       name: "Kwang-Ju Kim",
       description: "ETRI, S.Korea",
-      profileImage: "committee/kwangju-kim.png",
+      profileImage: "/committee/kwangju-kim.png",
     },
     {
       name: "Jong Taek Lee",
       description: "KNU, S.Korea",
-      profileImage: "committee/jongtaek-lee.png",
+      profileImage: "/committee/jongtaek-lee.png",
     },
     {
       name: "Byoung Chul Ko",
       description: "Keimyung University, S.Korea",
-      profileImage: "committee/byoungchul-ko.png",
+      profileImage: "/committee/byoungchul-ko.png",
     },
     {
       name: "Arslan Basharat",
       description: "Kitware Inc, USA",
-      profileImage: "committee/arslan-basharat.png",
+      profileImage: "/committee/arslan-basharat.png",
     },
   ],
 };
@@ -73,7 +73,7 @@ const publicationChairs: ChairsInterface = {
     {
       name: "Srirangaraj Setlur",
       description: "University of Buffalo, USA",
-      profileImage: "committee/srirangaraj-setlur.png",
+      profileImage: "/committee/srirangaraj-setlur.png",
     },
   ],
 };
@@ -84,12 +84,12 @@ const financialChairs: ChairsInterface = {
     {
       name: "Deokwoo Lee",
       description: "Keimyung University, S.Korea",
-      profileImage: "committee/deokwoo-lee.png",
+      profileImage: "/committee/deokwoo-lee.png",
     },
     {
       name: "Jun-Wei Hsieh",
       description: "NYCU, Taiwan",
-      profileImage: "committee/jun-wei-hsieh.png",
+      profileImage: "/committee/jun-wei-hsieh.png",
     },
   ],
 };
@@ -100,17 +100,17 @@ const publicityChairs: ChairsInterface = {
     {
       name: "Jiaying Liu",
       description: "Peking University, China",
-      profileImage: "committee/jiaying-liu.png",
+      profileImage: "/committee/jiaying-liu.png",
     },
     {
       name: "Wei Qi Yan",
       description: "AUT, New Zealand",
-      profileImage: "committee/wei-qi-yan.png",
+      profileImage: "/committee/wei-qi-yan.png",
     },
     {
       name: "Ruben Tolosana",
       description: "Universidad Autonoma de Madrid, Spain",
-      profileImage: "committee/ruben-tolosana.png",
+      profileImage: "/committee/ruben-tolosana.png",
     },
   ],
 };
@@ -121,12 +121,12 @@ const websiteAndRestrationChairs: ChairsInterface = {
     {
       name: "Heeseok Oh",
       description: "Hansung University, S.Korea",
-      profileImage: "committee/heeseok-oh.png",
+      profileImage: "/committee/heeseok-oh.png",
     },
     {
       name: "Yiwei Fu",
       description: "GE Research, USA",
-      profileImage: "committee/yiwei-fu.png",
+      profileImage: "/committee/yiwei-fu.png",
     },
   ],
 };
@@ -137,12 +137,12 @@ const workshopChairs: ChairsInterface = {
     {
       name: "Hyunjong Yang",
       description: "POSTECH, S. Korea",
-      profileImage: "committee/hyunjong-yang.png",
+      profileImage: "/committee/hyunjong-yang.png",
     },
     {
       name: "Federica Battisti",
       description: "University of Padua, Italy",
-      profileImage: "committee/federica-battisti.png",
+      profileImage: "/committee/federica-battisti.png",
     },
   ],
 };
@@ -153,12 +153,12 @@ const tutorialChairs: ChairsInterface = {
     {
       name: "ChangIck Kim",
       description: "KAIST, S.Korea",
-      profileImage: "committee/changick-kim.png",
+      profileImage: "/committee/changick-kim.png",
     },
     {
       name: "Gaoang Wang",
       description: "ZJU-UIUC Institute, China",
-      profileImage: "committee/gaoang-wang.png",
+      profileImage: "/committee/gaoang-wang.png",
     },
   ],
 };
@@ -169,12 +169,12 @@ const industrialChairs: ChairsInterface = {
     {
       name: "Peter Tu",
       description: "GE Global Research, USA",
-      profileImage: "committee/peter-tu.png",
+      profileImage: "/committee/peter-tu.png",
     },
     {
       name: "Lipeng Ke",
       description: "Amazon Lab126, USA",
-      profileImage: "committee/lipeng-ke.png",
+      profileImage: "/committee/lipeng-ke.png",
     },
   ],
 };
@@ -185,12 +185,12 @@ const challengeChairs: ChairsInterface = {
     {
       name: "Zheng Tang",
       description: "Nvidia Metropolis, USA",
-      profileImage: "committee/zheng-tang.png",
+      profileImage: "/committee/zheng-tang.png",
     },
     {
       name: "Weiyao Lin",
       description: "SJTU, China",
-      profileImage: "committee/weiyao-lin.png",
+      profileImage: "/committee/weiyao-lin.png",
     },
   ],
 };
@@ -201,7 +201,7 @@ const americaLiaison: ChairsInterface = {
     {
       name: "Ming-Ching Chang",
       description: "University at Albany - SUNY,  USA",
-      profileImage: "committee/ming-ching-chang.png",
+      profileImage: "/committee/ming-ching-chang.png",
     },
   ],
 };
@@ -212,7 +212,7 @@ const asiaLiaison: ChairsInterface = {
     {
       name: "Jiwen Lu",
       description: "Tsinghua University, China",
-      profileImage: "committee/jiwen-lu.png",
+      profileImage: "/committee/jiwen-lu.png",
     },
   ],
 };
@@ -223,7 +223,7 @@ const europeLiaison: ChairsInterface = {
     {
       name: "Julian Fierrez",
       description: "Universidad Autonoma de Madrid, Spain",
-      profileImage: "committee/julian-fierrez.png",
+      profileImage: "/committee/julian-fierrez.png",
     },
   ],
 };
@@ -238,22 +238,22 @@ const areaChairs: ChairsInterface = {
     {
       name: "Shu Hu",
       description: "Carnegie Mellon University, USA",
-      profileImage: "committee/shu-hu.png",
+      profileImage: "/committee/shu-hu.png",
     },
     {
       name: "Chih-Chung Hsu",
       description: "National Cheng Kung University, Taiwan",
-      profileImage: "committee/chih-chung-hsu.png",
+      profileImage: "/committee/chih-chung-hsu.png",
     },
     {
       name: "Jun-Wei Hsieh",
       description: "National Yang Ming Chiao Tung University, Taiwan",
-      profileImage: "committee/jun-wei-hsieh.png",
+      profileImage: "/committee/jun-wei-hsieh.png",
     },
     {
       name: "...",
       description: "",
-      profileImage: "committee/placeholder.png",
+      profileImage: "/committee/placeholder.png",
     },
   ],
 };
