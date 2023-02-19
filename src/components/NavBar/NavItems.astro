@@ -35,10 +35,13 @@ const navItems: NavItem[] = [
   { name: "Sponsors", href: "/sponsors" },
   { name: "Contact", href: "/contact" },
 ];
+
+const { className } = Astro.props;
 ---
 
 <ul
-  class="navlist relative -top-12 hidden grow flex-col items-center justify-end font-bold text-white lg:top-0 lg:flex lg:flex-row lg:gap-6"
+  class={"relative hidden grow flex-col items-center justify-end font-bold text-white lg:top-0 lg:flex lg:flex-row lg:gap-6 " +
+    className}
 >
   {
     navItems.map((item) => {
