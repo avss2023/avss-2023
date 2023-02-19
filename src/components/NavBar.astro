@@ -31,7 +31,8 @@ import NavItems from "./NavBar/NavItems.astro";
       <MenuIcon className="menu-icon h-8 w-8 lg:hidden" />
     </div>
   </div>
-  <NavItems />
+
+  <NavItems className="navlist" />
 
   <script>
     const navbar = document.querySelector(".navbar") as HTMLElement;
@@ -39,15 +40,14 @@ import NavItems from "./NavBar/NavItems.astro";
     const menuBtn = document.querySelector(".menu-btn") as HTMLElement;
     const menuIcon = document.querySelector(".menu-icon") as HTMLElement;
     const closeIcon = document.querySelector(".close-icon") as HTMLElement;
-    /* const listItems = document.querySelectorAll(
-      "[data-item]"
-    ) as NodeListOf<HTMLElement>; */
+
     const isOpen = () => menuBtn.dataset.open;
 
     const resetAnimation = () => {
       menuIcon.classList.remove("disappear", "appear");
       closeIcon.classList.remove("disappear", "appear");
       navbar.classList.remove("blur-in", "blur-out");
+      navList.classList.remove("fade-in", "fade-out");
     };
 
     const toggleOpenState = () => {
