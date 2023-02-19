@@ -1,0 +1,55 @@
+---
+import HoverNavItems from "./HoverNavItems.astro";
+
+interface NavItem {
+  name: string;
+  href: string;
+  hover?: NavItem[];
+}
+
+const navItems: NavItem[] = [
+  { name: "News", href: "/news" },
+  { name: "Organization", href: "/organization" },
+  { name: "Program", href: "/program" },
+  {
+    name: "Calls",
+    href: "/calls",
+    hover: [
+      {
+        name: "Call For Papers",
+        href: "/calls",
+      },
+      {
+        name: "Call For Workshops",
+        href: "/calls/workshops",
+      },
+      {
+        name: "Call For Tutorials",
+        href: "/calls/tutorials",
+      },
+    ],
+  },
+  { name: "Submission", href: "/submission" },
+  { name: "Information", href: "/information" },
+  { name: "Attend", href: "/attend" },
+  { name: "Sponsors", href: "/sponsors" },
+  { name: "Contact", href: "/contact" },
+];
+---
+
+<ul
+  class="navlist relative -top-12 hidden grow flex-col items-center justify-end font-bold text-white lg:top-0 lg:flex lg:flex-row lg:gap-6"
+>
+  {
+    navItems.map((item) => {
+      return (
+        <li class="group relative py-3">
+          <a class="hover:underline" href={item.href}>
+            {item.name}
+          </a>
+          <HoverNavItems itemHover={item.hover} />
+        </li>
+      );
+    })
+  }
+</ul>
