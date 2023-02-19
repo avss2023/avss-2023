@@ -68,49 +68,21 @@ const navItems: NavItem[] = [
   <ul
     class="navlist relative -top-12 hidden grow flex-col items-center justify-end font-bold text-white lg:top-0 lg:flex lg:flex-row lg:gap-6"
   >
-    <li data-item="1" class="py-3">
-      <a class="hover:underline" href="news">News</a>
-    </li>
-    <li data-item="2" class="py-3">
-      <a class="hover:underline" href="organization">Organization</a>
-    </li>
-    <li data-item="3" class="py-3">
-      <a class="hover:underline" href="program">Program</a>
-    </li>
     <li data-item="4" class="group relative py-3">
       <a class="hover:underline" href="calls">Calls</a>
-      <div
-        class="opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100"
-      >
         <ul
-          class="absolute top-12 left-12 hidden w-56 -translate-x-1/2 gap-2 rounded-lg border-2 bg-black/80 px-4 py-3 shadow-lg group-hover:block"
+        class="pointer-events-none absolute top-10 left-12 w-56 -translate-x-1/2 rounded-lg border-2 bg-black/80 px-4 py-3 opacity-0 shadow-lg transition-opacity duration-200 ease-out lg:group-focus-within:pointer-events-auto lg:group-focus-within:block lg:group-focus-within:opacity-100 lg:group-hover:pointer-events-auto lg:group-hover:block lg:group-hover:opacity-100"
         >
           <li data-item="4.1" class="my-2">
-            <a class="hover:underline" href="calls"> Call For Papers</a>
+          <a class="hover:underline" href="calls">Call For Papers</a>
           </li>
           <li data-item="4.2" class="my-2">
-            <a class="hover:underline" href="calls"> Call For Workshops</a>
+          <a class="hover:underline" href="calls">Call For Workshops</a>
           </li>
           <li data-item="4.3" class="my-2">
-            <a class="hover:underline" href="calls"> Call For Tutorials</a>
+          <a class="hover:underline" href="calls">Call For Tutorials</a>
           </li>
         </ul>
-      </div>
-    </li>
-    <li data-item="5" class="py-3">
-      <a class="hover:underline" href="submission">Submission</a>
-    </li>
-    <li data-item="6" class="py-3">
-      <a class="hover:underline" href="information">Information</a>
-    </li>
-    <li data-item="7" class="py-3">
-      <a class="hover:underline" href="attend">Attend</a>
-    </li>
-    <li data-item="8" class="py-3">
-      <a class="hover:underline" href="sponsors">Sponsors</a>
-    </li>
-    <li data-item="9" class="py-3">
-      <a class="hover:underline" href="contact">Contact</a>
     </li>
   </ul>
 
