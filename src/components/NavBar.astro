@@ -43,21 +43,20 @@ const navItems: NavItem[] = [
   class="navbar mx-auto flex w-full max-w-5xl flex-col px-6 py-4 lg:flex-row"
 >
   <div class="flex items-center justify-between">
-    <div
+    <a
+      href="/"
       class="z-10 w-fit flex-shrink-0 rounded-lg p-2 outline-neutral-200 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:outline"
     >
-      <a href="/">
-        <Image
-          src="/favicon.svg"
-          alt="logo of AVSS 2023"
-          width={36}
-          height={36}
-          aspectRatio={1}
-          format="svg"
-          quality={100}
-        />
-      </a>
-    </div>
+      <Image
+        src="/favicon.svg"
+        alt="logo of AVSS 2023"
+        width={36}
+        height={36}
+        aspectRatio={1}
+        format="svg"
+        quality={100}
+      />
+    </a>
     <div
       data-open="false"
       class="menu-btn z-10 h-10 w-10 cursor-pointer rounded-lg p-1 text-white outline-neutral-200 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:outline lg:hidden"
