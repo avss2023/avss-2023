@@ -11,25 +11,17 @@ const { itemHover } = Astro.props as Props;
 
 const hasHover = itemHover && itemHover.length > 0;
 
-const groupBreakPoint = "lg";
-const groupSelectors = ["group-hover", "group-focus-within"];
-const groupBehaviors = ["pointer-events-auto", "block", "opacity-100"];
-const prefixes = groupSelectors.map((behavior) => {
-  return `${groupBreakPoint}:${behavior}`;
-});
-
 const blockStyle =
   "absolute top-10 left-12 w-56 -translate-x-1/2 rounded-lg border-2 bg-black/80 px-4 py-3 shadow-lg";
 const groupBehaviorBefore = "pointer-events-none opacity-0";
-const groupBehaviorAfter = prefixes
-  .map((prefix) => {
-    return groupBehaviors
-      .map((behavior) => {
-        return `${prefix}:${behavior} `;
-      })
-      .join(" ");
-  })
-  .join(" ");
+const groupBehaviorAfter = `
+  lg:group-focus-within:pointer-events-auto
+  lg:group-focus-within:block
+  lg:group-focus-within:opacity-100
+  lg:group-hover:pointer-events-auto
+  lg:group-hover:block 
+  lg:group-hover:opacity-100
+  `;
 const transition = "transition-opacity duration-200 ease-out";
 
 const classNameHover = [
