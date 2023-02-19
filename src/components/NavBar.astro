@@ -2,41 +2,7 @@
 import { Image } from "@astrojs/image/components";
 import CloseIcon from "./NavBar/CloseIcon.astro";
 import MenuIcon from "./NavBar/MenuIcon.astro";
-
-interface NavItem {
-  name: string;
-  href: string;
-  hover?: NavItem[];
-}
-
-const navItems: NavItem[] = [
-  { name: "News", href: "news" },
-  { name: "Organization", href: "organization" },
-  { name: "Program", href: "program" },
-  {
-    name: "Calls",
-    href: "calls",
-    hover: [
-      {
-        name: "Call For Papers",
-        href: "call-for-papers",
-      },
-      {
-        name: "Call For Workshops",
-        href: "call-for-workshops",
-      },
-      {
-        name: "Call For Tutorials",
-        href: "call-for-tutorials",
-      },
-    ],
-  },
-  { name: "Submission", href: "submission" },
-  { name: "Information", href: "information" },
-  { name: "Attend", href: "attend" },
-  { name: "Sponsors", href: "sponsors" },
-  { name: "Contact", href: "contact" },
-];
+import NavItems from "./NavBar/NavItems.astro";
 ---
 
 <nav
@@ -65,26 +31,7 @@ const navItems: NavItem[] = [
       <MenuIcon className="menu-icon h-8 w-8 lg:hidden" />
     </div>
   </div>
-  <ul
-    class="navlist relative -top-12 hidden grow flex-col items-center justify-end font-bold text-white lg:top-0 lg:flex lg:flex-row lg:gap-6"
-  >
-    <li data-item="4" class="group relative py-3">
-      <a class="hover:underline" href="calls">Calls</a>
-        <ul
-        class="pointer-events-none absolute top-10 left-12 w-56 -translate-x-1/2 rounded-lg border-2 bg-black/80 px-4 py-3 opacity-0 shadow-lg transition-opacity duration-200 ease-out lg:group-focus-within:pointer-events-auto lg:group-focus-within:block lg:group-focus-within:opacity-100 lg:group-hover:pointer-events-auto lg:group-hover:block lg:group-hover:opacity-100"
-        >
-          <li data-item="4.1" class="my-2">
-          <a class="hover:underline" href="calls">Call For Papers</a>
-          </li>
-          <li data-item="4.2" class="my-2">
-          <a class="hover:underline" href="calls">Call For Workshops</a>
-          </li>
-          <li data-item="4.3" class="my-2">
-          <a class="hover:underline" href="calls">Call For Tutorials</a>
-          </li>
-        </ul>
-    </li>
-  </ul>
+  <NavItems />
 
   <script>
     const navbar = document.querySelector(".navbar") as HTMLElement;

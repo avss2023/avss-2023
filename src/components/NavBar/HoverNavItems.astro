@@ -1,0 +1,43 @@
+---
+interface Props {
+  itemHover:
+    | {
+        name: string;
+        href: string;
+      }[]
+    | undefined;
+}
+const { itemHover } = Astro.props as Props;
+
+const hasHover = itemHover && itemHover.length > 0;
+
+const blockStyle =
+  "absolute top-10 left-12 w-56 -translate-x-1/2 rounded-lg border-2 bg-black/80 px-4 py-3 shadow-lg";
+const beforeHoverStyle = "pointer-events-none opacity-0";
+const afterHoverStyle = `
+  lg:group-focus-within:pointer-events-auto
+  lg:group-focus-within:block
+  lg:group-focus-within:opacity-100
+  lg:group-hover:pointer-events-auto
+  lg:group-hover:block 
+  lg:group-hover:opacity-100
+  `;
+const transition = "transition-opacity duration-200 ease-out";
+const classNameHover = `${blockStyle} ${beforeHoverStyle} ${afterHoverStyle} ${transition}`;
+---
+
+{
+  hasHover && (
+    <ul class={classNameHover}>
+      {itemHover.map((hoverItem) => {
+        return (
+          <li class="my-2">
+            <a class="hover:underline" href={hoverItem.href}>
+              {hoverItem.name}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  )
+}
