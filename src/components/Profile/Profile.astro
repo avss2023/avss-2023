@@ -2,7 +2,7 @@
 import ProfileImage from "./ProfileImage.astro";
 import type { ProfileInterface } from "./profiles";
 
-const { name, description, profileImage } = {
+const { name, description, profileImage, email } = {
   ...Astro.props,
 } as ProfileInterface;
 ---
@@ -13,6 +13,7 @@ const { name, description, profileImage } = {
   <ProfileImage imageSrc={profileImage} altText={name} />
   <div class="grow">
     <p class="text-center text-2xl font-bold">{name}</p>
+    <p class="text-center text-sm text-gray-400">{email}</p>
     <p class="max-w-[225px] text-center text-gray-500">{description}</p>
   </div>
 </div>
