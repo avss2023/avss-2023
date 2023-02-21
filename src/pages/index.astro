@@ -53,19 +53,24 @@ const avssContent: Array<ContentProps> = [
       </p>
       <p>
         AVSS is sponsored by the
-        <a target="_blank" href="https://www.computer.org/web/guest/"
-          >IEEE Computer Society</a
+        <a
+          class="fancy"
+          target="_blank"
+          href="https://www.computer.org/web/guest/">IEEE Computer Society</a
         > (PAMI TC) and the <a
+          class="fancy"
           target="_blank"
           href="https://signalprocessingsociety.org/"
           >IEEE Signal Processing Society</a
         >
         (IVMSP TC). There will be a <a
+          class="fancy"
           target="_blank"
           href="https://www.cs.albany.edu/AVSS2019/program.html"
           >main conference</a
         >
         as well as multiple associated <a
+          class="fancy"
           target="_blank"
           href="https://www.cs.albany.edu/AVSS2019/workshops.html">workshops</a
         >.
@@ -78,16 +83,18 @@ const avssContent: Array<ContentProps> = [
         src="/83.png"
         alt="illustration of 83 tower"
         class="absolute right-8 -bottom-36 -z-30 md:scale-100"
-        aspectRatio="69∶440"
-        height="440"
+        aspectRatio={69 / 440}
+        height={440}
+        width={69}
         format="webp"
       />
       <Image
         src="/city.png"
         alt="illustration of city"
         class="absolute bottom-[-7.5rem] -left-2 -z-10 md:left-4"
-        aspectRatio="53∶28"
-        height="196"
+        aspectRatio={53 / 28}
+        height={196}
+        width={371}
         format="webp"
       />
     </figure>
@@ -95,15 +102,5 @@ const avssContent: Array<ContentProps> = [
 
   <style>
     /* gradient underline under the a tag using after */
-    a {
-      @apply relative inline-block bg-gradient-to-l from-red-500 via-rose-500 to-pink-500 bg-clip-text font-semibold text-transparent;
-    }
-    a::after {
-      content: "";
-      @apply absolute left-0 bottom-0 h-0.5 w-full origin-left scale-x-0 bg-gradient-to-l from-red-500 via-rose-500 to-pink-500 transition-transform duration-300 ease-out;
-    }
-    a:hover::after {
-      @apply scale-x-100;
-    }
   </style>
 </Layout>
