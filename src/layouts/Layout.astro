@@ -63,6 +63,16 @@ const { title } = Astro.props;
     left: 0px;
     top: 0px; */
       }
+      a.fancy {
+        @apply relative inline-block bg-gradient-to-l from-red-500 via-rose-500 to-pink-500 bg-clip-text font-semibold text-transparent;
+      }
+      a.fancy::after {
+        content: "";
+        @apply absolute left-0 bottom-0 h-0.5 w-full origin-left scale-x-0 bg-gradient-to-l from-red-500 via-rose-500 to-pink-500 transition-transform duration-300 ease-out;
+      }
+      a.fancy:hover::after {
+        @apply scale-x-100;
+      }
     </style>
   </html>
 </html>
