@@ -1,0 +1,59 @@
+---
+import { Picture } from "@astrojs/image/components";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Information :: AVSS2023">
+  <header class="mx-auto max-w-3xl">
+    <h1 class="text-2xl font-bold uppercase">Information</h1>
+    <h2 id="venue" class="mb-12 mt-3 text-4xl font-bold sm:mb-16 sm:text-6xl">
+      Venue
+    </h2>
+  </header>
+  <section class="mx-auto mt-4 max-w-2xl text-lg">
+    <p class="mt-4">
+      AVSS 2023 will be taking place from 7 - 9 November 2023 at the Daegu
+      Exhibition & Convention Center (EXCO) in Daegu, South Korea.
+    </p>
+
+    <h3 class="mt-8 mb-6 text-3xl font-bold">
+      Daegu Exhibition & Convention Center (EXCO)
+    </h3>
+    <Picture
+      src="/exco.jpeg"
+      alt="EXCO"
+      aspectRatio={1200 / 645}
+      widths={[200, 400, 800]}
+      sizes="100vw"
+    />
+
+    <h4 class="mt-4 mb-2 text-xl font-bold">Address</h4>
+    <p>10, Exco-ro, Buk-gu, Daegu 41515</p>
+
+    <h4 class="mt-4 mb-2 text-xl font-bold">Tel</h4>
+    <p>+82-53-601-5000</p>
+    <p class="mt-4">
+      <a
+        href="https://www.exco.co.kr/en/sub03/sub012.asp"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="fancy">Click Here</a
+      >
+      for more information on the venue.
+    </p>
+
+    <article
+      class="mt-8 mb-4 w-full overflow-hidden rounded-lg border-2 border-gray-300"
+    >
+      <iframe
+        width="100%"
+        height="400"
+        frameborder="0"
+        scrolling="no"
+        marginheight="0"
+        marginwidth="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=128.60788822174075%2C35.902851781956706%2C128.61850976943973%2C35.910594630476204&layer=mapnik&marker=35.90672330091915%2C128.6131989955902"
+      ></iframe>
+    </article>
+  </section>
+</Layout>
