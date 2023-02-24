@@ -13,8 +13,8 @@ const paperContents: Array<ContentProps> = [
 ];
 
 const workshopContents: Array<ContentProps> = [
-  { left: "Workshop Proposals Deadline", right: "May 1, 2023" },
-  { left: "Tutorial Proposals Deadline", right: "May 1, 2023" },
+  { left: "Proposals Deadline", right: "May 1, 2023" },
+  { left: "Acceptance Notification", right: "May 15, 2023" },
 ];
 
 const registrationContents: Array<ContentProps> = [
@@ -24,7 +24,7 @@ const registrationContents: Array<ContentProps> = [
 
 const avssContent: Array<ContentProps> = [
   { left: "Conference Dates", right: ["Nov 7", "Nov 9, 2023"] },
-  { left: "Workshop Date", right: "Nov 6, 2023" },
+  { left: "Workshop / Tutorial / Challenge Date", right: "Nov 6, 2023" },
 ];
 ---
 
@@ -33,7 +33,7 @@ const avssContent: Array<ContentProps> = [
     class="mx-auto grid max-w-5xl grid-cols-1 gap-x-6 gap-y-12 md:grid-cols-2"
   >
     <Card title="Paper" contents={paperContents} />
-    <Card title="Workshop/Tutorial" contents={workshopContents} />
+    <Card title="Workshop / Tutorial / Challenge" contents={workshopContents} />
     <Card title="Registration" contents={registrationContents} />
     <Card title="AVSS 2023" contents={avssContent} />
     <article
