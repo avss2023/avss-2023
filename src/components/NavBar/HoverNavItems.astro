@@ -11,23 +11,26 @@ const { itemHover } = Astro.props as Props;
 
 const hasHover = itemHover && itemHover.length > 0;
 
-const blockStyle =
-  "absolute top-10 left-12 w-56 -translate-x-1/2 rounded-lg border-2 bg-black/80 px-4 py-3 shadow-lg";
-const groupBehaviorBefore = "pointer-events-none opacity-0";
-const groupBehaviorAfter = `
+const mobileStyle =
+  "ml-6"
+const desktopBeforeInteration = "lg:pointer-events-none lg:opacity-0";
+const desktopAfterInteraction =
+"lg:absolute lg:top-10 lg:left-12 lg:w-56 lg:-translate-x-1/2 lg:rounded-lg lg:border-2 lg:bg-black/80 lg:px-4 lg:py-3 lg:shadow-lg";
+const desktopTransitionProperty = `
   lg:group-focus-within:pointer-events-auto
   lg:group-focus-within:block
   lg:group-focus-within:opacity-100
   lg:group-hover:pointer-events-auto
-  lg:group-hover:block 
+  lg:group-hover:block
   lg:group-hover:opacity-100
   `;
 const transition = "transition-opacity duration-200 ease-out";
 
 const classNameHover = [
-  blockStyle,
-  groupBehaviorBefore,
-  groupBehaviorAfter,
+  mobileStyle,
+  desktopBeforeInteration,
+  desktopAfterInteraction,
+  desktopTransitionProperty,
   transition,
 ].join(" ");
 

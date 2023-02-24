@@ -53,13 +53,13 @@ const { className } = Astro.props;
 ---
 
 <ul
-  class={"relative hidden grow flex-col items-center justify-end font-bold text-white lg:top-0 lg:flex lg:flex-row lg:gap-6 " +
+  class={"relative hidden divide-y-2 border-y-2 my-4 border-white overflow-y-scroll divide-white lg:my-0 lg:border-0 lg:divide-none grow flex-col items-center justify-end font-bold text-white lg:top-0 lg:flex lg:flex-row lg:gap-6 " +
     className}
 >
   {
     navItems.map((item) => {
       return (
-        <li class="group relative py-3">
+        <li class="group relative w-full px-6 py-4 lg:w-auto lg:px-0 lg:py-3">
           <a class="hover:underline" href={item.href}>
             {item.name}
           </a>
