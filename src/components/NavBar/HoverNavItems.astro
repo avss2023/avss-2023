@@ -11,11 +11,10 @@ const { itemHover } = Astro.props as Props;
 
 const hasHover = itemHover && itemHover.length > 0;
 
-const mobileStyle =
-  "ml-6"
+const mobileStyle = "ml-6";
 const desktopBeforeInteration = "lg:pointer-events-none lg:opacity-0";
 const desktopAfterInteraction =
-"lg:absolute lg:top-10 lg:left-12 lg:w-56 lg:-translate-x-1/2 lg:rounded-lg lg:border-2 lg:bg-black/80 lg:px-4 lg:py-3 lg:shadow-lg";
+  "lg:absolute lg:top-10 lg:left-12 lg:w-56 lg:-translate-x-1/2 lg:rounded-lg lg:border-2 lg:bg-black/80 lg:px-4 lg:py-3 lg:shadow-lg";
 const desktopTransitionProperty = `
   lg:group-focus-within:pointer-events-auto
   lg:group-focus-within:block
