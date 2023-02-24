@@ -10,10 +10,10 @@ const { title, contents } = Astro.props;
 ---
 
 <div
-  class="link-card overflow-hidden rounded-lg shadow-lg transition-shadow duration-500 ease-out hover:shadow-2xl"
+  class="link-card flex flex-col justify-between overflow-hidden rounded-lg shadow-lg transition-shadow duration-500 ease-out hover:shadow-2xl"
 >
   <header
-    class="group block bg-primary px-6 py-4 text-2xl font-semibold text-neutral-100"
+    class="group flex items-center bg-primary px-6 py-4 text-2xl font-semibold text-neutral-100"
   >
     <div
       class="flex origin-left flex-row gap-2 transition-transform duration-150 ease-out group-focus-within:scale-110 group-hover:scale-110 group-focus:scale-110 group-active:scale-110"
@@ -23,7 +23,7 @@ const { title, contents } = Astro.props;
       </h2>
     </div>
   </header>
-  <div class="divide-y-2 divide-neutral-300 bg-white py-2 px-3 text-sm">
+  <div class="w-full divide-y-2 divide-neutral-300 bg-white py-2 px-3 text-sm grow">
     {
       contents.map((content) => (
         <div class="flex flex-col gap-2 px-2 py-4">
