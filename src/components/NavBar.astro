@@ -51,70 +51,28 @@ import NavItems from "./NavBar/NavItems.astro";
     };
 
     const toggleOpenState = () => {
-      resetAnimation();
-
       // the only dependency of this animation is isOpen state
       menuBtn.dataset.open = isOpen() === "false" ? "true" : "false";
 
-      if (isOpen() === "true") menuIcon.classList.add("disappear");
-      else closeIcon.classList.add("disappear");
-    };
-
-    const menuIconAnimation = () => {
       if (isOpen() === "true") {
         menuIcon.classList.add("hidden");
         closeIcon.classList.remove("hidden");
-        closeIcon.classList.add("appear");
-        navbar.classList.add("blur-in");
-      }
-      menuIcon.classList.remove("disappear", "appear");
-      closeIcon.classList.remove("disappear");
-    };
 
-    const closeIconAnimation = () => {
-      if (isOpen() === "false") {
+        navbar.classList.remove("blur-out");
+        navbar.classList.add("blur-in");
+        navList.classList.remove("hidden");
+      }
+      else {
         closeIcon.classList.add("hidden");
         menuIcon.classList.remove("hidden");
-        menuIcon.classList.add("appear");
-        navList.classList.add("fade-out");
-      }
-      closeIcon.classList.remove("disappear", "appear");
-      menuIcon.classList.remove("disappear");
-    };
 
-    const navbarAnimation = (e: AnimationEvent) => {
-      if (e.animationName === "blur") {
-        if (isOpen() === "true") {
-          navbar.classList.add("backdrop-blur", "bg-neutral-800/80");
-          navList.classList.add("flex", "fade-in");
-          navList.classList.remove("hidden");
-        } else {
-          navbar.classList.remove(
-            "blur-out",
-            "backdrop-blur",
-            "bg-neutral-800/80"
-          );
-        }
-      }
-    };
-
-    const navListAnimation = (e: AnimationEvent) => {
-      if (e.animationName === "fade") {
-        if (isOpen() === "true") {
-        } else {
-          navList.classList.add("hidden");
-          navList.classList.remove("flex");
-          navbar.classList.add("blur-out");
-        }
-        navList.classList.remove("fade-in", "fade-out");
+        navbar.classList.remove("blur-in");
+        navbar.classList.add("blur-out");
+        navList.classList.add("hidden");
       }
     };
 
     menuBtn.addEventListener("click", toggleOpenState);
-    menuIcon.addEventListener("animationend", menuIconAnimation);
-    closeIcon.addEventListener("animationend", closeIconAnimation);
-    navbar.addEventListener("animationend", navbarAnimation);
-    navList.addEventListener("animationend", navListAnimation);
   </script>
 </nav>
 
@@ -141,14 +99,15 @@ import NavItems from "./NavBar/NavItems.astro";
   }
   @keyframes blur {
     0% {
+      height: 100px;
       background-color: inherit;
       backdrop-filter: blur(0px);
-      height: 100px;
     }
     100% {
       background-color: #262626cc;
       backdrop-filter: blur(8px);
-      height: 516px;
+      height: 100vh;
+      height: 100svh;
     }
   }
   @keyframes fade {
@@ -161,21 +120,25 @@ import NavItems from "./NavBar/NavItems.astro";
   }
 
   .appear {
-    animation: appear 0.2s ease-in forwards;
+    opacity: 1;
   }
   .disappear {
-    animation: appear 0.2s ease-in reverse forwards;
+    opacity: 0;
   }
   .blur-in {
-    animation: blur 0.2s ease forwards;
+    background-color: #262626cc;
+    backdrop-filter: blur(8px);
+    height: 100vh;
+    height: 100svh;
   }
   .blur-out {
-    animation: blur 0.2s ease reverse forwards;
+    background-color: inherit;
+    backdrop-filter: blur(0px);
   }
   .fade-in {
-    animation: fade 0.2s ease forwards;
+    opacity: 1;
   }
   .fade-out {
-    animation: fade 0.1s ease reverse forwards;
+    opacity: 0;
   }
 </style>
