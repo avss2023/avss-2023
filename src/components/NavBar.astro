@@ -43,13 +43,6 @@ import NavItems from "./NavBar/NavItems.astro";
 
     const isOpen = () => menuBtn.dataset.open;
 
-    const resetAnimation = () => {
-      menuIcon.classList.remove("disappear", "appear");
-      closeIcon.classList.remove("disappear", "appear");
-      navbar.classList.remove("blur-in", "blur-out");
-      navList.classList.remove("fade-in", "fade-out");
-    };
-
     const toggleOpenState = () => {
       // the only dependency of this animation is isOpen state
       menuBtn.dataset.open = isOpen() === "false" ? "true" : "false";
@@ -61,8 +54,7 @@ import NavItems from "./NavBar/NavItems.astro";
         navbar.classList.remove("blur-out");
         navbar.classList.add("blur-in");
         navList.classList.remove("hidden");
-      }
-      else {
+      } else {
         closeIcon.classList.add("hidden");
         menuIcon.classList.remove("hidden");
 
