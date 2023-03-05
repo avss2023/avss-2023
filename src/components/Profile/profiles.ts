@@ -14,9 +14,9 @@ const generalChairs: ChairsInterface = {
   roll: "General Chairs",
   profiles: [
     {
-      name: "Jenq-Neung Hwang",
+      name: "Jenq-Neng Hwang",
       description: "University of Washington, USA",
-      profileImage: "/committee/jenqneung-hwang.png",
+      profileImage: "/committee/jenqneng-hwang.png",
       email: "hwang@uw.edu",
     },
     {
