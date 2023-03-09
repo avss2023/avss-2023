@@ -6,16 +6,16 @@ const { imageSrc, altText } = Astro.props;
 ---
 
 <div
-  class="mx-auto aspect-square w-28 grow-0 overflow-hidden rounded-full border-4 bg-gray-300 sm:w-36 lg:text-3xl"
+  class="mx-auto aspect-square w-20 grow-0 overflow-hidden rounded-full border-4 bg-gray-300 object-cover sm:w-20 lg:text-3xl"
 >
   {
     imageSrc ? (
       <Image
         src={imageSrc}
         alt={altText}
-        class="aspect-square w-36 object-cover"
+        class="object-cover aspect-square"
+        width={150}
         aspectRatio="1/1"
-        width="150"
         format="webp"
       />
     ) : (
