@@ -11,6 +11,7 @@ const { title, contents } = Astro.props;
 
 <div
   class="link-card flex flex-col justify-between overflow-hidden rounded-lg shadow-lg transition-shadow duration-500 ease-out hover:shadow-2xl"
+  id={title.toLowerCase().split(/\s+?\/\s+?|\s+/).join("-")}
 >
   <header
     class="bg-primary group flex items-center px-6 py-4 text-2xl font-semibold text-neutral-100"
