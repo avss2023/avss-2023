@@ -284,6 +284,18 @@ const areaChairs: ChairsInterface = {
   ],
 };
 
+const localArrangements: ChairsInterface = {
+  roll: "Local Arrangements",
+  profiles: [
+    {
+      name: "Donghyun Ryu",
+      description: "Daegu City AI Blockchain Center, S.Korea",
+      profileImage: "/committee/donghyun-ryu.png",
+      email: "",
+    },
+  ],
+};
+
 const committee: ChairsInterface[] = [
   generalChairs,
   honoraryChairs,
@@ -300,6 +312,7 @@ const committee: ChairsInterface[] = [
   asiaLiaison,
   europeLiaison,
   areaChairs,
+  localArrangements,
 ];
 
 export default committee;
