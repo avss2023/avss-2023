@@ -8,8 +8,9 @@ import Profiles from "./Profile/Profiles.astro";
     return (
       <>
         <h3
-        class="mx-auto mt-6 mb-3 max-w-2xl text-3xl font-bold sm:mt-8 sm:text-3xl"
-        id={chair.roll.toLowerCase().split(" ").join("-")}>
+          class="mx-auto mt-6 mb-4 max-w-4xl text-3xl font-bold sm:mt-8 sm:text-3xl"
+          id={chair.roll.toLowerCase().split(" ").join("-")}
+        >
           {chair.roll}
         </h3>
         <Profiles {...chair} />
