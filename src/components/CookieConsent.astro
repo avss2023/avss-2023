@@ -1,0 +1,63 @@
+---
+if (Astro.cookies.has("cookie-consent")) {
+  const cookieConsent = document.querySelector(".cookie-consent");
+
+  if (cookieConsent) cookieConsent.remove();
+}
+---
+
+<div
+  aria-label="cookie consent"
+  class="fixed bottom-0 left-0 right-0 hidden bg-black py-6 px-6 text-lg text-white opacity-0 transition-opacity duration-300 ease-in"
+>
+  <div class="mx-auto flex max-w-5xl flex-col gap-6 lg:flex-row">
+    <div>
+      IEEE websites place cookies on your device to give you the best user
+      experience. By using our websites, you agree to the placement of these
+      cookies. To learn more, read our
+      <a
+        class="text-gray-400 underline"
+        href="https://www.ieee.org/about/help/security_privacy.html"
+        >Privacy Policy</a
+      >
+    </div>
+    <button
+      aria-label="cookie consent accept"
+      class="shrink-0 rounded bg-gray-200 py-2 px-6 text-black transition-all duration-150 hover:bg-gray-300 active:bg-gray-400"
+    >
+      Accept & Close</button
+    >
+  </div>
+</div>
+
+<script>
+  const hasCookie = document.cookie.includes("cookieconsent_status=dismiss");
+
+  if (!hasCookie) {
+    const cookieConsentButton = document.querySelector(
+      "[aria-label='cookie consent accept']"
+    );
+    const cookieConsent = document.querySelector(
+      '[aria-label="cookie consent"]'
+    );
+
+    cookieConsent?.classList.remove("hidden");
+    setTimeout(() => {
+      cookieConsent?.classList.remove("opacity-0");
+      cookieConsent?.classList.add("opacity-100");
+    }, 500);
+
+    cookieConsentButton?.addEventListener("click", () => {
+      const expireAfter6Months = new Date();
+      expireAfter6Months.setMonth(expireAfter6Months.getMonth() + 6);
+
+      document.cookie = `cookieconsent_status=dismiss;expires=${expireAfter6Months}; path=/`;
+
+      cookieConsent?.classList.add("opacity-0");
+      cookieConsent?.classList.remove("opacity-100");
+      setTimeout(() => {
+        cookieConsent?.classList.remove("hidden");
+      }, 500);
+    });
+  }
+</script>
