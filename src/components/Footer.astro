@@ -7,10 +7,15 @@ import { Image } from "@astrojs/image/components";
 >
   <div class="mx-auto grid max-w-5xl grid-cols-1 gap-6 lg:grid-cols-2">
     <section class="flex flex-row flex-wrap gap-4 gap-y-2 font-semibold">
-      <a class="text-primary">Privacy Policy</a>
-      <a>Cookie Policy</a>
-      <a>Email</a>
-      <a>Contact Us</a>
+      <a href="https://www.ieee.org/security-privacy.html" class="text-primary"
+        >Privacy Policy</a
+      >
+      <a href="https://www.ieee.org/about/corporate/governance/p9-26.html"
+        >Nondiscrimination Policy</a
+      >
+      <a href="https://www.ieee.org/about/help/site-terms-conditions.html"
+        >Terms and Conditions</a
+      >
     </section>
     <section class="flex flex-col gap-4 gap-y-2 sm:flex-row lg:justify-end">
       <span class="block font-semibold">Sponsors</span>
@@ -56,8 +61,16 @@ import { Image } from "@astrojs/image/components";
       <span>Tel | TBA</span>
       <span>Fax | TBA</span>
     </section>
-    <span class="block text-neutral-600"
-      >COPYRIGHT © AVSS 2023. All Rights Reserved</span
-    >
+    <div class="block max-w-4xl text-neutral-400 lg:col-span-2">
+      <div>
+        © Copyright 2023 IEEE – All rights reserved. Use of this website
+        signifies your agreement to the IEEE Terms and Conditions.
+      </div>
+      <div>
+        A not-for-profit organization, IEEE is the world’s largest technical
+        professional organization dedicated to advancing technology for the
+        benefit of humanity.
+      </div>
+    </div>
   </div>
 </footer>
