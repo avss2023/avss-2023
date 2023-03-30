@@ -11,7 +11,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  output: "server",
   site: "https://avss2023.org",
   integrations: [image(), sitemap(), tailwind()],
 });
