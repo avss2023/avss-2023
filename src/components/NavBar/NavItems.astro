@@ -8,8 +8,28 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { name: "News", href: "/news" },
-  { name: "Organization", href: "/organization" },
+  {
+    name: "General",
+    href: "/news",
+    hover: [
+      {
+        name: "News",
+        href: "/news",
+      },
+      {
+        name: "Oranization",
+        href: "/organization",
+      },
+      {
+        name: "Conference Policies",
+        href: "/policies",
+      },
+      {
+        name: "Contac",
+        href: "/contact",
+      },
+    ],
+  },
   { name: "Program", href: "/program" },
   {
     name: "Calls",
@@ -46,7 +66,6 @@ const navItems: NavItem[] = [
   },
   { name: "Attend", href: "/attend" },
   { name: "Sponsors", href: "/sponsors" },
-  { name: "Contact", href: "/contact" },
 ];
 
 const { className } = Astro.props;
