@@ -256,23 +256,19 @@ const europeLiaison: ChairsInterface = {
   ],
 };
 
-// Shu Hu, Carnegie Mellon University, USA
-// Chih-Chung Hsu, National Cheng Kung University, Taiwan
-// Jun-Wei Hsieh, National Yang Ming Chiao Tung University, Taiwan
-
 const areaChairs: ChairsInterface = {
   roll: "Area Chairs",
   profiles: [
     {
       name: "Shu Hu",
       description: "Carnegie Mellon University, USA",
-      profileImage: "",
+      profileImage: "/committee/shu-hu.png",
       email: "shuhu@cmu.edu",
     },
     {
       name: "Chih-Chung Hsu",
       description: "National Cheng Kung University, Taiwan",
-      profileImage: "",
+      profileImage: "/committee/chih-chung-hsu.png",
       email: "cchsu@gs.ncku.edu.tw",
     },
     {
@@ -292,6 +288,12 @@ const localArrangements: ChairsInterface = {
       description: "Daegu City AI Blockchain Center, S.Korea",
       profileImage: "/committee/donghyun-ryu.png",
       email: "",
+    },
+    {
+      name: "O.K. Baek",
+      description: "ETRI, S.Korea",
+      profileImage: "/committee/ok-baek.png",
+      email: "ok.baek@etri.re.kr",
     },
   ],
 };
