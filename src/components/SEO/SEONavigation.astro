@@ -1,0 +1,40 @@
+---
+let schema = JSON.stringify({
+  "@context": "https://schema.org/",
+  "@type": "ItemList",
+  itemListElements: [
+    {
+      "@type": "SiteNavigationElement",
+      position: 1,
+      name: "Organization",
+      description: "Organizing Committee",
+      url: "https://avss2023.org/organization/",
+    },
+    {
+      "@type": "SiteNavigationElement",
+      position: 2,
+      name: "Submission",
+      description: "Paper Submission Instructions and Guidelines",
+      url: "https://avss2023.org/submission/",
+    },
+    {
+      "@type": "SiteNavigationElement",
+      position: 3,
+      name: "Calls",
+      description:
+        "Call for Papers. The important dates are June 14 (Paper Submission), August 15 (Decision to Authors), and August 25 (Camera Ready).",
+      url: "https://avss2023.org/calls/",
+    },
+    {
+      "@type": "SiteNavigationElement",
+      position: 4,
+      name: "Venue",
+      description:
+        "Daegu Exhibition & Convention Center (EXCO) in Daegu, South Korea",
+      url: "https://avss2023.org/venue/",
+    },
+  ],
+});
+---
+
+<script type="application/ld+json" set:html={schema}></script>
