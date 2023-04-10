@@ -1,4 +1,5 @@
 ---
+import { Image } from "@astrojs/image/components";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -12,5 +13,18 @@ import Layout from "../layouts/Layout.astro";
       Sponsors
     </h2>
   </header>
-  <section class="mx-auto mt-4 max-w-2xl text-lg">TBA</section>
+  <section class="mx-auto mt-4 max-w-2xl text-lg">
+    <figure class="mix-blend-multiply">
+      <h3 id="sponsors" class="mt-8 mb-6 text-3xl font-bold">Sponsor</h3>
+      <div class="flex flex-row flex-wrap justify-evenly gap-2">
+        <Image
+          src="/IEEE-SPS.png"
+          alt="IEEE SPS"
+          height={300}
+          width={424}
+          format="webp"
+        />
+      </div>
+    </figure>
+  </section>
 </Layout>
