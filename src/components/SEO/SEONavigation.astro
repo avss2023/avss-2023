@@ -2,23 +2,29 @@
 let schema = JSON.stringify({
   "@context": "https://schema.org/",
   "@type": "ItemList",
+  name: "AVSS 2023",
+  description:
+    "The 19th IEEE International Conference on Advanced Video and Signal Based Surveillance",
+  image: "https://avss2023.org/favicon.svg",
+  numberOfItems: 4,
+  url: "https://avss2023.org/",
   itemListElements: [
     {
-      "@type": "SiteNavigationElement",
+      "@type": "ListItem",
       position: 1,
       name: "Organization",
       description: "Organizing Committee",
       url: "https://avss2023.org/organization/",
     },
     {
-      "@type": "SiteNavigationElement",
+      "@type": "ListItem",
       position: 2,
       name: "Submission",
       description: "Paper Submission Instructions and Guidelines",
       url: "https://avss2023.org/submission/",
     },
     {
-      "@type": "SiteNavigationElement",
+      "@type": "ListItem",
       position: 3,
       name: "Calls",
       description:
@@ -26,7 +32,7 @@ let schema = JSON.stringify({
       url: "https://avss2023.org/calls/",
     },
     {
-      "@type": "SiteNavigationElement",
+      "@type": "ListItem",
       position: 4,
       name: "Venue",
       description:
