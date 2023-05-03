@@ -1,9 +1,40 @@
 ---
 import MainHeader from "../../components/MainHeader.astro";
 import Layout from "../../layouts/Layout.astro";
+import Profiles from "../../components/Profile/Profiles.astro";
+import type { ProfileInterface } from "../../components/Profile/profiles";
+
+const speakers: ProfileInterface[] = [
+  {
+    name: "Sangdoo Yun",
+    profileImage: "/sangdoo-yun.jpg",
+    description: "",
+  },
+  {
+    name: "Djamila Aouada",
+    profileImage: "/djamila-aouada.jpg",
+    description: "",
+  },
+  {
+    name: "TBD",
+    profileImage: "",
+    description: "",
+  },
+  {
+    name: "TBD",
+    profileImage: "",
+    description: "",
+  },
+];
 ---
 
 <Layout title="Keynote Speakers :: AVSS2023">
   <MainHeader metaTitle="General" title="Keynote Speakers" />
-  <section class="mx-auto mt-4 max-w-2xl text-lg">TBA</section>
+  <section class="mx-auto mt-4 max-w-2xl text-lg">
+    <p class="mt-4 mb-8">
+      The AVSS 2023 Committee are pleased to announce the following speakers
+      have confirmed their participation at the Conference.
+    </p>
+  </section>
+  <Profiles profiles={speakers} />
 </Layout>

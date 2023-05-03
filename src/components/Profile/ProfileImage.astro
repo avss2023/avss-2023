@@ -5,21 +5,17 @@ import DefaultImage from "./DefaultImage.astro";
 const { imageSrc, altText } = Astro.props;
 ---
 
-<div
-  class="mx-auto aspect-square w-20 grow-0 overflow-hidden rounded-full border-4 bg-gray-300 object-cover sm:w-20 lg:text-3xl"
->
-  {
-    imageSrc ? (
-      <Image
-        src={imageSrc}
-        alt={altText}
-        class="object-cover aspect-square"
-        width={150}
-        aspectRatio="1/1"
-        format="webp"
-      />
-    ) : (
-      <DefaultImage />
-    )
-  }
-</div>
+{
+  imageSrc ? (
+    <Image
+      src={imageSrc}
+      alt={altText}
+      class="aspect-square w-full object-cover"
+      width={150}
+      aspectRatio="1/1"
+      format="webp"
+    />
+  ) : (
+    <DefaultImage />
+  )
+}
