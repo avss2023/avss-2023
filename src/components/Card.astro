@@ -1,5 +1,6 @@
 ---
 import type { ContentProps } from "../pages/index.astro";
+import lowerCasify from "../utils/lowerCasify";
 
 export type Props = {
   title: string;
@@ -11,10 +12,10 @@ const { title, contents } = Astro.props;
 
 <div
   class="link-card flex flex-col justify-between overflow-hidden rounded-lg shadow-lg transition-shadow duration-500 ease-out hover:shadow-2xl"
-  id={title.toLowerCase().split(/\s+?\/\s+?|\s+/).join("-")}
+  id={lowerCasify(title)}
 >
   <header
-    class="bg-primary group flex items-center px-6 py-4 text-2xl font-semibold text-neutral-100"
+    class="group flex items-center bg-primary px-6 py-4 text-2xl font-semibold text-neutral-100"
   >
     <div
       class="flex origin-left flex-row gap-2 transition-transform duration-150 ease-out group-focus-within:scale-110 group-hover:scale-110 group-focus:scale-110 group-active:scale-110"

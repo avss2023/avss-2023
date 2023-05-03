@@ -1,18 +1,11 @@
 ---
 import { Image } from "@astrojs/image/components";
 import Layout from "../layouts/Layout.astro";
+import MainHeader from "../components/MainHeader.astro";
 ---
 
 <Layout title="Sponsors :: AVSS2023">
-  <header class="mx-auto max-w-3xl">
-    <h1 class="text-xl font-bold uppercase sm:text-2xl">Sponsors</h1>
-    <h2
-      id="sponsors"
-      class="mb-12 mt-3 text-4xl font-bold sm:mb-16 sm:text-6xl"
-    >
-      Sponsors
-    </h2>
-  </header>
+  <MainHeader metaTitle="Sponsors" title="sponsors" />
   <section class="mx-auto mt-4 max-w-2xl text-lg">
     <figure class="mix-blend-multiply">
       <h3 id="sponsors" class="mt-8 mb-6 text-3xl font-bold">Sponsor</h3>

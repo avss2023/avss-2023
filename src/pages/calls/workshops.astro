@@ -1,21 +1,14 @@
 ---
 import { Image } from "@astrojs/image/components";
 import Layout from "../../layouts/Layout.astro";
+import MainHeader from "../../components/MainHeader.astro";
 ---
 
 <Layout
   title="Calls :: AVSS2023"
   meta="Details about Call for Workshops. The important dates are May 1, 2023 (Workshop Proposal Submission Deadline), May 15, 2023 (Acceptance Notification), and November 6, 2023 (Workshop Date)."
 >
-  <header class="mx-auto max-w-3xl">
-    <h1 class="text-xl font-bold uppercase sm:text-2xl">Calls</h1>
-    <h2
-      id="call-for-workshops"
-      class="mb-12 mt-3 text-4xl font-bold sm:mb-16 sm:text-6xl"
-    >
-      Call For Workshops
-    </h2>
-  </header>
+  <MainHeader metaTitle="Calls" title="Calls For Workshops" />
   <section class="mx-auto mt-4 max-w-2xl text-lg">
     <section class="-mx-4 rounded-md bg-red-100 px-4 py-4 text-red-800">
       <p class="font-bold italic">
