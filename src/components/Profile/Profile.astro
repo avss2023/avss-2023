@@ -1,4 +1,5 @@
 ---
+import lowerCasify from "../../utils/lowerCasify";
 import ProfileImage from "./ProfileImage.astro";
 import type { ProfileInterface } from "./profiles";
 
@@ -9,10 +10,10 @@ const { name, description, profileImage, email } = {
 
 <div
   class="mx-auto grid w-full grid-rows-[auto_1fr] items-start justify-center gap-2 rounded-lg border-2 bg-white px-4 py-4 sm:max-w-none sm:flex-col"
-  id={name.toLowerCase().split(" ").join("-")}
+  id={lowerCasify(name)}
 >
   <div
-    class="mx-auto aspect-square w-32 grow-0 overflow-hidden rounded-full border-4 bg-gray-300 object-cover sm:w-32 lg:text-3xl"
+    class="mx-auto aspect-square w-28 grow-0 overflow-hidden rounded-full border-4 bg-gray-300 object-cover lg:text-3xl"
   >
     <ProfileImage imageSrc={profileImage} altText={name} />
   </div>

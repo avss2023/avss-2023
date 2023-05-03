@@ -1,0 +1,13 @@
+---
+import lowerCasify from "../../utils/lowerCasify";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<h4 id={lowerCasify(title)} class="mt-6 mb-4 text-2xl font-bold">
+  {title}
+</h4>

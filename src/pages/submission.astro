@@ -1,5 +1,7 @@
 ---
 import MainHeader from "../components/MainHeader.astro";
+import Heading3 from "../components/Tags/Heading3.astro";
+import Paragraph from "../components/Tags/Paragraph.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -13,12 +15,12 @@ import Layout from "../layouts/Layout.astro";
     title="Paper Submission Instruction and Guidelines"
   />
   <section class="mx-auto mt-6 max-w-2xl text-lg">
-    <p class="mt-4">
+    <Paragraph>
       We invite submissions of up to eight pages, including references. The
       maximum size of the abstract is 1000 characters. Any submission must be in
       PDF format (maximum 10MB); submissions in other formats will be rejected.
-    </p>
-    <p class="mt-4">
+    </Paragraph>
+    <Paragraph>
       A paper submission implies that, if the paper is accepted, one of the
       authors will present the paper/poster at the conference. Authors are
       responsible for obtaining any necessary visas and may need to start that
@@ -26,15 +28,12 @@ import Layout from "../layouts/Layout.astro";
       presentation in place of an author is NOT considered presenting. Papers
       that are not presented will be pulled from the IEEE proceedings and are
       not considered published.
-    </p>
+    </Paragraph>
 
-    <h3 id="submission-templates" class="mt-8 text-3xl font-bold">
-      Submission Templates
-    </h3>
-
-    <p class="mt-4">
+    <Heading3 title="Submission Templates" />
+    <Paragraph>
       There are two sets of paper submission templates available:
-    </p>
+    </Paragraph>
 
     <ul class="mt-4">
       <li class="ml-6 list-disc">
@@ -55,15 +54,15 @@ import Layout from "../layouts/Layout.astro";
       </li>
     </ul>
 
-    <p class="mt-4">
+    <Paragraph>
       Detailed style and formatting instructions can be found in either
       template. The blue line numbers must not be removed in the version for
       review, as it greatly facilitates the review process. However, the line
       numbers must be removed in the final version. Submissions not using the
       above templates or disclosing the identity of the authors will be rejected
       without review.
-    </p>
-    <p class="mt-4">
+    </Paragraph>
+    <Paragraph>
       A complete paper must be submitted using one of the above templates,
       formatted for double-blind review, at the Microsoft Conference Management
       Toolkit (CMT) site:
@@ -75,8 +74,8 @@ import Layout from "../layouts/Layout.astro";
       >
         Click here</a
       >
-    </p>
-    <p class="mt-4">
+    </Paragraph>
+    <Paragraph>
       Make sure that your browser has cookies and Javascript enabled. Please add
       <a
         class="text-blue-600 underline"
@@ -90,13 +89,10 @@ import Layout from "../layouts/Layout.astro";
       created accounts). They will ensure that your co-authors can also see your
       submission when they log in. Authorship cannot be changed during the review
       process.
-    </p>
+    </Paragraph>
 
-    <h3 id="double-blined-peer-review" class="mt-8 text-3xl font-bold">
-      Double-Blind Peer Review
-    </h3>
-
-    <p class="mt-4">
+    <Heading3 title="Double-Blind Peer Review" />
+    <Paragraph>
       AVSS-2023 uses a double-blind peer review procedure, i.e. the identity of
       authors is hidden from reviewers and the identity of reviewers is hidden
       from authors. In order to identify a paper, one of the authors must first
@@ -107,8 +103,8 @@ import Layout from "../layouts/Layout.astro";
       templates and policies (below) before submission. The paper must be
       registered and submitted through CMT by the deadline specified in the
       Important Dates page of the AVSS-2023 website.
-    </p>
-    <p class="mt-4">
+    </Paragraph>
+    <Paragraph>
       Papers submitted for review must remain anonymous. First, &quot;Paper
       ID&quot;, as allocated by CMT website upon registration of the paper, must
       replace author names and affiliations. Secondly, there must be no
@@ -125,13 +121,10 @@ import Layout from "../layouts/Layout.astro";
       rejection without review. If a paper is accepted, the final version can
       (and should) include such self-references. For more detailed instructions
       and examples please see Section 1.6 in the templates.
-    </p>
+    </Paragraph>
 
-    <h3 id="dual-double-submissions" class="mt-8 text-3xl font-bold">
-      Dual/Double Submissions
-    </h3>
-
-    <p class="mt-4">
+    <Heading3 title="Dual/Double Submissions" />
+    <Paragraph>
       By submitting a manuscript to AVSS, the authors guarantee that it has not
       been previously published or accepted for publication in substantially
       similar form in an archival peer-reviewed forum. Furthermore, no paper
@@ -146,26 +139,20 @@ import Layout from "../layouts/Layout.astro";
       body of your paper why your AVSS-2023 paper is non-trivially different
       from these concurrent submissions, and include anonymized versions of
       those papers in the supplemental material.
-    </p>
+    </Paragraph>
 
-    <h3 id="conflict-responsibilities" class="mt-8 text-3xl font-bold">
-      Conflict & Responsibilities
-    </h3>
-
-    <p class="mt-4">
+    <Heading3 title="Conflict & Responsibilities" />
+    <Paragraph>
       It is the primary author’s responsibility to ensure that all authors on
       their paper have registered their conflicts into CMT. Conflicts are needed
       to resolve assignments to both reviewers and area chairs. If a paper is
       found to have an undeclared conflict that causes a problem, the paper may
       be summarily rejected. Incomplete or manipulation of conflict domains may
       result in paper rejection.
-    </p>
+    </Paragraph>
 
-    <h3 id="supplementary-material" class="mt-8 text-3xl font-bold">
-      Supplementary Material
-    </h3>
-
-    <p class="mt-4">
+    <Heading3 title="Supplementary Material" />
+    <Paragraph>
       Authors may optionally upload supplementary material, which may include:
       <ol class="ml-6 mt-4 list-decimal">
         <li class="pl-1">
@@ -184,17 +171,17 @@ import Layout from "../layouts/Layout.astro";
           are not essential to the understanding of the submitted paper.
         </li>
       </ol>
-    </p>
-    <p class="mt-4">
+    </Paragraph>
+    <Paragraph>
       AVSS-2023 encourages authors to submit videos using an MP4 codec such as
       DivX contained in an AVI or quicktime MOV, compressed with ZIP. Also,
       please submit a README text file with each video specifying the exact
       codec used and a URL where the codec can be downloaded.
-    </p>
-    <p class="mt-4">
+    </Paragraph>
+    <Paragraph>
       The authors should refer to the contents of the supplementary material
       appropriately in the paper. Note that reviewers will be encouraged to look
       at it, but are not obligated to do so.
-    </p>
+    </Paragraph>
   </section>
 </Layout>

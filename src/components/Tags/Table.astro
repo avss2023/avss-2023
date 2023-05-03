@@ -1,0 +1,34 @@
+---
+interface Props {
+  data: {
+    left: string;
+    right: string;
+    title?: boolean;
+  }[];
+}
+const { data } = Astro.props as Props;
+---
+
+<figure>
+  <table class="mt-4 w-full max-w-2xl table-auto border-gray-600 text-xl">
+    <tbody class="border-2 border-gray-600">
+      {
+        data.map(({ left, right, title }) => {
+          return (
+            <tr
+              class={
+                "border-y-2 border-gray-600 odd:bg-gray-200 " +
+                (title === true && " font-bold")
+              }
+            >
+              <td class="border-x-2 border-gray-600 px-4 py-4 text-center">
+                {left}
+              </td>
+              <td class="px-4 py-4 text-center">{right}</td>
+            </tr>
+          );
+        })
+      }
+    </tbody>
+  </table>
+</figure>
