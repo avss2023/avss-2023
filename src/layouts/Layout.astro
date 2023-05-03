@@ -75,7 +75,8 @@ const { title, meta } = Astro.props;
     top: 0px; */
       }
       a.fancy {
-        @apply relative inline-block bg-gradient-to-l from-red-500 via-rose-500 to-pink-500 bg-clip-text font-semibold text-transparent;
+        @apply relative bg-gradient-to-l from-red-500 via-rose-500 to-pink-500 bg-clip-text font-semibold text-transparent;
+        word-wrap: break-word;
       }
       a.fancy::after {
         content: "";
