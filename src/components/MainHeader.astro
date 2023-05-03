@@ -1,0 +1,20 @@
+---
+import lowerCasify from "../utils/lowerCasify";
+
+interface Props {
+  metaTitle: string;
+  title: string;
+}
+
+const { metaTitle, title } = Astro.props as Props;
+---
+
+<header class="mx-auto max-w-3xl">
+  <h1 class="text-xl font-bold uppercase sm:text-2xl">{metaTitle}</h1>
+  <h2
+    id={lowerCasify(title)}
+    class="mb-12 mt-3 text-4xl font-bold sm:mb-16 sm:text-6xl"
+  >
+    {title}
+  </h2>
+</header>
