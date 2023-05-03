@@ -1,9 +1,294 @@
 ---
 import MainHeader from "../../components/MainHeader.astro";
+import Heading3 from "../../components/Tags/Heading3.astro";
+import Heading4 from "../../components/Tags/Heading4.astro";
+import List from "../../components/Tags/List.astro";
+import Paragraph from "../../components/Tags/Paragraph.astro";
+import Table from "../../components/Tags/Table.astro";
+import UList from "../../components/Tags/UList.astro";
 import Layout from "../../layouts/Layout.astro";
+
+// Attendee Registration Fees
+// Author SPS Member
+// Author IEEE Member
+// Author Non-Member
+// Author Life Member
+// Advance SPS Member
+// Advance IEEE Member
+// Advance Non-Member
+// Advance Student SPS Member
+// Advance Student IEEE Member
+// Advance Student Non-Member
+// Advance Life Member
+// Regular SPS Member
+// Regular IEEE Member
+// Regular Non-Member
+// Regular Student SPS Member
+// Regular Student IEEE Member
+// Regular Student Non-Member
+// Regular Life Member
+// Virtual Attendee Registration Fees
+// Actual Registration Fee
+// 850.00
+// 850.00
+// 1,020.00
+// 470.00
+// 850.00
+// 850.00
+// 1,020.00
+// 510.00
+// 510.00
+// 615.00
+// 470.00
+// 1,300.00
+// 1,300.00
+// 1,560.00
+// 780.00
+// 780.00
+// 940.00
+// 715.00
+
+const AttendeeRegistrationFees = [
+  {
+    left: "Attendee Registration Fees",
+    right: "Actual Registration Fee",
+    title: true,
+  },
+  {
+    left: "Author SPS Member",
+    right: "850.00",
+  },
+  {
+    left: "Author IEEE Memeber",
+    right: "850.00",
+  },
+  {
+    left: "Author Non-Memeber",
+    right: "1,020.00",
+  },
+  {
+    left: "Author Life Memeber",
+    right: "470.00",
+  },
+  {
+    left: "Advance SPS Member",
+    right: "850.00",
+  },
+  {
+    left: "Advance IEEE Member",
+    right: "850.00",
+  },
+  {
+    left: "Advance Non-Member",
+    right: "1,020.00",
+  },
+  {
+    left: "Advance Student SPS Member",
+    right: "510.00",
+  },
+  {
+    left: "Advance Student IEEE Member",
+    right: "510.00",
+  },
+  {
+    left: "Advance Student Non-Member",
+    right: "615.00",
+  },
+  {
+    left: "Advance Life Member",
+    right: "470.00",
+  },
+  {
+    left: "Regular SPS Member",
+    right: "1,300.00",
+  },
+  {
+    left: "Regular IEEE Member",
+    right: "1,300.00",
+  },
+  {
+    left: "Regular Non-Member",
+    right: "1,560.00",
+  },
+  {
+    left: "Regular Student SPS Member",
+    right: "780.00",
+  },
+  {
+    left: "Regular Student IEEE Member",
+    right: "780.00",
+  },
+  {
+    left: "Regular Student Non-Member",
+    right: "940.00",
+  },
+  {
+    left: "Regular Life Member",
+    right: "715.00",
+  },
+];
+
+const VirtualAttendeeRegistrationFees = [
+  {
+    left: "Virtual Attendee SPS Member",
+    right: "150.00",
+    title: true,
+  },
+  {
+    left: "Virtual Attendee IEEE Member",
+    right: "150.00",
+  },
+  {
+    left: "Virtual Attendee Non-Member",
+    right: "200.00",
+  },
+  {
+    left: "Virtual Attendees Student SPS Member",
+    right: "75.00",
+  },
+  {
+    left: "Virtual Attendees Student IEEE Member",
+    right: "75.00",
+  },
+  {
+    left: "Virtual Attendees Student Non-Member",
+    right: "100.00",
+  },
+  {
+    left: "Virtual Attendee Life Member",
+    right: "75.00",
+  },
+];
+
+const AdditionalRegistrationItems = [
+  {
+    left: "Additional Registration Items",
+    right: "Actual Registration Fee",
+    title: true,
+  },
+  {
+    left: 'Advance "Physical" Tutorial ONLY',
+    right: "100.00",
+  },
+  {
+    left: 'Regular "Physical" Tutorial ONLY',
+    right: "150.00",
+  },
+  {
+    left: 'Advance "Physical" Tutorial ONLY Student',
+    right: "100.00",
+  },
+  {
+    left: "Virtual Tutorial ONLY",
+    right: "150.00",
+  },
+  {
+    left: 'Regular "Physical" Tutorial ONLY Student',
+    right: "50.00",
+  },
+];
 ---
 
 <Layout title="Registration :: AVSS2023">
   <MainHeader metaTitle="Attend" title="Registration" />
-  <section class="mx-auto mt-4 max-w-2xl text-lg">TBA</section>
+  <section class="mx-auto mt-4 max-w-2xl text-lg">
+    <Heading3 title="Registration Fee" />
+    <Heading4 title="Registration Page" />
+    <Paragraph>TBD</Paragraph>
+
+    <Heading4 title="Early Registration" />
+    <Paragraph>TBD</Paragraph>
+
+    <Paragraph>
+      All registration fee is estimated in USD, but transaction will be done in
+      South Korean Won (KRW) <strong>(TBD)</strong>
+    </Paragraph>
+
+    <Paragraph>
+      Please read the following for rate categories, rules (for authors of
+      accepted papers), and policies.
+    </Paragraph>
+
+    <Table data={AttendeeRegistrationFees} />
+    <Table data={VirtualAttendeeRegistrationFees} />
+    <Table data={VirtualAttendeeRegistrationFees} />
+
+    <Heading3 title="Rules" />
+    <UList>
+      <List>Each conference attendee must be registered.</List>
+      <List>
+        Every paper accepted by a technical meeting sponsored by the <a
+          href="https://signalprocessingsociety.org/"
+          target="_blank"
+          class="fancy">IEEE Signal Processing Society</a
+        > to present at AVSS must have at least one registration at the <strong
+          >FULL member/non-member rate</strong
+        >. <br />Thus, for a manuscript for which all authors are students, one
+        student author will be required to register at the full registration
+        rate. One person can register multiple papers as long as that person is
+        a co-author on each of the papers.
+      </List>
+      <List>
+        Registration entitles the attendee to technical sessions, workshops,
+        coffee breaks, welcome reception, conference banquet, city tours, as
+        well as conference materials and electronic conference proceedings.
+      </List>
+      <List>
+        <strong>IEEE Membership</strong>: You must be an IEEE Member at the time
+        of registration to receive the IEEE member discount. For IEEE Member,
+        you must put in your valid IEEE Membership number in your registration.
+        Please visit <a
+          href="https://www.ieee.org/membership/join/index.html"
+          target="_blank"
+          class="fancy">ieee.org/join</a
+        > for the steps to join IEEE. We encourage you to do so if you are not an
+        IEEE member.
+      </List>
+      <List>
+        <strong>Forms of payment</strong>: Only on-line registration is
+        accepted. Registration payments must be received by the registration
+        deadline for the rate at which you registered; if payment is not
+        received by the deadline, you will be responsible for the higher rate.
+      </List>
+      <List>
+        <strong>Workshop authors</strong>: A full registration is mandatory for
+        each accepted workshop paper. Note some workshop has late paper
+        notification and camera-ready deadlines. So workshop authors please
+        ensure to finish registration by the early registration <strong
+          >(TBD)</strong
+        >.
+      </List>
+      <List>
+        Papers which are not presented at the conference will be excluded from
+        the official proceedings and will not appear in IEEE Xplore. It is,
+        therefore, critical that at least one author of this paper attend the
+        conference to present the work.
+      </List>
+    </UList>
+
+    <Heading3 title="Policies" />
+    <UList>
+      <List>
+        <strong>Refund Policy</strong>: All refund requests must be made via
+        email with a written statement of withdrawal to <strong>TBD</strong>.
+        All cancellations will be subject to a <strong>USD$50</strong> cancellation
+        fee before <strong>TBD</strong>. NO REFUNDS will be made after <strong
+          >TBD</strong
+        >.
+      </List>
+      <List>
+        You are allowed to change the name on the registration without penalty.
+      </List>
+      <List>
+        If on-line payment is not possible for you, please contact us (mailto:<strong
+          >TBD</strong
+        >) for wire transfer details. Steps including bank account number, will
+        be emailed to you.
+      </List>
+      <List>
+        If you have any questions about registration, please contact us via
+        email to <strong>TBD</strong>.
+      </List>
+    </UList>
+  </section>
 </Layout>
