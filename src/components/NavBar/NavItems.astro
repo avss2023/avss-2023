@@ -10,23 +10,27 @@ interface NavItem {
 const navItems: NavItem[] = [
   {
     name: "General",
-    href: "/news",
+    href: "/general/news",
     hover: [
       {
         name: "News",
-        href: "/news",
+        href: "/general/news",
       },
       {
         name: "Organization",
-        href: "/organization",
+        href: "/general/organization",
+      },
+      {
+        name: "Keynote Speakers",
+        href: "/general/keynote-speakers",
       },
       {
         name: "Conference Policies",
-        href: "/policies",
+        href: "/general/policies",
       },
       {
         name: "Contact",
-        href: "/contact",
+        href: "/general/contact",
       },
     ],
   },
@@ -62,9 +66,30 @@ const navItems: NavItem[] = [
         name: "Venue",
         href: "/information/venue",
       },
+      {
+        name: "Travel to Daegu",
+        href: "/information/travel",
+      },
+      {
+        name: "Accommodation",
+        href: "/information/accommodation",
+      },
     ],
   },
-  { name: "Attend", href: "/attend" },
+  {
+    name: "Attend",
+    href: "/attend/registration",
+    hover: [
+      {
+        name: "Registration",
+        href: "/attend/registration",
+      },
+      {
+        name: "Visa Information",
+        href: "/attend/visa-information",
+      },
+    ],
+  },
   { name: "Sponsors", href: "/sponsors" },
 ];
 
