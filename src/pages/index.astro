@@ -26,6 +26,19 @@ const avssContent: Array<ContentProps> = [
   { left: "Conference Dates", right: ["Nov 7", "Nov 9, 2023"] },
   { left: "Workshop / Tutorial / Challenge Date", right: "Nov 6, 2023" },
 ];
+
+const news = [
+  {
+    title: "TBA",
+    description: "TBA",
+    link: "",
+  },
+  {
+    title: "TBA",
+    description: "TBA",
+    link: "",
+  },
+];
 ---
 
 <Layout
@@ -33,12 +46,54 @@ const avssContent: Array<ContentProps> = [
   meta="AVSS 2023 is the 19th edition of the IEEE International Conference on Advanced Video and Signal-Based Surveillance. AVSS is the premier international conference in the field of video and signal-based surveillance."
 >
   <div
-    class="mx-auto grid max-w-5xl grid-cols-1 gap-x-6 gap-y-12 md:grid-cols-2"
+    class="mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-[1fr_1fr] md:grid-cols-[2fr_1fr] lg:grid-cols-[3fr_1fr]"
   >
-    <Card title="Paper" contents={paperContents} />
-    <Card title="Workshop / Tutorial / Challenge" contents={workshopContents} />
-    <Card title="Registration" contents={registrationContents} />
-    <Card title="AVSS 2023" contents={avssContent} />
+    <div class="grid grid-cols-1 gap-x-6 gap-y-6 md:grid-cols-2">
+      <Card title="Paper" contents={paperContents} />
+      <Card
+        title="Workshop / Tutorial / Challenge"
+        contents={workshopContents}
+      />
+      <Card title="Registration" contents={registrationContents} />
+      <Card title="AVSS 2023" contents={avssContent} />
+    </div>
+    <div
+      class="link-card flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-500 ease-out hover:shadow-2xl"
+    >
+      <header
+        class="group flex items-center bg-primary px-5 py-3 text-xl font-semibold text-neutral-100"
+      >
+        <div
+          class="flex origin-left flex-row gap-2 transition-transform duration-150 ease-out group-focus-within:scale-110 group-hover:scale-110 group-focus:scale-110 group-active:scale-110"
+        >
+          <h2>News</h2>
+        </div>
+      </header>
+      <div class="flex flex-col gap-1 overflow-scroll">
+        <div
+          class="w-full grow divide-y-2 divide-neutral-300 bg-white px-3 text-sm"
+        >
+          {
+            news.map(({ title, description, link }) => {
+              return (
+                <div class="flex flex-col gap-1 px-2 py-4">
+                  <div class="text-xl font-semibold uppercase text-neutral-600">
+                    <a class="fancy" href={link}>
+                      {title}
+                    </a>
+                  </div>
+                  <div class="text-base">{description}</div>
+                </div>
+              );
+            })
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-x-6 gap-y-12 md:grid-cols-2"
+  >
     <article
       id="article"
       class="z-10 mx-auto grid w-full max-w-2xl gap-4 px-4 pb-8 font-light md:px-2"
