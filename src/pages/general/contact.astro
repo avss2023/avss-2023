@@ -1,33 +1,31 @@
 ---
-import MainHeader from "../../components/MainHeader.astro";
+import MainHeader from "../../components/Tags/MainHeader.astro";
+import Paragraph from "../../components/Tags/Paragraph.astro";
+import Section from "../../components/Tags/Section.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="Contact :: AVSS2023">
   <MainHeader metaTitle="General" title="Contact" />
-  <section class="mx-auto mt-4 max-w-2xl text-lg">
-    <div class="pb-3">
+  <Section>
+    <Paragraph>
       If you have enquiries about the conference, please contact the following
       conference chairs:
-    </div>
+    </Paragraph>
 
     <h3 class="pt-6 pb-2 text-2xl font-bold hover:underline">
       <a href="/organization/#jenq-neng-hwang">Jenq-Neng Hwang</a>
     </h3>
-    <div><a href="mailto:hwang@uw.edu" class="fancy">hwang@uw.edu</a></div>
+    <a href="mailto:hwang@uw.edu" class="fancy">hwang@uw.edu</a>
     <h3 class="pt-6 pb-2 text-2xl font-bold hover:underline">
       <a href="/organization/#michael-s.-ryoo">Michael S. Ryoo</a>
     </h3>
-    <div>
-      <a href="mailto:mryoo@cs.stonybrook.edu" class="fancy"
-        >mryoo@cs.stonybrook.edu</a
-      >
-    </div>
+    <a href="mailto:mryoo@cs.stonybrook.edu" class="fancy"
+      >mryoo@cs.stonybrook.edu</a
+    >
     <h3 class="pt-6 pb-2 text-2xl font-bold hover:underline">
       <a href="/organization/#kwang-ju-kim">Kwang-Ju Kim</a>
     </h3>
-    <div>
-      <a href="mailto:kwangju@etri.re.kr" class="fancy">kwangju@etri.re.kr</a>
-    </div>
-  </section>
+    <a href="mailto:kwangju@etri.re.kr" class="fancy">kwangju@etri.re.kr</a>
+  </Section>
 </Layout>

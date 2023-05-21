@@ -1,7 +1,13 @@
 ---
 import { Image } from "@astrojs/image/components";
 import Layout from "../../layouts/Layout.astro";
-import MainHeader from "../../components/MainHeader.astro";
+import MainHeader from "../../components/Tags/MainHeader.astro";
+import Section from "../../components/Tags/Section.astro";
+import Paragraph from "../../components/Tags/Paragraph.astro";
+import Heading3 from "../../components/Tags/Heading3.astro";
+import Sponsors from "../../components/Sponsors.astro";
+import UList from "../../components/Tags/UList.astro";
+import List from "../../components/Tags/List.astro";
 ---
 
 <Layout
@@ -9,7 +15,7 @@ import MainHeader from "../../components/MainHeader.astro";
   meta="Details about Call for Challenges. The important dates are May 1, 2023 (Challenge Workshop Proposal Submission), May 15, 2023 (Acceptance Notification), and November 6, 2023 (Challenge Date)."
 >
   <MainHeader metaTitle="Calls" title="Calls For Challenges" />
-  <section class="mx-auto mt-4 max-w-2xl text-lg">
+  <Section>
     <section class="-mx-4 rounded-md bg-red-100 px-4 py-4 text-red-800">
       <p class="font-bold italic">
         19th IEEE Int. Conf. on Advanced Video and Signal-Based Surveillance
@@ -20,7 +26,7 @@ import MainHeader from "../../components/MainHeader.astro";
       <p class="font-bold italic">6 (Mon.) ~ 9 (Thur.), November, 2023</p>
     </section>
 
-    <p class="mt-4">
+    <Paragraph>
       <strong>AVSS 2023</strong> is the <strong>19th</strong> edition of the
       <strong>
         IEEE International Conference on Advanced Video and Signal-Based
@@ -32,15 +38,13 @@ import MainHeader from "../../components/MainHeader.astro";
       The goal is to provide a game-changing and cross-disciplinary forum that brings
       together experts from academia, industry, and government to advance the frontiers
       of theories, methods, systems, and applications.
-    </p>
-    <p class="mt-4">
+    </Paragraph>
+    <Paragraph>
       AVSS 2023 invites proposals for Challenge addressing problems that will
       engage and excite the video processing/analytics and surveillance research
       community.
-    </p>
-    <h3 id="important-dates" class="mt-8 mb-6 text-3xl font-bold">
-      Important Dates
-    </h3>
+    </Paragraph>
+    <Heading3 title="Important Dates" />
     <figure>
       <table
         class="w-full max-w-2xl table-auto border-gray-600 text-xl font-bold"
@@ -65,87 +69,74 @@ import MainHeader from "../../components/MainHeader.astro";
         </tbody>
       </table>
     </figure>
-    <p class="mt-4">The proposal should include the following information:</p>
-    <ul class="ml-6 mt-4 list-disc">
-      <li class="pl-1">
+    <Paragraph>
+      The proposal should include the following information:
+    </Paragraph>
+    <UList>
+      <List>
         The challenge title that is explicative of the addressed topic
-      </li>
-      <li class="pl-1">
-        A brief introduction of the challenge (max 500 words)
-      </li>
-      <li class="pl-1">
+      </List>
+      <List>A brief introduction of the challenge (max 500 words)</List>
+      <List>
         The impact and significance of the challeng in the research and/or
         industrial community
-      </li>
-      <li class="pl-1">The rules for participation</li>
-      <li class="pl-1">
+      </List>
+      <List>The rules for participation</List>
+      <List>
         The criteria that will be used to evaulate the submitted entries
-      </li>
-      <li class="pl-1">The team that will run the challenge</li>
-      <li class="pl-1">
+      </List>
+      <List>The team that will run the challenge</List>
+      <List>
         Important dates (e.g., submission deadline, data available, and winner
         anouncement)
-      </li>
-      <li class="pl-1">Award propsed (if any)</li>
-      <li class="pl-1">Sponsorship (if any)</li>
-    </ul>
-    <p class="mt-4">
+      </List>
+      <List>Award propsed (if any)</List>
+      <List>Sponsorship (if any)</List>
+    </UList>
+    <Paragraph>
       Challenge organizers should provide a dataset to participating teams that
       should include <em>a training set with ground truth</em> and a <em
         >testing set whose ground truth is hidden</em
       >. Challenge organizers are in charge of the evaluating the results/models
       submitted by the participants on the testing set.
-    </p>
-    <p class="mt-4">
+    </Paragraph>
+    <Paragraph>
       Challenge organizers will also organize the presentation of the
       best-performing teams in a dedicated session at AVSS. The session
       includes:
-    </p>
+    </Paragraph>
 
-    <ul class="ml-6 mt-4 list-disc">
-      <li class="pl-1">The presentation of the challenge</li>
-      <li class="pl-1">The presentation of awards and the sponsors (if any)</li>
-      <li class="pl-1">
+    <UList>
+      <List>The presentation of the challenge</List>
+      <List>The presentation of awards and the sponsors (if any)</List>
+      <List>
         A presentation of the model/approach by the participating teams
-      </li>
-    </ul>
+      </List>
+    </UList>
 
-    <h3 id="submission-instructions" class="mt-8 text-3xl font-bold">
-      Submission Instructions
-    </h3>
-    <p class="mt-4">
+    <Heading3 title="Submission Instructions" />
+    <Paragraph>
       Proposals should be submitted via email to the challenge chairs:
-    </p>
-    <ul class="ml-6 mt-4 list-disc">
-      <li class="pl-1">
+    </Paragraph>
+    <UList>
+      <List>
         Zheng Tang (Nvidia Metropolis, USA) : <a
           class="fancy"
           href="mailto:tangzhengthomas@gmail.com">tangzhengthomas@gmail.com</a
         >
-      </li>
-      <li class="pl-1">
+      </List>
+      <List>
         Weiyao Lin (SJTU, China) : <a
           class="fancy"
           href="mailto:wylin@sjtu.edu.cn">wylin@sjtu.edu.cn</a
         >
-      </li>
-    </ul>
+      </List>
+    </UList>
 
-    <p class="mt-4">
+    <Paragraph>
       Inquiries regarding the challenge sessions should be sent to the challenge
       chairs.
-    </p>
-    <figure class="mix-blend-multiply">
-      <h3 id="sponsors" class="mt-8 mb-6 text-3xl font-bold">Sponsors</h3>
-      <div class="flex flex-row flex-wrap justify-evenly gap-2">
-        <Image
-          src="/IEEE-SPS.png"
-          alt="IEEE SPS"
-          height={140}
-          width={198}
-          format="webp"
-        />
-      </div>
-    </figure>
-  </section>
+    </Paragraph>
+    <Sponsors />
+  </Section>
 </Layout>

@@ -1,7 +1,12 @@
 ---
 import { Image } from "@astrojs/image/components";
 import Layout from "../../layouts/Layout.astro";
-import MainHeader from "../../components/MainHeader.astro";
+import MainHeader from "../../components/Tags/MainHeader.astro";
+import Paragraph from "../../components/Tags/Paragraph.astro";
+import UList from "../../components/Tags/UList.astro";
+import List from "../../components/Tags/List.astro";
+import Section from "../../components/Tags/Section.astro";
+import Sponsors from "../../components/Sponsors.astro";
 ---
 
 <Layout
@@ -9,7 +14,7 @@ import MainHeader from "../../components/MainHeader.astro";
   meta="Details about Call for Papers. The important dates are June 14 (Paper Submission), August 15 (Decision to Authors), and August 25 (Camera Ready)."
 >
   <MainHeader metaTitle="Calls" title="Calls For Papers" />
-  <section class="mx-auto mt-4 max-w-2xl text-lg">
+  <Section>
     <section class="-mx-4 rounded-md bg-red-100 px-4 py-4 text-red-800">
       <p class="font-bold italic">
         19th IEEE Int. Conf. on Advanced Video and Signal-Based Surveillance
@@ -20,7 +25,7 @@ import MainHeader from "../../components/MainHeader.astro";
       <p class="font-bold italic">6 (Mon.) ~ 9 (Thur.), November, 2023</p>
     </section>
 
-    <p class="mt-4">
+    <Paragraph>
       <strong>AVSS 2023</strong> is the <strong>19th</strong> edition of the
       <strong>
         IEEE International Conference on Advanced Video and Signal-Based
@@ -29,7 +34,7 @@ import MainHeader from "../../components/MainHeader.astro";
       a premier forum for the presentation of new advances and research results in
       the field of video and signal-based surveillance. AVSS 2023 is
       <strong> sponsored by the IEEE Signal Processing Society.</strong>
-    </p>
+    </Paragraph>
 
     <h3 id="important-dates" class="mt-8 mb-6 text-3xl font-bold">
       Important Dates
@@ -76,47 +81,47 @@ import MainHeader from "../../components/MainHeader.astro";
     <h3 id="topics-of-interest" class="mt-8 text-3xl font-bold">
       Topics of Interest
     </h3>
-    <p class="mt-4">
+    <Paragraph>
       AVSS is the leading conference venue for the underlying theory, methods,
       systems, and applications of video and signal based surveillance. AVSS
       invites submissions in areas listed below, especially on
       cross-disciplinary and game-changing subjects. The list of topics of
       interest includes, but is not limited to
-    </p>
+    </Paragraph>
 
     <h4 id="real-time-video-processing" class="mt-6 mb-4 text-2xl font-bold">
       Real-time Video Processing
     </h4>
-    <ul class="ml-6 list-disc">
-      <li class="pl-1">Real-time Object Detection and Recognition</li>
-      <li class="pl-1">Real-time Face Recognition</li>
-      <li class="pl-1">Real-time Video Compression</li>
-      <li class="pl-1">Real-time Motion Analysis</li>
-      <li class="pl-1">Real-time Video Enhancement</li>
-    </ul>
+    <UList>
+      <List>Real-time Object Detection and Recognition</List>
+      <List>Real-time Face Recognition</List>
+      <List>Real-time Video Compression</List>
+      <List>Real-time Motion Analysis</List>
+      <List>Real-time Video Enhancement</List>
+    </UList>
 
     <h4 id="multi-camera-video-analytics" class="mt-6 mb-4 text-2xl font-bold">
       Multi-camera Video Analytics
     </h4>
-    <ul class="ml-6 list-disc">
-      <li class="pl-1">Multi-view Geometry for Surveillance</li>
-      <li class="pl-1">Multi-camera Object Tracking</li>
-      <li class="pl-1">Crowd Analysis</li>
-      <li class="pl-1">Multi-camera Resource Management</li>
-      <li class="pl-1">Multi-camera Video Synchronization</li>
-    </ul>
+    <UList>
+      <List>Multi-view Geometry for Surveillance</List>
+      <List>Multi-camera Object Tracking</List>
+      <List>Crowd Analysis</List>
+      <List>Multi-camera Resource Management</List>
+      <List>Multi-camera Video Synchronization</List>
+    </UList>
 
     <h4 id="security-privacy" class="mt-6 mb-4 text-2xl font-bold">
       SECURITY &amp; PRIVACY
     </h4>
-    <ul class="ml-6 list-disc">
-      <li class="pl-1">Privacy-Preserving Machine Learning</li>
-      <li class="pl-1">Secure Data Sharing and Exchange</li>
-      <li class="pl-1">Authentication and Authorization</li>
-      <li class="pl-1">Cybersecurity Threat Detection and Response</li>
-      <li class="pl-1">Security and Privacy in the Internet of Things</li>
-      <li class="pl-1">Adversarial Machine Learning</li>
-    </ul>
+    <UList>
+      <List>Privacy-Preserving Machine Learning</List>
+      <List>Secure Data Sharing and Exchange</List>
+      <List>Authentication and Authorization</List>
+      <List>Cybersecurity Threat Detection and Response</List>
+      <List>Security and Privacy in the Internet of Things</List>
+      <List>Adversarial Machine Learning</List>
+    </UList>
 
     <h4
       id="surveillance-systems-and-applications"
@@ -124,13 +129,13 @@ import MainHeader from "../../components/MainHeader.astro";
     >
       SURVEILLANCE SYSTEMS AND APPLICATIONS
     </h4>
-    <ul class="ml-6 list-disc">
-      <li class="pl-1">Surveillance for Smart Cities</li>
-      <li class="pl-1">Surveillance for Public Safety</li>
-      <li class="pl-1">Surveillance for Home and Business Security</li>
-      <li class="pl-1">Surveillance for Critical Infrastructure</li>
-    </ul>
-    <p class="mt-4">
+    <UList>
+      <List>Surveillance for Smart Cities</List>
+      <List>Surveillance for Public Safety</List>
+      <List>Surveillance for Home and Business Security</List>
+      <List>Surveillance for Critical Infrastructure</List>
+    </UList>
+    <Paragraph>
       Prospective authors are invited to submit high-quality full papers
       representing original results in all areas of video and signal-based
       surveillance. Submissions and final papers are limited to
@@ -140,18 +145,7 @@ import MainHeader from "../../components/MainHeader.astro";
       </strong>
       Accepted papers are published in the conference proceedings that will be also
       available in the IEEE Xplore digital library.
-    </p>
-    <figure class="mix-blend-multiply">
-      <h3 id="sponsors" class="mt-8 mb-6 text-3xl font-bold">Sponsors</h3>
-      <div class="flex flex-row flex-wrap justify-evenly gap-2">
-        <Image
-          src="/IEEE-SPS.png"
-          alt="IEEE SPS"
-          height={140}
-          width={198}
-          format="webp"
-        />
-      </div>
-    </figure>
-  </section>
+    </Paragraph>
+    <Sponsors />
+  </Section>
 </Layout>

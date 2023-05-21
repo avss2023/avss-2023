@@ -1,12 +1,13 @@
 ---
-import MainHeader from "../../components/MainHeader.astro";
+import MainHeader from "../../components/Tags/MainHeader.astro";
 import Paragraph from "../../components/Tags/Paragraph.astro";
+import Section from "../../components/Tags/Section.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="Visa Information :: AVSS2023">
   <MainHeader metaTitle="Attend" title="Visa Information" />
-  <section class="mx-auto mt-4 max-w-2xl text-lg">
+  <Section>
     <Paragraph>
       You may access <a
         href="http://english.visitkorea.or.kr/enu/TRV/TV_ENG_2_1.jsp"
@@ -46,5 +47,5 @@ import Layout from "../../layouts/Layout.astro";
       > to apply. The QR code must be saved in your mobile phone, upon completion
       of the form, to be shown to Korean Immigration Officials upon arrival.
     </Paragraph>
-  </section>
+  </Section>
 </Layout>

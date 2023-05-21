@@ -1,7 +1,12 @@
 ---
-import { Image } from "@astrojs/image/components";
 import Layout from "../../layouts/Layout.astro";
-import MainHeader from "../../components/MainHeader.astro";
+import MainHeader from "../../components/Tags/MainHeader.astro";
+import Section from "../../components/Tags/Section.astro";
+import Paragraph from "../../components/Tags/Paragraph.astro";
+import UList from "../../components/Tags/UList.astro";
+import List from "../../components/Tags/List.astro";
+import Heading3 from "../../components/Tags/Heading3.astro";
+import Sponsors from "../../components/Sponsors.astro";
 ---
 
 <Layout
@@ -9,7 +14,7 @@ import MainHeader from "../../components/MainHeader.astro";
   meta="Details about Call for Workshops. The important dates are May 1, 2023 (Workshop Proposal Submission Deadline), May 15, 2023 (Acceptance Notification), and November 6, 2023 (Workshop Date)."
 >
   <MainHeader metaTitle="Calls" title="Calls For Workshops" />
-  <section class="mx-auto mt-4 max-w-2xl text-lg">
+  <Section>
     <section class="-mx-4 rounded-md bg-red-100 px-4 py-4 text-red-800">
       <p class="font-bold italic">
         19th IEEE Int. Conf. on Advanced Video and Signal-Based Surveillance
@@ -20,7 +25,7 @@ import MainHeader from "../../components/MainHeader.astro";
       <p class="font-bold italic">6 (Mon.) ~ 9 (Thur.), November, 2023</p>
     </section>
 
-    <p class="mt-4">
+    <Paragraph>
       <strong>AVSS 2023</strong> is the <strong>19th</strong> edition of the
       <strong>
         IEEE International Conference on Advanced Video and Signal-Based
@@ -32,18 +37,16 @@ import MainHeader from "../../components/MainHeader.astro";
       The goal is to provide a game-changing and cross-disciplinary forum that brings
       together experts from academia, industry, and government to advance the frontiers
       of theories, methods, systems, and applications.
-    </p>
-    <p class="mt-4">
+    </Paragraph>
+    <Paragraph>
       Typically, workshops on new and emerging topics/challenges related to
       video and signal-based surveillance and of interest to the community at
       large are held in conjunction with AVSS. Workshops will be held on
       <strong>November 9 (Thursday) 2023</strong>, after the main conference. We
       welcome workshop proposals in new and emerging research areas of visual
       and signal-based surveillance.
-    </p>
-    <h3 id="important-dates" class="mt-8 mb-6 text-3xl font-bold">
-      Important Dates
-    </h3>
+    </Paragraph>
+    <Heading3 title="Important Dates" />
     <figure>
       <table
         class="w-full max-w-2xl table-auto border-gray-600 text-xl font-bold"
@@ -68,79 +71,67 @@ import MainHeader from "../../components/MainHeader.astro";
         </tbody>
       </table>
     </figure>
-    <p class="mt-4">
+    <Paragraph>
       Prospective workshop organizers are invited to submit proposals via e-mail
       to the workshop chairs:
-    </p>
-    <ul class="ml-6 mt-4 list-disc">
-      <li class="pl-1">
+    </Paragraph>
+    <UList>
+      <List>
         Hyunjong Yang (POSTECH, S. Korea): <a
           class="fancy"
           href="mailto:hyunyang@postech.ac.kr">hyunyang@postech.ac.kr</a
         >
-      </li>
-      <li class="pl-1">
+      </List>
+      <List>
         Federica Battisti (University of Padua, Italy):
         <a class="fancy" href="mailto:federica.battisti@unipd.it"
           >federica.battisti@unipd.it</a
         >
-      </li>
-    </ul>
-    <p class="mt-4">no later than <strong>May 1, 2023.</strong></p>
-    <p class="mt-4">The proposal should include the following information:</p>
+      </List>
+    </UList>
+    <Paragraph>no later than <strong>May 1, 2023.</strong></Paragraph>
 
-    <ul class="ml-6 mt-4 list-disc">
-      <li class="pl-1">Workshop title</li>
-      <li class="pl-1">
-        List of organizers including affiliation and email address
-      </li>
-      <li class="pl-1">Workshop motivation</li>
-      <li class="pl-1">Estimated participation (industry/academia)</li>
-      <li class="pl-1">
+    <Heading3 title="Workshop Proposal Submission" />
+    <Paragraph>
+      The proposal should include the following information:
+    </Paragraph>
+    <UList>
+      <List>Workshop title</List>
+      <List>List of organizers including affiliation and email address</List>
+      <List>Workshop motivation</List>
+      <List>Estimated participation (industry/academia)</List>
+      <List>
         Anticipated number of talks/posters and length of workshop (half-day or
         full-day)
-      </li>
-      <li class="pl-1">
+      </List>
+      <List>
         Paper submission procedure Paper review procedure
         (single-blind/double-blind, solicited/invited-only pool of reviewers)
-      </li>
-      <li class="pl-1">
+      </List>
+      <List>
         Paper submission and acceptance deadlines (camera-ready and early
         registration deadlines for a workshop/contest must coincide with the
         corresponding deadlines of AVSS-2023 – see Important Dates on <a
           class="fancy"
           href="/calls/">Call for Papers</a
         >)
-      </li>
-      <li>Special space and equipment requests, if any</li>
-    </ul>
-    <h3 id="topics-of-interest" class="mt-8 text-3xl font-bold">
-      Topics of Interest
-    </h3>
-    <p class="mt-4">
+      </List>
+      <List>Special space and equipment requests, if any</List>
+    </UList>
+    <Heading3 title="Topics of Interest" />
+    <Paragraph>
       Topics of interest include, but are not limited to, the following:
-    </p>
-    <ul class="ml-6 mt-4 list-disc">
-      <li class="pl-1">Surveillance in Smart Cities</li>
-      <li class="pl-1">Human and Vehicle Surveillance</li>
-      <li class="pl-1">Multi-camera Video Analytics</li>
-      <li class="pl-1">Privacy and Security</li>
-      <li class="pl-1">Real-time Video or Distributed Systems</li>
-      <li class="pl-1">Real-time Video Processing</li>
-    </ul>
+    </Paragraph>
+    <UList>
+      <List>Surveillance in Smart Cities</List>
+      <List>Human and Vehicle Surveillance</List>
+      <List>Multi-camera Video Analytics</List>
+      <List>Privacy and Security</List>
+      <List>Real-time Video or Distributed Systems</List>
+      <List>Real-time Video Processing</List>
+    </UList>
 
-    <p class="mt-4">We are looking forward to receiving your proposals!</p>
-    <figure class="mix-blend-multiply">
-      <h3 id="sponsors" class="mt-8 mb-6 text-3xl font-bold">Sponsors</h3>
-      <div class="flex flex-row flex-wrap justify-evenly gap-2">
-        <Image
-          src="/IEEE-SPS.png"
-          alt="IEEE SPS"
-          height={140}
-          width={198}
-          format="webp"
-        />
-      </div>
-    </figure>
-  </section>
+    <Paragraph>We are looking forward to receiving your proposals!</Paragraph>
+    <Sponsors />
+  </Section>
 </Layout>
