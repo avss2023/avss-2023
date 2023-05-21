@@ -277,6 +277,12 @@ const areaChairs: ChairsInterface = {
       profileImage: "/committee/jun-wei-hsieh.png",
       email: "jwhsieh@nctu.edu.tw",
     },
+    {
+      name: "Srijan Das",
+      description: "University of North Carolina at Charlotte, USA",
+      profileImage: "/committee/srijan-das.png",
+      email: "sdas24@uncc.edu",
+    },
   ],
 };
 
