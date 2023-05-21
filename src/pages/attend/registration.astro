@@ -1,5 +1,5 @@
 ---
-import MainHeader from "../../components/MainHeader.astro";
+import MainHeader from "../../components/Tags/MainHeader.astro";
 import Heading3 from "../../components/Tags/Heading3.astro";
 import Heading4 from "../../components/Tags/Heading4.astro";
 import List from "../../components/Tags/List.astro";
@@ -7,6 +7,7 @@ import Paragraph from "../../components/Tags/Paragraph.astro";
 import Table from "../../components/Tags/Table.astro";
 import UList from "../../components/Tags/UList.astro";
 import Layout from "../../layouts/Layout.astro";
+import Section from "../../components/Tags/Section.astro";
 
 // Attendee Registration Fees
 // Author SPS Member
@@ -191,7 +192,7 @@ const AdditionalRegistrationItems = [
 
 <Layout title="Registration :: AVSS2023">
   <MainHeader metaTitle="Attend" title="Registration" />
-  <section class="mx-auto mt-4 max-w-2xl text-lg">
+  <Section>
     <Heading3 title="Registration Fee" />
     <Heading4 title="Registration Page" />
     <Paragraph>TBD</Paragraph>
@@ -290,5 +291,5 @@ const AdditionalRegistrationItems = [
         email to <strong>TBD</strong>.
       </List>
     </UList>
-  </section>
+  </Section>
 </Layout>

@@ -1,6 +1,7 @@
 ---
 import committee from "./Profile/profiles";
 import Profiles from "./Profile/Profiles.astro";
+import lowerCastify from "../utils/lowerCasify";
 ---
 
 {
@@ -9,7 +10,7 @@ import Profiles from "./Profile/Profiles.astro";
       <>
         <h3
           class="mx-auto mt-6 mb-4 max-w-4xl text-3xl font-bold sm:mt-8 sm:text-3xl"
-          id={chair.roll.toLowerCase().split(" ").join("-")}
+          id={lowerCastify(chair.roll)}
         >
           {chair.roll}
         </h3>

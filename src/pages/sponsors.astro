@@ -1,14 +1,16 @@
 ---
 import { Image } from "@astrojs/image/components";
 import Layout from "../layouts/Layout.astro";
-import MainHeader from "../components/MainHeader.astro";
+import MainHeader from "../components/Tags/MainHeader.astro";
+import Section from "../components/Tags/Section.astro";
+import Heading3 from "../components/Tags/Heading3.astro";
 ---
 
 <Layout title="Sponsors :: AVSS2023">
   <MainHeader metaTitle="Sponsors" title="Sponsors" />
-  <section class="mx-auto mt-4 max-w-2xl text-lg">
+  <Section>
     <figure class="mix-blend-multiply">
-      <h3 id="sponsors" class="mt-8 mb-6 text-3xl font-bold">Sponsor</h3>
+      <Heading3 title="Sponsor" />
       <div class="flex flex-row flex-wrap justify-evenly gap-2">
         <Image
           src="/IEEE-SPS.png"
@@ -19,5 +21,5 @@ import MainHeader from "../components/MainHeader.astro";
         />
       </div>
     </figure>
-  </section>
+  </Section>
 </Layout>

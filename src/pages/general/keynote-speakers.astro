@@ -1,8 +1,10 @@
 ---
-import MainHeader from "../../components/MainHeader.astro";
-import Layout from "../../layouts/Layout.astro";
 import Profiles from "../../components/Profile/Profiles.astro";
 import type { ProfileInterface } from "../../components/Profile/profiles";
+import MainHeader from "../../components/Tags/MainHeader.astro";
+import Paragraph from "../../components/Tags/Paragraph.astro";
+import Section from "../../components/Tags/Section.astro";
+import Layout from "../../layouts/Layout.astro";
 
 const speakers: ProfileInterface[] = [
   {
@@ -30,11 +32,12 @@ const speakers: ProfileInterface[] = [
 
 <Layout title="Keynote Speakers :: AVSS2023">
   <MainHeader metaTitle="General" title="Keynote Speakers" />
-  <section class="mx-auto mt-4 max-w-2xl text-lg">
-    <p class="mt-4 mb-8">
+  <Section>
+    <Paragraph>
       The AVSS 2023 Committee are pleased to announce the following speakers
       have confirmed their participation at the Conference.
-    </p>
-  </section>
+    </Paragraph>
+  </Section>
+  <div class="mt-6"></div>
   <Profiles profiles={speakers} />
 </Layout>
