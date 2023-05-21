@@ -3,6 +3,8 @@ import MainHeader from "../components/Tags/MainHeader.astro";
 import Heading3 from "../components/Tags/Heading3.astro";
 import Paragraph from "../components/Tags/Paragraph.astro";
 import Layout from "../layouts/Layout.astro";
+import OList from "../components/Tags/OList.astro";
+import List from "../components/Tags/List.astro";
 ---
 
 <!-- write a meta description of this page for better seo -->
@@ -154,23 +156,23 @@ import Layout from "../layouts/Layout.astro";
     <Heading3 title="Supplementary Material" />
     <Paragraph>
       Authors may optionally upload supplementary material, which may include:
-      <ol class="ml-6 mt-4 list-decimal">
-        <li class="pl-1">
+      <OList>
+        <List>
           videos to showcase results/demo of the proposed approach/system
-        </li>
-        <li class="pl-1">
+        </List>
+        <List>
           images and other results in addition to the ones in the paper
           anonymized
-        </li>
-        <li class="pl-1">
+        </List>
+        <List>
           related submissions to other conferences and journals appendices or
           technical
-        </li>
-        <li class="pl-1">
+        </List>
+        <List>
           reports containing extended proofs and mathematical derivations that
           are not essential to the understanding of the submitted paper.
-        </li>
-      </ol>
+        </List>
+      </OList>
     </Paragraph>
     <Paragraph>
       AVSS-2023 encourages authors to submit videos using an MP4 codec such as

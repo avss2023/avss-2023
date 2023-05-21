@@ -1,10 +1,1369 @@
 ---
+import { Image } from "@astrojs/image/components";
+import Heading3 from "../../components/Tags/Heading3.astro";
+import Heading4 from "../../components/Tags/Heading4.astro";
+import List from "../../components/Tags/List.astro";
 import MainHeader from "../../components/Tags/MainHeader.astro";
+import Paragraph from "../../components/Tags/Paragraph.astro";
 import Section from "../../components/Tags/Section.astro";
+import UList from "../../components/Tags/UList.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="Travel To Daegu :: AVSS2023" meta="">
   <MainHeader metaTitle="Information" title="Travel To Daegu" />
-  <Section />
+  <Section>
+    <Heading3 title="Entry to Korea" />
+    <Paragraph>
+      Here are the important things to do prior to your departure
+    </Paragraph>
+    <Heading4
+      title="Apply for the Korea Electronic Travel Authorization (K-ETA) or Visa"
+    />
+    <UList>
+      <List>
+        Firstly, check if K-ETA or Visa applies to your country of departure.
+        Click here to access the website.
+      </List>
+      <List>
+        If a Visa is required, you must apply for a Visa (select Tourist Visa)
+        for your travel to South Korea.
+      </List>
+      <List>
+        If your country of departure is among the countries with a Visa
+      </List>
+      <List>
+        Waiver, you must apply for the K-ETA. – You must apply for the K-ETA and
+        receive approval 72 hours prior to departure.
+      </List>
+      <List>
+        You are strongly advised to apply for the K-ETA at least one week before
+        your intended departure (K-ETA fee: KRW 10,000)
+      </List>
+    </UList>
+
+    <Heading4 title="Apply for Q-Code (Mandatory for all travelers)" />
+    <UList>
+      <List>Apply for Q-Code 72 hours prior to departure.</List>
+      <List>Click here to apply.</List>
+      <List>
+        The QR code must be saved in your mobile phone, upon completion of the
+        form, to be shown to Korean Immigration Officials upon arrival.
+      </List>
+    </UList>
+
+    <Heading3 title="How to get to Daegu?" />
+    <Paragraph>
+      Attendees can easily get to Daegu via three airports in South Korea: Daegu
+      International Airport, Gimhae International Airport, and Incheon
+      International Airport.
+    </Paragraph>
+    <Paragraph>
+      Most international flights will land at <b
+        >Incheon International Airport, Seoul</b
+      >, and there are multiple routes to get to <b>AVSS 2023</b> in EXCO, Daegu
+    </Paragraph>
+    <Paragraph>Here are the locations of the 3 airports:</Paragraph>
+    <Image
+      src="/airports-in-korea.png"
+      alt="Airports in Korea"
+      width={1595}
+      height={1038}
+      format="webp"
+      class="w-full my-6"
+    />
+
+    <Heading3 title="How to get to EXCO?" />
+    <Heading4 title="Route 1" />
+    <details class="border-4 p-4">
+      <summary
+        >From Incheon Int'l Airport → GwangMyeong Station → Dongdaegu Station</summary
+      >
+      <div class="my-6">
+        <div>
+          <img
+            src="https://sa2022.siggraph.org/storage/2022/09/Route-1.png"
+            alt=""
+          />
+        </div>
+        <UList>
+          <List>
+            Contact: Incheon Int’l Airport KTX Info Desk (1st Flr, Exit 7)
+            +82-32-741-7788
+          </List>
+          <List>
+            Website: <a
+              class="fancy"
+              href="http://www.letskorail.com/ebizbf/EbizBfIndex_eng.do"
+              target="_blank"
+              rel="noopener"
+              >http://www.letskorail.com/ebizbf/EbizBfIndex_eng.do</a
+            >
+          </List>
+        </UList>
+        <h6 class="my-4 font-semibold">Airport Limousine Bus</h6>
+        <div class="w-full overflow-scroll border border-slate-400">
+          <table class="w-full table-auto border-collapse overflow-scroll">
+            <thead>
+              <tr>
+                <th
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >Route</th
+                >
+                <th
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >The First Bus</th
+                >
+                <th
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >The Last Bus</th
+                >
+                <th
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >Travel Duration</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >Incheon Int’l Airport Terminal 2 → Incheon Int’l Airport
+                  Terminal 1 → GwangMyeong Station</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >06:10</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >22:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >(T1) 1hr<br />
+                  (T2) 1hr 20min</td
+                >
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <UList>
+          <List>
+            It takes around 20 min. from Incheon Int’l Airport Terminal 2 to
+            Terminal 1 via limousine bus.
+          </List>
+          <List>
+            Airlines at Terminal 2: Korean Air, Delta Airlines, Air Fance, KLM
+            Royal Dutch Airlines (Others will arrive at Terminal 1)
+          </List>
+          <List>
+            Online ticketing is unavailable and you are required to purchase
+            onsite
+          </List>
+        </UList>
+        <h6 class="my-4 font-semibold">KTX Airport Limousine (6770)</h6>
+        <div class="w-full overflow-scroll border border-slate-400">
+          <table class="w-full border-collapse overflow-scroll">
+            <tbody>
+              <tr>
+                <th
+                  rowspan="4"
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >Incheon Airport Terminal 2</th
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >6:10</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >6:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >7:00</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >7:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >7:50</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >8:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >8:50</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >9:10</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >9:30</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >9:50</td
+                >
+              </tr>
+              <tr>
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >10:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >10:50</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >11:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >11:50</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >12:10</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >12:30</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >13:00</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >13:30</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >14:00</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >14:30</td
+                >
+              </tr>
+              <tr>
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >15:00</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >15:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >15:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >16:00</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >16:30</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >17:00</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >17:30</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >18:00</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >18:30</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >18:50</td
+                >
+              </tr>
+              <tr>
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >19:10</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >19:30</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >20:00</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >20:30</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >21:00</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >21:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >21:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >22:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"></td>
+                <td class="border border-slate-300 px-4 py-2 text-center"></td>
+              </tr>
+              <tr>
+                <th
+                  rowspan="4"
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >Incheon Airport Terminal 1</th
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >6:28</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >6:58</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >7:18</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >7:38</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >8:08</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >8:38</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >9:08</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >9:28</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >9:48</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >10:08</td
+                >
+              </tr>
+              <tr>
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >10:38</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >11:08</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >11:38</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >12:08</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >12:28</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >12:48</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >13:18</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >13:48</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >14:18</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >14:48</td
+                >
+              </tr>
+              <tr>
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >15:18</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >15:38</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >15:58</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >16:18</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >16:48</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >17:18</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >17:48</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >18:18</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >18:48</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >19:08</td
+                >
+              </tr>
+              <tr>
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >19:28</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >19:48</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >20:18</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >20:48</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >21:18</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >21:38</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >22:08</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >22:38</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"></td>
+                <td class="border border-slate-300 px-4 py-2 text-center"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h6 class="my-4 font-semibold">Where to get on</h6>
+        <div class="route_2set_img clear">
+          <div class="route_img_box">
+            <p class="route_sub_tit">Terminal 1 1F 8A</p>
+            <div class="map_wrap">
+              <img
+                src="https://sa2022.siggraph.org/storage/2022/09/terminal_map06.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="route_img_box">
+            <p class="route_sub_tit">Terminal 2 B1F 45</p>
+            <div class="map_wrap">
+              <img
+                src="https://sa2022.siggraph.org/storage/2022/09/terminal_map07.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <h6 class="my-4 font-semibold">
+          KORAIL KTX (Korea Train Express) Schedule
+        </h6>
+        <div class="w-full overflow-scroll border border-slate-400">
+          <table class="table-auto border-collapse">
+            <thead>
+              <tr>
+                <th
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >Route</th
+                >
+                <th
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >The First Train</th
+                >
+                <th
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >The Last Train</th
+                >
+                <th
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >Travel Duration</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >GwangMyeong Station → Dongdaegu Station</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >05:20 AM</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >23:10 PM</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >1hr 30min</td
+                >
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <UList>
+          <List>
+            You can check train schedules and purchase tickets on-line up to 1
+            month in advance.
+          </List>
+        </UList>
+      </div>
+    </details>
+    <Heading4 title="Route 2" />
+    <details class="border-4 p-4">
+      <summary
+        >From Incheon Int'l Airport → Seoul Station → Dongdaegu Station</summary
+      >
+      <div class="my-6">
+        <div>
+          <img
+            src="https://sa2022.siggraph.org/storage/2022/09/Route-2.png"
+            alt=""
+          />
+        </div>
+        <h6 class="my-4 font-semibold">
+          AREX (Airport Railroad Express) Schedule
+        </h6>
+        <div class="w-full overflow-scroll border border-slate-400">
+          <table class="table-auto border-collapse">
+            <thead>
+              <tr>
+                <th
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >Route</th
+                >
+                <th
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >The First Train</th
+                >
+                <th
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >The Last Train</th
+                >
+                <th
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >Travel Duration</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >Incheon Int’l Airport Terminal2 →<br />
+                  Incheon Int’l Airport Terminal1 →<br />
+                  Seoul Station</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >05:15</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >22:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >1hr (T1)<br />
+                  1hr 10min(T2)</td
+                >
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <UList>
+          <List>
+            It takes about 8min from the Incheon Int’l Airport Terminal 2 to
+            Terminal 1.
+          </List>
+        </UList>
+        <h6 class="my-4 font-semibold">Departure Time Schedule</h6>
+        <div class="w-full overflow-scroll border border-slate-400">
+          <table class="table-auto border-collapse border border-slate-400">
+            <tbody>
+              <tr>
+                <th
+                  rowspan="3"
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >Incheon Int’l Airport<br />
+                  Terminal 2</th
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >5:15</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >5:55</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >6:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >7:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >8:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >8:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >9:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >9:55</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >10:40</td
+                >
+              </tr>
+              <tr>
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >11:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >11:50</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >12:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >13:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >13:50</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >14:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >15:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >15:45</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >16:40</td
+                >
+              </tr>
+              <tr>
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >17:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >17:50</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >18:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >19:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >19:55</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >20:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >21:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >22:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"></td>
+              </tr>
+              <tr>
+                <th
+                  rowspan="3"
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >Incheon Int’l Airport<br />
+                  Terminal 1</th
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >5:23</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >6:03</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >6:48</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >7:28</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >8:28</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >8:48</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >9:28</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >10:03</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >10:48</td
+                >
+              </tr>
+              <tr>
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >11:28</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >11:58</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >12:48</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >13:28</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >13:58</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >14:48</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >15:28</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >15:53</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >16:48</td
+                >
+              </tr>
+              <tr>
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >17:28</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >17:58</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >18:48</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >19:28</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >20:03</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >20:48</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >21:48</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >22:48</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"></td>
+              </tr>
+              <tr>
+                <th
+                  rowspan="3"
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >Arrival time to<br />
+                  Seoul Stn.</th
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >6:07</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >6:46</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >7:31</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >8:11</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >9:11</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >9:31</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >10:11</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >10:46</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >11:31</td
+                >
+              </tr>
+              <tr>
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >12:11</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >12:41</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >13:31</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >14:11</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >14:41</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >15:31</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >16:11</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >16:36</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >17:31</td
+                >
+              </tr>
+              <tr>
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >18:11</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >18:41</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >19:31</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >20:11</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >20:47</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >21:31</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >22:31</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >23:31</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h6 class="my-4 font-semibold">Where to get on</h6>
+        <h6 class="my-4 font-semibold">Terminal 1 Transit Center (B1)</h6>
+        <div class="termitanl_map_wrap tac">
+          <img
+            src="https://sa2022.siggraph.org/storage/2022/09/Terminal-1-Transit-Center-B1.png"
+            alt=""
+          />
+        </div>
+        <h6 class="my-4 font-semibold">Terminal 2 Transit Center (B1)</h6>
+        <div class="termitanl_map_wrap tac">
+          <img
+            src="https://sa2022.siggraph.org/storage/2022/09/Terminal-2-Transit-Center-B1.png"
+            alt=""
+          />
+        </div>
+        <UList>
+          <List>
+            Contact: Incheon Int’l Airport KTX Info Desk (1st Flr, Exit 7)
+            +82-32-741-7788
+          </List>
+          <List>
+            Website: <a
+              class="fancy"
+              href="http://www.arex.or.kr/main.do"
+              target="_blank"
+              rel="noopener">http://www.arex.or.kr/main.do</a
+            >
+          </List>
+        </UList>
+        <p></p>
+        <h6 class="my-4 font-semibold">
+          KORAIL KTX (Korea Train Express) Schedule
+        </h6>
+        <div class="w-full overflow-scroll border border-slate-400">
+          <table class="table-auto border-collapse">
+            <thead>
+              <tr>
+                <th
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >Route</th
+                >
+                <th
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >The First Train</th
+                >
+                <th
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >The Last Train</th
+                >
+                <th
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >Travel Duration</th
+                >
+                <th
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >Boarding Location</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >Seoul Station → Dongdaegu Station</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >05:05 AM</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >23:00 PM</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >1hr 50min</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >Seoul Station</td
+                >
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <UList>
+          <List>
+            You can check train schedules and purchase tickets on-line up to 1
+            month in advance.
+          </List>
+          <List>Customer Service Center : (82) 1544-7788 + 7</List>
+          <List>
+            Website: <a
+              class="fancy"
+              href="http://www.letskorail.com/ebizbf/EbizbfForeign_pr16100.do?gubun=1"
+              target="_blank"
+              rel="noopener"
+              >http://www.letskorail.com/ebizbf/EbizbfForeign_pr16100.do?gubun=1</a
+            >
+          </List>
+        </UList>
+      </div>
+    </details>
+    <Heading4 title="Route 3" />
+    <details class="border-4 p-4">
+      <summary
+        >From Incheon Int'l Airport → Dongdaegu Express Bus Terminal</summary
+      >
+      <div class="my-6">
+        <div>
+          <img
+            src="https://sa2022.siggraph.org/storage/2022/09/Route-3.png"
+            alt=""
+          />
+        </div>
+        <h6 class="my-4 font-semibold">Airport Limousine Bus</h6>
+        <div class="w-full overflow-scroll border border-slate-400">
+          <table class="table-auto border-collapse">
+            <colgroup>
+              <col />
+              <col />
+            </colgroup>
+            <thead>
+              <tr>
+                <th
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >Route</th
+                >
+                <th
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >The First Bus</th
+                >
+                <th
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >The Last Bus</th
+                >
+                <th
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >Travel Duration</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >Incheon Int’l Airport Terminal 2 →<br />
+                  Incheon Int’l Airport Terminal 1 → Dongdaegu Express Bus Terminal</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >06:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >23:30</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >4hr 30min</td
+                >
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <UList>
+          <List>
+            It takes around 20min. from Incheon Int’l Airport Terminal 2 to
+            Terminal 1via limousine bus.
+          </List>
+          <List>
+            Airlines at Terminal 2: Korean Air, Delta Airlines, Air Fance, KLM
+            Royal Dutch Airlines (Others will arrive at Terminal 1)
+          </List>
+          <List>
+            Online ticketing is unavailable for a foreigner since website
+            (Incheon Airport → Dongdaegu : <a
+              class="fancy"
+              href="https://txbuse.t-money.co.kr/"
+              target="_blank"
+              rel="noopener">https://txbuse.t-money.co.kr/</a
+            >) do not receive foreigner cardholder’s credit card.
+          </List>
+        </UList>
+        <h6 class="my-4 font-semibold">
+          Departure time table (updated as of Apr., 2019)
+        </h6>
+        <div class="w-full overflow-scroll border border-slate-400">
+          <table class="table-auto border-collapse">
+            <tbody>
+              <tr>
+                <th
+                  rowspan="3"
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >Bus Schedule<br />
+                  Terminal 1</th
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >6:30</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >7:00</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >7:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >9:00</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >9:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >10:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >11:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >12:20</td
+                >
+              </tr>
+              <tr>
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >13:00</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >14:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >15:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >17:00</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >17:30</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >18:00</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >18:30</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >19:30</td
+                >
+              </tr>
+              <tr>
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >20:00</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >20:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >22:00</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >22:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >23:30</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"></td>
+                <td class="border border-slate-300 px-4 py-2 text-center"></td>
+                <td class="border border-slate-300 px-4 py-2 text-center"></td>
+              </tr>
+              <tr>
+                <th
+                  rowspan="3"
+                  class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                  >Bus Schedule<br />
+                  Terminal 2</th
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >6:10</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >6:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >7:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >8:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >9:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >10:00</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >11:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >12:00</td
+                >
+              </tr>
+              <tr>
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >12:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >14:00</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >15:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >16:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >17:10</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >17:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >18:10</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >19:10</td
+                >
+              </tr>
+              <tr>
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >19:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >20:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >21:40</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >22:20</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"
+                  >23:10</td
+                >
+                <td class="border border-slate-300 px-4 py-2 text-center"></td>
+                <td class="border border-slate-300 px-4 py-2 text-center"></td>
+                <td class="border border-slate-300 px-4 py-2 text-center"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <h6 class="my-4 font-semibold">Bus ticket office</h6>
+      <UList>
+        <List>
+          Terminal 1: You can purchase bus tickets and get information at
+          ticketing offices next to Exit 4 and 9 in Arrival Hall Floor 1
+          (indoors) or offices next to Exit 4, 6, 7, 8, 11, 13, and 9C
+          (outdoors).
+        </List>
+        <List>
+          Terminal 2: You can purchase bus tickets and get information at
+          ticketing offices outdoors and indoors on Transit Center (B1).
+        </List>
+      </UList>
+      <h6 class="my-4 font-semibold">
+        Terminal 1 Bus stop location (1Floor No.10 )
+      </h6>
+      <div class="termitanl_map_wrap tac">
+        <img
+          src="https://sa2022.siggraph.org/storage/2022/09/Terminal-1-Bus-stop-location-1Floor-No.10-.png"
+          alt=""
+        />
+      </div>
+      <h6 class="my-4 font-semibold">
+        Terminal 2 Bus stop location (Traffic center Basement 1 No. 3 )
+      </h6>
+      <p>
+        Airlines at Terminal 2: Korean Air, Delta Airlines, Air Fance, KLM Royal
+        Dutch Airlines
+      </p>
+      <div class="termitanl_map_wrap tac">
+        <img
+          src="https://sa2022.siggraph.org/storage/2022/09/Terminal-2-Bus-stop-location-Traffic-center-Basement-1-No.-3-.png"
+          alt=""
+        />
+      </div>
+      <h6 class="my-4 font-semibold">Taxi</h6>
+      <div class="w-full overflow-scroll border border-slate-400">
+        <table class="table w-full border-collapse">
+          <thead>
+            <tr>
+              <th
+                class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                >Route</th
+              >
+              <th
+                class="border border-slate-300 bg-slate-200 px-4 py-2 text-center"
+                >Travel Duration</th
+              >
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-slate-300 px-4 py-2 text-center"
+                >Dongdaegu Express Bus Terminal → EXCO</td
+              >
+              <td class="border border-slate-300 px-4 py-2 text-center"
+                >Approx. 15min.</td
+              >
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="my-6">
+        * Korean Taxi drivers are not good at speaking English. Please bring the
+        Korean message card as follows.
+      </p>
+      <p class="my-6">
+        엑스코 로 가주세요<br />
+        I want to go to EXCO (Congress venue).
+      </p>
+    </details>
+
+    <Paragraph>
+      Here’s a map of Daegu with EXCO (event venue), Daegu International
+      Airport, and key attractions at-a-glance.
+    </Paragraph>
+    <Image
+      src="/Daegu-Map.png"
+      alt="Daegu Map"
+      width={2104}
+      height={2285}
+      format="webp"
+      class="w-2/3 mx-auto my-6"
+    />
+    <Paragraph>Get more travel handy information about Daegu here.</Paragraph>
+
+    <Heading3 title="Covid-19 Updates" />
+    <Paragraph>
+      Prior to booking your trip to Daegu, please ensure that you check on the
+      latest Covid-19 travel advisory here. As the pandemic stabilizes in South
+      Korea, the Korean government is moving closer to post-pandemic by lifting
+      almost all of its Covid-19 social distancing rules except mask-wearing
+      which is still compulsory.
+    </Paragraph>
+    <Paragraph>
+      Over 86% of South Korean population has been fully vaccinated which brings
+      the country to be among the top 7thin terms of vaccination progress in the
+      OECD list of countries. View the latest vaccination progress in South
+      Korea here.
+    </Paragraph>
+    <Paragraph>
+      We look forward to welcoming you to <b>AVSS 2023</b> in a safe and inviting
+      environment.
+    </Paragraph>
+
+    <Heading3 title="Onsite Safety & Hygiene Measures" />
+    <Paragraph>
+      In order to reduce the risk of infection during the event, we ask that all
+      visitors be aware and abide to the following onsite safety and hygiene
+      measures implemented:
+    </Paragraph>
+    <div class="my-6 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+      <div class="p-6">
+        <Image
+          src="/mask.png"
+          alt="Mask"
+          width={200}
+          height={200}
+          format="webp"
+          class="w-1/2 mx-auto max-w-[100px]"
+        />
+        <p class="mt-6 text-center">Wear a mask at all times</p>
+      </div>
+      <div class="p-6">
+        <Image
+          src="/hand-sanitizer.png"
+          alt="Hand Sanitizer"
+          width={200}
+          height={200}
+          format="webp"
+          class="w-1/2 mx-auto max-w-[100px]"
+        />
+        <p class="mt-6 text-center">Use hand sanitizer frequently</p>
+      </div>
+      <div class="p-6">
+        <Image
+          src="/social-distancing.png"
+          alt="Social Distancing"
+          width={200}
+          height={200}
+          format="webp"
+          class="w-1/2 mx-auto max-w-[100px]"
+        />
+        <p class="mt-6 text-center">Maintain social distancing</p>
+      </div>
+      <div class="p-6">
+        <Image
+          src="/temperature-check.png"
+          alt="Temperature Check"
+          width={200}
+          height={200}
+          format="webp"
+          class="w-1/2 mx-auto max-w-[100px]"
+        />
+        <p class="mt-6 text-center">Temperature check at all entrances</p>
+      </div>
+      <div class="p-6">
+        <Image
+          src="/contact-tracing.png"
+          alt="Contact Tracing"
+          width={200}
+          height={200}
+          format="webp"
+          class="w-1/2 mx-auto max-w-[100px]"
+        />
+        <p class="mt-6 text-center">Contact tracing via QR code</p>
+      </div>
+      <div class="p-6">
+        <Image
+          src="/responsible.png"
+          alt="Responsible"
+          width={200}
+          height={200}
+          format="webp"
+          class="w-1/2 mx-auto max-w-[100px]"
+        />
+        <p class="mt-6 text-center">Be responseible for your own health</p>
+      </div>
+    </div>
+    <a
+      href="https://www.flaticon.com/free-icons/mask"
+      title="mask icons"
+      class="text-sm text-gray-500"
+      >Mask icons created by Smashicons - Flaticon</a
+    >
+  </Section>
 </Layout>
