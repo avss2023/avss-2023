@@ -1,30 +1,37 @@
 ---
-interface Props {
-  data: {
-    left: string;
-    right: string;
-    title?: boolean;
-  }[];
+export interface Row {
+  items: string[];
+  title?: boolean;
+  bold?: boolean;
 }
-const { data } = Astro.props as Props;
+interface Props {
+  rows: Row[];
+}
+const { rows } = Astro.props as Props;
 ---
 
 <figure>
-  <table class="mt-4 w-full max-w-2xl table-auto border-gray-600 text-xl">
-    <tbody class="border-2 border-gray-600">
+  <table class="mt-4 w-full max-w-2xl table-auto border-gray-800 text-xl">
+    <tbody class="border-2 border-gray-800">
       {
-        data.map(({ left, right, title }) => {
+        rows.map(({ items, title, bold }) => {
           return (
             <tr
               class={
-                "border-y-2 border-gray-600 odd:bg-gray-200 " +
-                (title === true && " font-bold")
+                "border-y-2 border-gray-800" +
+                (title
+                  ? " bg-gray-600 font-bold text-gray-100"
+                  : " odd:bg-gray-300") +
+                  (bold ? " font-bold" : "")
               }
             >
-              <td class="border-x-2 border-gray-600 px-4 py-4 text-center">
-                {left}
-              </td>
-              <td class="px-4 py-4 text-center">{right}</td>
+              {items.map((item) => {
+                return (
+                  <td class="border-x-2 border-gray-800 px-4 py-4 text-center">
+                    {item}
+                  </td>
+                );
+              })}
             </tr>
           );
         })

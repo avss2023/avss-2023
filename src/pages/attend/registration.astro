@@ -4,188 +4,74 @@ import Heading3 from "../../components/Tags/Heading3.astro";
 import Heading4 from "../../components/Tags/Heading4.astro";
 import List from "../../components/Tags/List.astro";
 import Paragraph from "../../components/Tags/Paragraph.astro";
-import Table from "../../components/Tags/Table.astro";
+import Table, { Row } from "../../components/Tags/Table.astro";
 import UList from "../../components/Tags/UList.astro";
 import Layout from "../../layouts/Layout.astro";
 import Section from "../../components/Tags/Section.astro";
 
-// Attendee Registration Fees
-// Author SPS Member
-// Author IEEE Member
-// Author Non-Member
-// Author Life Member
-// Advance SPS Member
-// Advance IEEE Member
-// Advance Non-Member
-// Advance Student SPS Member
-// Advance Student IEEE Member
-// Advance Student Non-Member
-// Advance Life Member
-// Regular SPS Member
-// Regular IEEE Member
-// Regular Non-Member
-// Regular Student SPS Member
-// Regular Student IEEE Member
-// Regular Student Non-Member
-// Regular Life Member
-// Virtual Attendee Registration Fees
-// Actual Registration Fee
-// 850.00
-// 850.00
-// 1,020.00
-// 470.00
-// 850.00
-// 850.00
-// 1,020.00
-// 510.00
-// 510.00
-// 615.00
-// 470.00
-// 1,300.00
-// 1,300.00
-// 1,560.00
-// 780.00
-// 780.00
-// 940.00
-// 715.00
-
-const AttendeeRegistrationFees = [
+const Rates: Row[] = [
   {
-    left: "Attendee Registration Fees",
-    right: "Actual Registration Fee",
+    items: ["Category", "Early Registration", "Standard Registration"],
     title: true,
   },
   {
-    left: "Author SPS Member",
-    right: "850.00",
+    items: ["IEEE Member", "USD $850", "USD $1,300"],
   },
   {
-    left: "Author IEEE Memeber",
-    right: "850.00",
+    items: ["Non-IEEE Member", "USD $1,020", "USD $1,560"],
   },
   {
-    left: "Author Non-Memeber",
-    right: "1,020.00",
+    items: ["Student IEEE Member", "USD $510", "USD $780"],
   },
   {
-    left: "Author Life Memeber",
-    right: "470.00",
+    items: ["Student Non-IEEE Member", "USD $615", "USD $940"],
   },
   {
-    left: "Advance SPS Member",
-    right: "850.00",
-  },
-  {
-    left: "Advance IEEE Member",
-    right: "850.00",
-  },
-  {
-    left: "Advance Non-Member",
-    right: "1,020.00",
-  },
-  {
-    left: "Advance Student SPS Member",
-    right: "510.00",
-  },
-  {
-    left: "Advance Student IEEE Member",
-    right: "510.00",
-  },
-  {
-    left: "Advance Student Non-Member",
-    right: "615.00",
-  },
-  {
-    left: "Advance Life Member",
-    right: "470.00",
-  },
-  {
-    left: "Regular SPS Member",
-    right: "1,300.00",
-  },
-  {
-    left: "Regular IEEE Member",
-    right: "1,300.00",
-  },
-  {
-    left: "Regular Non-Member",
-    right: "1,560.00",
-  },
-  {
-    left: "Regular Student SPS Member",
-    right: "780.00",
-  },
-  {
-    left: "Regular Student IEEE Member",
-    right: "780.00",
-  },
-  {
-    left: "Regular Student Non-Member",
-    right: "940.00",
-  },
-  {
-    left: "Regular Life Member",
-    right: "715.00",
+    items: ["IEEE Life Member", "USD $470", "USD $715"],
   },
 ];
 
-const VirtualAttendeeRegistrationFees = [
+const InPerson: Row[] = [
   {
-    left: "Virtual Attendee SPS Member",
-    right: "150.00",
+    items: ["Category", "Early Registration", "Standard Registration"],
     title: true,
   },
   {
-    left: "Virtual Attendee IEEE Member",
-    right: "150.00",
+    items: ["IEEE & SPS Member", "USD $700", "USD $850"],
   },
   {
-    left: "Virtual Attendee Non-Member",
-    right: "200.00",
+    items: ["Non-IEEE Member", "USD $850", "USD $1,000"],
   },
   {
-    left: "Virtual Attendees Student SPS Member",
-    right: "75.00",
+    items: ["Student IEEE & SPS Member", "USD $350", "USD $400"],
   },
   {
-    left: "Virtual Attendees Student IEEE Member",
-    right: "75.00",
+    items: ["Student Non-IEEE Member", "USD $450", "USD $500"],
   },
   {
-    left: "Virtual Attendees Student Non-Member",
-    right: "100.00",
-  },
-  {
-    left: "Virtual Attendee Life Member",
-    right: "75.00",
+    items: ["IEEE Life Member", "USD $350", "USD $350"],
   },
 ];
 
-const AdditionalRegistrationItems = [
+const Virtual: Row[] = [
   {
-    left: "Additional Registration Items",
-    right: "Actual Registration Fee",
+    items: ["Category", "Early Registration", "Standard Registration"],
     title: true,
   },
   {
-    left: 'Advance "Physical" Tutorial ONLY',
-    right: "100.00",
+    items: ["IEEE & SPS Member", "USD $150", "USD $150"],
   },
   {
-    left: 'Regular "Physical" Tutorial ONLY',
-    right: "150.00",
+    items: ["Non-IEEE Member", "USD $200", "USD $200"],
   },
   {
-    left: 'Advance "Physical" Tutorial ONLY Student',
-    right: "100.00",
+    items: ["Student IEEE & SPS Member", "USD $75", "USD $75"],
   },
   {
-    left: "Virtual Tutorial ONLY",
-    right: "150.00",
+    items: ["Student Non-IEEE Member", "USD $100", "USD $100"],
   },
   {
-    left: 'Regular "Physical" Tutorial ONLY Student',
-    right: "50.00",
+    items: ["IEEE Life Member", "USD $75", "USD $75"],
   },
 ];
 ---
@@ -210,9 +96,14 @@ const AdditionalRegistrationItems = [
       accepted papers), and policies.
     </Paragraph>
 
-    <Table data={AttendeeRegistrationFees} />
-    <Table data={VirtualAttendeeRegistrationFees} />
-    <Table data={VirtualAttendeeRegistrationFees} />
+    <Heading4 title="Rate" />
+    <Table rows={Rates} />
+
+    <Heading4 title="In-Person Registration" />
+    <Table rows={InPerson} />
+
+    <Heading4 title="Virtual Registration" />
+    <Table rows={Virtual} />
 
     <Heading3 title="Rules" />
     <UList>
@@ -256,7 +147,7 @@ const AdditionalRegistrationItems = [
         each accepted workshop paper. Note some workshop has late paper
         notification and camera-ready deadlines. So workshop authors please
         ensure to finish registration by the early registration <strong
-          >(TBD)</strong
+          >deadline of August 27.</strong
         >.
       </List>
       <List>
