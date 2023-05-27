@@ -20,38 +20,38 @@ import { Image } from "@astrojs/image/components";
     <section class="flex flex-col gap-4 gap-y-2 sm:flex-row lg:justify-end">
       <span class="block font-semibold">Sponsors</span>
       <div
-        class="flex flex-row flex-wrap items-center gap-4 gap-y-2 px-2 sm:px-0"
+        class="flex flex-col items-center flex-wrap p-8 gap-4 sm:flex-row sm:p-0"
       >
         <Image
-          height={16}
-          width={75}
+          height={48}
+          width={200}
           src="/etri.png"
           alt="etri logo"
-          class="h-4"
+          class="h-12 w-auto sm:h-4"
           format="webp"
         />
         <Image
-          height={16}
-          width={75}
+          height={80}
+          width={300}
           src="/knu.png"
           alt="knu logo"
-          class="h-5"
+          class="h-12 w-auto sm:h-5"
           format="webp"
         />
         <Image
-          height={16}
-          width={90}
+          height={60}
+          width={300}
           src="/daegu.png"
           alt="daegu logo"
-          class="h-5"
+          class="h-12 w-auto sm:h-6"
           format="webp"
         />
         <Image
-          height={16}
-          width={80}
+          height={40}
+          width={160}
           src="/kmu.png"
           alt="kmu ai fusion research institute"
-          class="h-6"
+          class="h-12 w-auto sm:h-6"
           format="webp"
         />
       </div>
