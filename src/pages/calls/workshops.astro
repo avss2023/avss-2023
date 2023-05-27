@@ -7,6 +7,23 @@ import UList from "../../components/Tags/UList.astro";
 import List from "../../components/Tags/List.astro";
 import Heading3 from "../../components/Tags/Heading3.astro";
 import Sponsors from "../../components/Sponsors.astro";
+import type { Row } from "../../components/Tags/Table.astro";
+import Table from "../../components/Tags/Table.astro";
+
+const Dates: Row[] = [
+  {
+    items: ["Workshop Proposal Submission Deadline", "May 1, 2023"],
+    bold: true,
+  },
+  {
+    items: ["Acceptance Notification", "May 15, 2023"],
+    bold: true,
+  },
+  {
+    items: ["Workshop Date", "November 6, 2023"],
+    bold: true,
+  },
+];
 ---
 
 <Layout
@@ -46,31 +63,10 @@ import Sponsors from "../../components/Sponsors.astro";
       welcome workshop proposals in new and emerging research areas of visual
       and signal-based surveillance.
     </Paragraph>
+
     <Heading3 title="Important Dates" />
-    <figure>
-      <table
-        class="w-full max-w-2xl table-auto border-gray-600 text-xl font-bold"
-      >
-        <tbody class="border-2 border-gray-600">
-          <tr class="border-y-2 border-gray-600 odd:bg-gray-200">
-            <td class="border-x-2 border-gray-600 px-4 py-4"
-              >Workshop Proposal Submission Deadline</td
-            >
-            <td class="px-4 py-4">May 1, 2023</td>
-          </tr>
-          <tr class="border-y-2 border-gray-600 odd:bg-gray-200">
-            <td class="border-x-2 border-gray-600 px-4 py-4"
-              >Acceptance Notification</td
-            >
-            <td class="px-4 py-4">May 15, 2023</td>
-          </tr>
-          <tr class="border-y-2 border-gray-600 odd:bg-gray-200">
-            <td class="border-x-2 border-gray-600 px-4 py-4">Workshop Date</td>
-            <td class="px-4 py-4">November 6, 2023</td>
-          </tr>
-        </tbody>
-      </table>
-    </figure>
+    <Table rows={Dates} />
+
     <Paragraph>
       Prospective workshop organizers are invited to submit proposals via e-mail
       to the workshop chairs:

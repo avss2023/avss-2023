@@ -1,5 +1,4 @@
 ---
-import { Image } from "@astrojs/image/components";
 import Layout from "../../layouts/Layout.astro";
 import MainHeader from "../../components/Tags/MainHeader.astro";
 import Paragraph from "../../components/Tags/Paragraph.astro";
@@ -7,6 +6,33 @@ import UList from "../../components/Tags/UList.astro";
 import List from "../../components/Tags/List.astro";
 import Section from "../../components/Tags/Section.astro";
 import Sponsors from "../../components/Sponsors.astro";
+import type { Row } from "../../components/Tags/Table.astro";
+import Heading3 from "../../components/Tags/Heading3.astro";
+import Table from "../../components/Tags/Table.astro";
+import Heading4 from "../../components/Tags/Heading4.astro";
+
+const Dates: Row[] = [
+  {
+    items: ["Paper Submission", "June 14, 2023"],
+    bold: true,
+  },
+  {
+    items: ["Decision to Authors", "August 15, 2023"],
+    bold: true,
+  },
+  {
+    items: ["Camera Ready", "August 25, 2023"],
+    bold: true,
+  },
+  {
+    items: ["Workshop Proposals", "May 1, 2023"],
+    bold: true,
+  },
+  {
+    items: ["Challenge Proposals", "May 1, 2023"],
+    bold: true,
+  },
+];
 ---
 
 <Layout
@@ -36,51 +62,10 @@ import Sponsors from "../../components/Sponsors.astro";
       <strong> sponsored by the IEEE Signal Processing Society.</strong>
     </Paragraph>
 
-    <h3 id="important-dates" class="mt-8 mb-6 text-3xl font-bold">
-      Important Dates
-    </h3>
-    <figure>
-      <table
-        class="w-full max-w-2xl table-fixed border-gray-600 text-xl font-bold"
-      >
-        <tbody class="border-2 border-gray-600">
-          <tr class="border-y-2 border-gray-600 odd:bg-gray-200">
-            <td class="border-x-2 border-gray-600 px-4 py-4 text-right"
-              >Paper Submission</td
-            >
-            <td class="px-4 py-4">June 14, 2023</td>
-          </tr>
-          <tr class="border-y-2 border-gray-600 odd:bg-gray-200">
-            <td class="border-x-2 border-gray-600 px-4 py-4 text-right"
-              >Decision to Authors</td
-            >
-            <td class="px-4 py-4">August 15, 2023</td>
-          </tr>
-          <tr class="border-y-2 border-gray-600 odd:bg-gray-200">
-            <td class="border-x-2 border-gray-600 px-4 py-4 text-right"
-              >Camera Ready</td
-            >
-            <td class="px-4 py-4">August 25, 2023</td>
-          </tr>
-          <tr class="border-y-2 border-gray-600 odd:bg-gray-200">
-            <td class="border-x-2 border-gray-600 px-4 py-4 text-right"
-              >Workshop Proposals</td
-            >
-            <td class="px-4 py-4">May 1, 2023</td>
-          </tr>
-          <tr class="border-y-2 border-gray-600 odd:bg-gray-200">
-            <td class="border-x-2 border-gray-600 px-4 py-4 text-right"
-              >Challenge Proposals</td
-            >
-            <td class="px-4 py-4">May 1, 2023</td>
-          </tr>
-        </tbody>
-      </table>
-    </figure>
+    <Heading3 title="Important Dates" />
+    <Table rows={Dates} />
 
-    <h3 id="topics-of-interest" class="mt-8 text-3xl font-bold">
-      Topics of Interest
-    </h3>
+    <Heading3 title="Topics of Interest" />
     <Paragraph>
       AVSS is the leading conference venue for the underlying theory, methods,
       systems, and applications of video and signal based surveillance. AVSS
@@ -89,9 +74,7 @@ import Sponsors from "../../components/Sponsors.astro";
       interest includes, but is not limited to
     </Paragraph>
 
-    <h4 id="real-time-video-processing" class="mt-6 mb-4 text-2xl font-bold">
-      Real-time Video Processing
-    </h4>
+    <Heading4 title="Real-time Video Processing" />
     <UList>
       <List>Real-time Object Detection and Recognition</List>
       <List>Real-time Face Recognition</List>
@@ -100,9 +83,7 @@ import Sponsors from "../../components/Sponsors.astro";
       <List>Real-time Video Enhancement</List>
     </UList>
 
-    <h4 id="multi-camera-video-analytics" class="mt-6 mb-4 text-2xl font-bold">
-      Multi-camera Video Analytics
-    </h4>
+    <Heading4 title="Multi-camera Video Analytics" />
     <UList>
       <List>Multi-view Geometry for Surveillance</List>
       <List>Multi-camera Object Tracking</List>
@@ -111,9 +92,7 @@ import Sponsors from "../../components/Sponsors.astro";
       <List>Multi-camera Video Synchronization</List>
     </UList>
 
-    <h4 id="security-privacy" class="mt-6 mb-4 text-2xl font-bold">
-      SECURITY &amp; PRIVACY
-    </h4>
+    <Heading4 title="Security and Privacy" />
     <UList>
       <List>Privacy-Preserving Machine Learning</List>
       <List>Secure Data Sharing and Exchange</List>
@@ -123,12 +102,7 @@ import Sponsors from "../../components/Sponsors.astro";
       <List>Adversarial Machine Learning</List>
     </UList>
 
-    <h4
-      id="surveillance-systems-and-applications"
-      class="mt-6 mb-4 text-2xl font-bold"
-    >
-      SURVEILLANCE SYSTEMS AND APPLICATIONS
-    </h4>
+    <Heading4 title="Surveillance Systems and Applications" />
     <UList>
       <List>Surveillance for Smart Cities</List>
       <List>Surveillance for Public Safety</List>
