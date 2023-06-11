@@ -8,9 +8,14 @@ import lowerCasify from "../utils/lowerCasify";
 export type ContentProps = {
   left: string;
   right: string | Array<string>;
+  highlight?: boolean;
 };
 const paperContents: Array<ContentProps> = [
-  { left: "Submission Deadline", right: "Jun 14, 2023, 11:59 PM AoE" },
+  {
+    left: "Submission Deadline",
+    right: "Jun 28, 2023, 11:59 PM AoE (Extended firm)",
+    highlight: true,
+  },
   { left: "Author Notification", right: "Aug 15, 2023" },
 ];
 
@@ -35,7 +40,7 @@ const avssContent: Array<ContentProps> = [
   meta="AVSS 2023 is the 19th edition of the IEEE International Conference on Advanced Video and Signal-Based Surveillance. AVSS is the premier international conference in the field of video and signal-based surveillance."
 >
   <div
-    class="mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-[1fr_1fr] md:grid-cols-[2fr_1fr] lg:grid-cols-[3fr_1fr]"
+    class="mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-[1fr_1fr] md:grid-cols-[2fr_1fr] lg:grid-cols-[2fr_1fr]"
   >
     <div class="grid grid-cols-1 gap-x-6 gap-y-6 md:grid-cols-2">
       <Card title="Paper" contents={paperContents} />
@@ -47,7 +52,7 @@ const avssContent: Array<ContentProps> = [
       <Card title="AVSS 2023" contents={avssContent} />
     </div>
     <div
-      class="link-card flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-500 ease-out hover:shadow-2xl"
+      class="link-card order-first flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-500 ease-out hover:shadow-2xl sm:order-last"
     >
       <header
         class="group flex items-center bg-primary px-5 py-3 text-xl font-semibold text-neutral-100"
@@ -66,12 +71,14 @@ const avssContent: Array<ContentProps> = [
             news.map(({ title, date, content }) => {
               return (
                 <a href={"/general/news/#" + lowerCasify(title)}>
-                  <div class="group flex flex-col gap-1 px-2 py-2 transition-colors hover:bg-gray-100">
-                    <div class="text-xl font-semibold uppercase text-neutral-600 group-hover:underline">
+                  <div class="group flex flex-col gap-1 px-2 py-2 transition-colors hover:bg-neutral-100">
+                    <div class="text-xl font-bold text-neutral-600 group-hover:underline">
                       {title}
                     </div>
-                    <div class="font-semibold text-gray-400">{date}</div>
-                    <div class="truncate text-sm text-gray-500">{content}</div>
+                    <div class="font-semibold text-neutral-400">{date}</div>
+                    <div class="truncate text-sm text-neutral-500">
+                      {content}
+                    </div>
                   </div>
                 </a>
               );
@@ -120,7 +127,7 @@ const avssContent: Array<ContentProps> = [
       </p>
     </article>
     <figure
-      class="relative mx-auto min-h-[200px] w-full max-w-[450px] grayscale md:max-w-[500px]"
+      class="neutralscale relative mx-auto min-h-[200px] w-full max-w-[450px] md:max-w-[500px]"
     >
       <Image
         src="/83.png"

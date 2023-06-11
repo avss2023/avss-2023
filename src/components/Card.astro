@@ -32,7 +32,11 @@ const { title, contents } = Astro.props;
           <div class="text-base font-semibold uppercase text-neutral-600">
             {content.left}
           </div>
-          <div class="text-xl">
+          <div
+            class={
+              "text-xl " + (content.highlight ? "text-primary font-bold" : "")
+            }
+          >
             {typeof content.right === "string" ? (
               content.right
             ) : (
