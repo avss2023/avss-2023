@@ -9,28 +9,6 @@ import UList from "../../components/Tags/UList.astro";
 import Layout from "../../layouts/Layout.astro";
 import Section from "../../components/Tags/Section.astro";
 
-const Rates: Row[] = [
-  {
-    items: ["Category", "Early Registration", "Standard Registration"],
-    title: true,
-  },
-  {
-    items: ["IEEE Member", "USD $850", "USD $1,300"],
-  },
-  {
-    items: ["Non-IEEE Member", "USD $1,020", "USD $1,560"],
-  },
-  {
-    items: ["Student IEEE Member", "USD $510", "USD $780"],
-  },
-  {
-    items: ["Student Non-IEEE Member", "USD $615", "USD $940"],
-  },
-  {
-    items: ["IEEE Life Member", "USD $470", "USD $715"],
-  },
-];
-
 const InPerson: Row[] = [
   {
     items: ["Category", "Early Registration", "Standard Registration"],
@@ -95,9 +73,6 @@ const Virtual: Row[] = [
       Please read the following for rate categories, rules (for authors of
       accepted papers), and policies.
     </Paragraph>
-
-    <Heading4 title="Rate" />
-    <Table rows={Rates} />
 
     <Heading4 title="In-Person Registration" />
     <Table rows={InPerson} />
