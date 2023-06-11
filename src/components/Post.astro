@@ -1,0 +1,16 @@
+---
+import lowerCasify from "../utils/lowerCasify";
+type Post = {
+  title: string;
+  date: string;
+  content: string;
+};
+
+const { title, date, content } = Astro.props as Post;
+---
+
+<div class="py-4" id={lowerCasify(title)}>
+  <h3 class="mb-2 text-xl font-bold">{title}</h3>
+  <p class="mb-2 text-gray-500">{date}</p>
+  <p>{content}</p>
+</div>
