@@ -1,20 +1,16 @@
 ---
+import type { NavItem } from "./NavItems.astro";
 interface Props {
-  itemHover:
-    | {
-        name: string;
-        href: string;
-      }[]
-    | undefined;
+  itemHover?: NavItem[];
 }
 const { itemHover } = Astro.props as Props;
 
 const hasHover = itemHover && itemHover.length > 0;
 
-const mobileStyle = "ml-6 flex gap-y-6 flex-col pt-6 text-lg";
+const mobileStyle = "ml-6 flex gap-y-6 flex-col pt-5 text-lg";
 const desktopBeforeInteration = "lg:pointer-events-none lg:opacity-0";
 const desktopAfterInteraction =
-  "lg:absolute lg:gap-y-4 lg:top-10 lg:left-12 lg:w-64 lg:-translate-x-1/2 lg:rounded-lg lg:border-2 lg:bg-black/80 lg:p-6 lg:shadow-lg";
+  "lg:absolute lg:gap-y-4 lg:top-10 lg:left-12 lg:w-64 lg:-translate-x-1/2 lg:rounded-lg lg:border-2 lg:bg-black/80 lg:px-8 lg:py-6 lg:shadow-lg";
 const desktopTransitionProperty = `
   lg:group-focus-within:pointer-events-auto
   lg:group-focus-within:opacity-100
@@ -48,6 +44,19 @@ const classNameHover = [
             <a class="hover:underline" href={hoverItem.href}>
               {hoverItem.name}
             </a>
+            {hoverItem.hover && (
+              <ul class={mobileStyle}>
+                {hoverItem.hover.map((item) => {
+                  return (
+                    <li>
+                      <a class="hover:underline" href={item.href}>
+                        {item.name}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
           </li>
         );
       })}
