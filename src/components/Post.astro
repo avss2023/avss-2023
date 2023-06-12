@@ -1,18 +1,26 @@
 ---
+import type { Post } from "../pages/general/news.astro";
 import Heading3 from "./Tags/Heading3.astro";
 import Paragraph from "./Tags/Paragraph.astro";
 
-type Post = {
-  title: string;
-  date: string;
-  content: string;
-};
-
-const { title, date, content } = Astro.props as Post;
+const { title, date, content, links } = Astro.props as Post;
 ---
 
 <div class="pb-4">
   <Heading3 title={title} />
   <p class="text-neutral-400">{date}</p>
   <Paragraph>{content}</Paragraph>
+  {
+    links && (
+      <div class="mt-2 flex gap-4">
+        {links?.map(({ text, link }) => {
+          return (
+            <a href={link} class="fancy text-2xl">
+              {text}
+            </a>
+          );
+        })}
+      </div>
+    )
+  }
 </div>
