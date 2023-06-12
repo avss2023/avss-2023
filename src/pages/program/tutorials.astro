@@ -1,0 +1,326 @@
+---
+import MainHeader from "../../components/Tags/MainHeader.astro";
+import Section from "../../components/Tags/Section.astro";
+import Layout from "../../layouts/Layout.astro";
+import Heading3 from "../../components/Tags/Heading3.astro";
+import Paragraph from "../../components/Tags/Paragraph.astro";
+import Heading4 from "../../components/Tags/Heading4.astro";
+import UList from "../../components/Tags/UList.astro";
+import List from "../../components/Tags/List.astro";
+---
+
+<Layout title="Program :: AVSS2023">
+  <MainHeader metaTitle="Program" title="Tutorials" />
+  <Section>
+    <Heading3 title="Adversarial Robustness in Autonomous Driving" />
+    <a class="fancy" href="/GE-AVSS-Tutorial-Proposal-2023-Final">
+      Tutorial Description File (PDF)
+    </a>
+    <Paragraph><strong>Date: TBD</strong></Paragraph>
+    <Paragraph>
+      <strong>
+        Presented by: Junyoung Hyun (Samsung Advanced Institute of Technology)
+      </strong>
+    </Paragraph>
+    <Heading4 title="Description" />
+    <Paragraph>TBD</Paragraph>
+    <Heading4 title="Material Provided" />
+    <Paragraph>TBD</Paragraph>
+    <Heading4 title="Outline" />
+    <Paragraph>TBD</Paragraph>
+    <Heading4 title="Presented by" />
+    <Paragraph>
+      <strong
+        >Junyoung Hyun (Samsung Advanced Institute of Technology, Ph.D.)</strong
+      >: TBD
+    </Paragraph>
+    <Heading3 title="Social Analytics" />
+    <Paragraph><strong>Date: TBD</strong></Paragraph>
+    <Paragraph>
+      <strong
+        >Presented by: Peter Tu (General Electric), Guy Ben-Yosef (General
+        Electric), Marc Tomlinson (Language Computer), Vivian Ta (Lake Forest
+        College), Mari Ostendorf (University of Washington), Jonathan Wender
+        (Polis Solutions), Brian Lande (Polis Solutions), David Matsumoto
+        (Humintell and San Francisco State University)</strong
+      >
+    </Paragraph>
+    <Heading4 title="Description" />
+    <Paragraph>
+      This course will cover the topic of social analytics through standard and
+      person borne cameras from which group level social interactions can be
+      acquired using both visual and auditory channels. This tutorial will cover
+      five main topics. First, we will consider the role of video analytics in
+      terms of base capabilities such as: person tracking, PTZ control,
+      articulated motion analysis, gaze detection, facial expression, emotion,
+      valence, arousal, and general behavior recognition. Second, using speech
+      to text algorithms, the semantic analysis of speech can be performed. This
+      topic will include the analysis of speech acts, narrative analysis and the
+      construction of models focused on salient social concepts such as respect
+      and rapport. Third, the topic of paralinguistics will be presented. This
+      form of analysis is not focused on what was said but how it was said. In
+      this way speech patterns may allow for the inference of affects such as
+      sarcasm and excitation. In addition, the analysis of pauses and abrupt
+      changes in tone allows for analysis of interaction dynamics. Fourth,
+      perspectives from behavioral and social science will be presented with the
+      idea that such constructs and frameworks allow for a more nuanced
+      interpretation of observed features. Finally, various fusion strategies
+      that incorporate all four of the previous topics will be discussed with
+      respect to the following outcome variables: normative behaviors, perceived
+      procedural justice, change point detection, emotion, valence, and arousal.
+    </Paragraph>
+    <Heading4 title="Material Provided" />
+    <Paragraph>TBD</Paragraph>
+    <Heading4 title="Motivation and Focus" />
+    <Paragraph>
+      With the proliferation of standard surveillance and wearable cameras, the
+      opportunity to observe and analyze authentic social interactions in
+      unconstrained conditions is quickly becoming an imperative for commercial,
+      government and military use. Increasingly, psychological and sociological
+      phenomena such as normative behaviors, civil interaction, emotional state,
+      rapport, respect, and intention can be understood through the lens of
+      automatic analysis. This application space includes the use of fixed
+      multi-camera installations, active sensors such as Pan Tilt Zoom cameras
+      as well as mobile devices such as person and drone borne cameras. Use case
+      scenarios include interactions between members of the public and police
+      officers or military personnel, doctor patient interactions, school yards
+      and classrooms, shopping centers and other public venues, commercial
+      sales, and entertainment events. This tutorial will cover an array of
+      topics that are foundational for this research agenda.
+    </Paragraph>
+    <Heading4 title="Outline" />
+    <UList>
+      <List>
+        <strong
+          >Multi-View Video Analytics (Peter Tu and Guy Ben-Yosef GE)</strong
+        >
+        <UList>
+          <List>
+            The Sherlocksystem, which makes use of multi-person tracking,
+            automatic PTZ camera control, pose, gaze and expression recognition,
+            will be presented. Methods for extracting social signals such as
+            proximity, interaction and emotional state will be described along
+            with a Bayesian inference engine capable of predicting high level
+            latent social cues such as rapport and hostility will be discussed.
+          </List>
+          <List>
+            Modern state of the art approaches in terms of behavior recognition
+            using raw pixels as well as skeleton models and the measurement of
+            expression as well as emotional arousal and valence will be
+            reviewed.
+          </List>
+          <List>
+            The use of visual language models allowing for increasingly nuanced
+            behavior recognition will be presented.
+          </List>
+        </UList>
+      </List>
+      <List>
+        <strong
+          >Semantics analysis of speech (Marc Tomlinson and Vivian Ta)</strong
+        >
+        <UList>
+          <List>
+            Methods that allow for the construction of specific social models
+            based on text representations of speech will be presented.
+          </List>
+          <List>
+            Analysis of speech in terms of speech acts and their communicative
+            and social implicatures will be described.
+          </List>
+          <List>
+            The use of semantic models for the purposes of narrative description
+            will be reviewed.
+          </List>
+        </UList>
+      </List>
+      <List>
+        <strong>Paralinguistics (Mari Ostendorf)</strong>
+        <UList>
+          <List>
+            Machine learning methods that transform auditory signals into riche
+            mbeddings will be presented.
+          </List>
+          <List>
+            Temporal analysis methods as applied to auditory embeddings will be
+            reviewed.
+          </List>
+        </UList>
+      </List>
+      <List>
+        <strong
+          >Social and Behavioral Science (Jonathan Wender, Brian Lande, and
+          David Matsumoto)</strong
+        >
+        <UList>
+          <List>
+            Behavioral science models as they pertain to the topic of procedural
+            justice will be reviewed.
+          </List>
+          <List>
+            An overview of social modelling with respect to cross cultural
+            interaction will be presented.
+          </List>
+        </UList>
+      </List>
+      <List>
+        <strong
+          >Fusion of visual, semantic, and audio cues (Marc Tomlinson)</strong
+        >
+        <UList>
+          <List>
+            Methods that allow for the fusion of visual, semantic and auditor
+            cues will be discussed in the context of social and behavioral
+            science.
+          </List>
+          <List>
+            A review of experiments associated with perceived procedural
+            justice, normative behaviors, change point detection, emotion,
+            valence and arousal will be presented.
+          </List>
+        </UList>
+      </List>
+    </UList>
+    <Heading4 title="Presented by" />
+    <Paragraph>
+      <strong>Peter H. Tu (GE Global Reseach, Chief Scientist)</strong>: Dr. Tu
+      received his Bachelor of Science degree in Systems Design Engineering from
+      the University of Waterloo Canada. He then received a DPhil from the
+      Department of Engineering Science at Oxford University. While at Oxford,
+      his research was devoted to the development of computer vision methods for
+      the autumatic analysis of seismic imagery. In 1997 Dr. Tu became a senior
+      research scientist working at General Electric’s Global Research center.
+      In partnership with Lockheed Martin, he developed a set of latent
+      fingerprint matching algorithms for the FBI Automatic Fingerprint
+      Identification System (AFIS). Dr. Tu has also developed optical methods
+      for the precise measurement of 3D parts in a manufacturing setting via
+      methods known as Helmholtz Stereopsis. Dr. Tu was the Principal
+      Investigator for the FBI ReFace project, which was tasked with developing
+      an automatic system for face reconstruction from skeletal remains. In
+      2006, he was the principal investigator for the National Institute of
+      Justice’s 3D Face Enhancer Program. This work was focused on improving
+      face recogntion from poor quality surveillance video. In subsequent years
+      Dr. Tu led a number of NIJ programs focused on topics such as face face
+      recognition and behavior understanding. In 2008, Dr Tu led the GE video
+      analytics team that participated in the DHS STIDP demonstration program -
+      the goal of STIDP was to establish an effective defence against suicide
+      bomber attack. Dr Tu was the Prinicipal Investigator for the DARPA
+      sponsored Sherlock effort focused on group level social behavior
+      understanding at a distance based on visual cues. Dr. Tu was the Principal
+      Investigator for the DARPA GAILA, CREATE and Geometry of Learning programs
+      focused on langauge acquisition via visual grounding, interagent
+      cooperation and data analysis through the lens of differential geometry.
+      Currently Dr. Tu is GE’s Chief Scientist for Artificial Intelligence,
+      topics of interest include: developing new forms of agency and awareness,
+      the grounding problem, associative memory and artificial intentionality.
+      Dr Tu has over 75 peer reviewed publications and has filed more than 50
+      U.S. patents.
+    </Paragraph>
+    <Paragraph>
+      <strong>Marc Tomlinson (Language Computer, Principal Scientist):</strong> Dr.
+      Tomlinson started with B.S. in computer science from Rensselaer Polytechnic
+      Institute, before moving on to a start-up investigating automated analysis
+      of cover letters and resumes for identifying the best potential candidates.
+      He then went on to earn a PhD in cognitive psychology from the University of
+      Texas at Austin. While there his research focused on understanding how individuals
+      learn and reason about the world around them and how this interacts with language.
+      In 2011, Dr. Tomlinson started at Language Computer, working on and leading
+      several IARPA programs, from which he published numerous papers on using language
+      to understand an individual’s psychological state, motivations, and social
+      goals and social actions in a variety of languages. During those efforts he
+      was also involved in understanding cultural differences at the nation and sub-
+      nation level in those expressions. He has commercialized some of these ideas
+      at a second start-up, succesfully predicting financial outcomes from an individuals
+      social media communications, opening new credit options for financially invisible
+      consumers. In addition to his work in social sciences, Dr. Tomlinson is the
+      principal invistigator for DARPA’s Causal Exploration program, developing new
+      methods for understanding how causality is expressed in language and advancing
+      the state of the art in automated ontology creation and other core natural
+      language processing areas. Currently he is the Principal Investigator for DARPA’s
+      Computational Cultural Understanding program where he is investigating the
+      fusion of multi-modal data for understanding cultural norms. Dr. Tomlinson
+      is interested in how language can be used as a medium for conversation and
+      interaction with both people and machines, and how these interactions can establish,
+      reinforce, or break social bonds.
+    </Paragraph>
+    <Paragraph>
+      <strong>Dr. Brian Lande, Ph.D</strong>: Dr. Lande is co-founder of Polis
+      Solutions and serves as its Chief Science Officer. In that capacity, he
+      oversees Polis’ applied and basic research portfolio, including
+      development and implementation of evidence-based training and performance
+      evaluation systems. His pioneering work on computational social science
+      led to his appointment as program manager at DARPA for the Good Stranger
+      program. Dr. Lande currently represents Polis on a range of research and
+      training projects ranging from improving officer decision-making related
+      to de-escalation and lawful use of force to automating analysis of
+      body-worn camera footage in order to identify procedurally just officer
+      actions. Dr. Lande has over fifteen years of operational experience as a
+      police officer in the State of California. He holds a Ph.D. in Sociology
+      from UC Berkeley.
+    </Paragraph>
+    <Paragraph>
+      <strong>Dr. Vivian Ta, Ph.D:</strong> Dr. Ta serves as Polis’ Chief Data Scientist,
+      and is also Assistant Professor of Psychology at Lake Forest College in Lake
+      Forest, IL. She is the director of the Technology, Relationships, and Language
+      Lab, which focuses on using natural language processing and text analysis to
+      examine psychological processes during social interactions in public safety
+      and other community settings. Dr. Ta is currently working on several DOJ-funded
+      projects to expand the use of natural language processing and machine learning
+      to improve the accuracy, scalability, and cost-effectiveness of tools for measuring
+      police performance and expertise in training and operational settings. Her
+      work has been published in journals such as Psychological Science, Journal
+      of Language and Social Psychology, and Negotiation and Conflict Management
+      Research, and has been funded by agencies such as the National Science Foundation,
+      Andrew C. Mellon Foundation, and American Psychological Association. Dr. Vivian
+      Ta holds a Ph.D. in Experimental Psychology from the University of Texas at
+      Arlington.
+    </Paragraph>
+    <Paragraph>
+      <strong>Dr. Jonathan Wender, Ph.D:</strong> Jonathan Wender is Polis’ co-founder
+      and CEO. He is a twenty-year police veteran and interdisciplinary social scientist
+      whose area of expertise is face-to-face social interactions in critical situations
+      where risk is high and trust is low. Jonathan has broad experience developing
+      and implementing large-scale technology, training and technical assistance
+      programs that foster accountable, transparent, equitable policing. He is lead
+      developer of Polis’ T3 - Tact, Tactics, and Trust and ADAPT programs, and is
+      currently directing Polis’ efforts to build systems that use natural language
+      processing and computer vision to automate the analysis of body-worn camera
+      data. Prior to co-founding Polis, Jonathan served at the US DoD DARPA as a
+      senior advisor on the “Good Stranger” program. He also previously served on
+      the faculty at the University of Washington in the Department of Sociology
+      and Law, Societies, and Justice Program. Jonathan is internationally recognized
+      as a subject-matter expert on police-community interactions, police reform,
+      police use of force, officer decision-making, police training, and other related
+      topics. He holds a Ph.D. in criminology from Simon Fraser University (2004).
+    </Paragraph>
+    <Paragraph>
+      <strong>David Matsumoto</strong>: Dr. Matsumoto is a world-renowned expert
+      in the fields of emotion, nonverbal behavior, deception, and culture. He
+      received his B.A. from the University of Michigan in 1981, double majoring
+      in psychology and Japanese and receiving High Honors in both. He obtained
+      his Masters (1983) and Doctoral (1986) degrees in Psychology from the
+      University of California at Berkeley. He has been a Professor of
+      Psychology at San Francisco State University (SFSU) since 1989, and is the
+      Founder and Director of SFSU’s Culture and Emotion Research Laboratory. He
+      has produced over 400 academic works including books, journal articles,
+      book chapters, and conference presentations. His books include well- known
+      titles such as the Culture and Psychology, the APA Handbook of Nonverbal
+      Communication (ed.), Nonverbal Communication: Science and Application
+      (ed.), the Cambridge Dictionary of Psychology (ed.), Cross-Cultural
+      Research Methods in Psychology (ed.), the APA Handbook of Interpersonal
+      Communication (ed.), the APA Handbook of Intercultural Communication
+      (ed.), and The Oxford Handbook of Culture and Psychology (ed.). He is the
+      recipient of many awards and honors in the field of psychology, and is a
+      Fellow of the Association for Psychological Science, the Society for
+      Personality and Social Psychology, the International Academy of
+      Intercultural Research, and the International Association for
+      Cross-Cultural Psychology. He is the series editor for Cambridge
+      University Press’ series on Culture and Psychology, and former
+      Editor-in-Chief for the Journal of Cross-Cultural Psychology. He has been
+      President and CEO of Humintell (<a
+        class="fancy"
+        href="http://www.humintell.com">www.humintell.com</a
+      >) since its founding in 2009.
+    </Paragraph>
+  </Section>
+</Layout>
