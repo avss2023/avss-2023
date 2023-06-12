@@ -75,11 +75,11 @@ const avssContent: Array<ContentProps> = [
                     href={"/general/news/#" + lowerCasify(title)}
                     class="group my-2 flex flex-col gap-1 px-2 py-2 transition-colors hover:bg-neutral-100"
                   >
-                    <div class="text-xl font-bold text-neutral-600 group-hover:underline">
+                    <div class="line-clamp-2 text-xl font-bold text-neutral-600 group-hover:underline">
                       {title}
                     </div>
                     <div class="font-semibold text-neutral-400">{date}</div>
-                    <div class="truncate text-sm text-neutral-500">
+                    <div class="line-clamp-2 text-sm text-neutral-500">
                       {content}
                     </div>
                   </a>
