@@ -1,7 +1,7 @@
 ---
 import HoverNavItems from "./HoverNavItems.astro";
 
-interface NavItem {
+export interface NavItem {
   name: string;
   href: string;
   hover?: NavItem[];
@@ -34,7 +34,34 @@ const navItems: NavItem[] = [
       },
     ],
   },
-  { name: "Program", href: "/program" },
+  {
+    name: "Program",
+    href: "/program",
+    hover: [
+      {
+        name: "Tutorials",
+        href: "/program/tutorials",
+      },
+      {
+        name: "Workshops",
+        href: "/program/workshops",
+        hover: [
+          {
+            name: "PPSS",
+            href: "/program/workshops/ppss",
+          },
+        ],
+      },
+      {
+        name: "Challenges",
+        href: "/program/challenges",
+      },
+      {
+        name: "Main Conference",
+        href: "/program/main-conference",
+      },
+    ],
+  },
   {
     name: "Calls",
     href: "/calls",
