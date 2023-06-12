@@ -8,9 +8,10 @@ const { itemHover } = Astro.props as Props;
 const hasHover = itemHover && itemHover.length > 0;
 
 const mobileStyle = "ml-6 flex gap-y-6 flex-col pt-5 text-lg";
+const innerStyle = "lg:py-4 lg:gap-y-4 lg:pt-4";
 const desktopBeforeInteration = "lg:pointer-events-none lg:opacity-0";
 const desktopAfterInteraction =
-  "lg:absolute lg:gap-y-4 lg:top-10 lg:left-12 lg:w-64 lg:-translate-x-1/2 lg:rounded-lg lg:border-2 lg:bg-black/80 lg:px-8 lg:py-6 lg:shadow-lg";
+  "lg:absolute lg:gap-y-4 lg:top-10 lg:left-12 lg:w-max lg:min-w-[16rem] lg:-translate-x-1/2 lg:rounded-lg lg:border-2 lg:bg-black/80 lg:px-8 lg:py-6 lg:shadow-lg";
 const desktopTransitionProperty = `
   lg:group-focus-within:pointer-events-auto
   lg:group-focus-within:opacity-100
@@ -45,7 +46,7 @@ const classNameHover = [
               {hoverItem.name}
             </a>
             {hoverItem.hover && (
-              <ul class={mobileStyle}>
+              <ul class={mobileStyle + innerStyle}>
                 {hoverItem.hover.map((item) => {
                   return (
                     <li>
