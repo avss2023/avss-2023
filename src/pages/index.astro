@@ -2,8 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import { Image } from "@astrojs/image/components";
-import { news } from "./general/news.astro";
+import { sortedByDate } from "./general/news.astro";
 import lowerCasify from "../utils/lowerCasify";
+
+const MAX_NEWS = 3;
 
 export type ContentProps = {
   left: string;
@@ -64,14 +66,15 @@ const avssContent: Array<ContentProps> = [
         </div>
       </header>
       <div class="flex flex-col gap-1 overflow-scroll">
-        <div
-          class="w-full grow divide-y-2 divide-neutral-300 bg-white px-3 py-3 text-sm"
-        >
+        <div class="w-full grow divide-y-2 bg-white px-3 py-1 text-sm">
           {
-            news.map(({ title, date, content }) => {
+            sortedByDate.slice(0, MAX_NEWS).map(({ title, date, content }) => {
               return (
-                <a href={"/general/news/#" + lowerCasify(title)}>
-                  <div class="group flex flex-col gap-1 px-2 py-2 transition-colors hover:bg-neutral-100">
+                <div>
+                  <a
+                    href={"/general/news/#" + lowerCasify(title)}
+                    class="group my-2 flex flex-col gap-1 px-2 py-2 transition-colors hover:bg-neutral-100"
+                  >
                     <div class="text-xl font-bold text-neutral-600 group-hover:underline">
                       {title}
                     </div>
@@ -79,8 +82,8 @@ const avssContent: Array<ContentProps> = [
                     <div class="truncate text-sm text-neutral-500">
                       {content}
                     </div>
-                  </div>
-                </a>
+                  </a>
+                </div>
               );
             })
           }

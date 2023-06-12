@@ -4,21 +4,51 @@ import MainHeader from "../../components/Tags/MainHeader.astro";
 import Section from "../../components/Tags/Section.astro";
 import Layout from "../../layouts/Layout.astro";
 
-export const news = [
+export interface Post {
+  title: string;
+  date: string;
+  content: string;
+  links?: { text: string; link: string }[];
+}
+
+export const news: Post[] = [
   {
     title: "Submission Deadline Extended",
     date: "June 11, 2023",
     content:
       "Responding to extensive requests, the paper submission deadline for IEEE AVSS 2023 is now extended to 28th June, 2023 AOE. This is the final, non-extendable deadline.",
   },
+  {
+    title: "Paper Submission Is Now Open: [Submission]",
+    date: "June 12, 2023",
+    content: "Paper submission is now open.",
+    links: [{ text: "[Submission]", link: "/submission" }],
+  },
+  {
+    title: "[Workshops], [Tutorials], and [Challenges] Pages Are Available Now",
+    date: "June 12, 2023",
+    content:
+      "The [Workshops], [Tutorials], and [Challenges] pages are available now.",
+    links: [
+      { text: "[Workshops]", link: "program/workshops" },
+      { text: "[Tutorials]", link: "program/tutorials" },
+      { text: "[Challenges]", link: "program/challenges" },
+    ],
+  },
 ];
+
+export const sortedByDate = news.sort((a, b) => {
+  const dateA = new Date(a.date);
+  const dateB = new Date(b.date);
+  return dateB.getTime() - dateA.getTime();
+});
 ---
 
 <Layout title="News :: AVSS2023">
   <MainHeader metaTitle="General" title="News" />
   <Section>
     <div class="divide-y-2">
-      {news.map((post) => <Post {...post} />)}
+      {sortedByDate.map((post) => <Post {...post} />)}
     </div>
   </Section>
 </Layout>
