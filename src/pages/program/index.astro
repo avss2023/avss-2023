@@ -1,0 +1,75 @@
+---
+import Heading3 from "../../components/Tags/Heading3.astro";
+import List from "../../components/Tags/List.astro";
+import MainHeader from "../../components/Tags/MainHeader.astro";
+import Section from "../../components/Tags/Section.astro";
+import UList from "../../components/Tags/UList.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const contents = [
+  {
+    title: "Tutorials",
+    events: [
+      {
+        title: "Adversarial Robustness in Autonomous Driving",
+        link: "/program/tutorials",
+      },
+    ],
+  },
+  {
+    title: "Workshops",
+    events: [
+      {
+        title:
+          "3rd Workshop and Challenge on Deepview: Global Multi-Target Visual Surveillance Based on Real-Time Large-Scale Analysis",
+        link: "/program/workshops/deep-view",
+      },
+      {
+        title:
+          "Crowd Behavior Analysis in Smart Cities: From Real-world Data to Digital Twins",
+        link: "/program/workshops/crowd-behavior-analysis",
+      },
+      {
+        title: "PPSS: Privacy-Preserving Surveillance Systems",
+        link: "/program/workshops/ppss",
+      },
+    ],
+  },
+  {
+    title: "Challenges",
+    events: [
+      {
+        title: "Cross-view Multi-object Tracking in DIVerse Open Scenes",
+        link: "/program/challenges",
+      },
+    ],
+  },
+  {
+    title: "Main Conference",
+  },
+];
+---
+
+<Layout title="Program :: AVSS2023">
+  <MainHeader metaTitle="Program" title="Program" />
+  <Section>
+    <div>
+      {
+        contents.map(({ title, events }) => (
+          <div class="pb-4">
+            <Heading3 title={title} />
+            <UList class="mt-2 flex gap-4">
+              {events?.map(({ title, link }) => (
+                <List>
+                  <a class="block hover:underline" href={link}>
+                    {title}
+                  </a>
+                </List>
+              ))}
+            </UList>
+          </div>
+        ))
+      }
+    </div>
+  </Section>
+</Layout>
