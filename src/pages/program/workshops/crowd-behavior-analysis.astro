@@ -1,247 +1,279 @@
 ---
+import Heading3 from "../../../components/Tags/Heading3.astro";
+import Heading4 from "../../../components/Tags/Heading4.astro";
+import List from "../../../components/Tags/List.astro";
+import MainHeader from "../../../components/Tags/MainHeader.astro";
+import Paragraph from "../../../components/Tags/Paragraph.astro";
+import Section from "../../../components/Tags/Section.astro";
+import UList from "../../../components/Tags/UList.astro";
+import Layout from "../../../layouts/Layout.astro";
 ---
 
-<p>Workshops 2</p>
-<h2
-  id="crowd-behavior-analysis-in-smart-cities-from-real-world-data-to-digital-twins"
->
-  Crowd Behavior Analysis in Smart Cities: From Real-world Data to Digital Twins
-</h2>
-<p>
-  <strong
-    >Organized by: Nicola Conci (University of Trento), and Lucio Marcenaro
-    (University of Genoa)</strong
-  >
-</p>
-<p>
-  <a
-    href="/Crowd+behavior+analysis+in+smart+cities_+from+real+world+data+to+digital+twins.pdf"
-    >Workshop Description File (PDF)</a
-  >
-</p>
-<h3 id="introduction">Introduction</h3>
-
-<p>
-  The automated analysis of crowds and the identification of crowd behaviors are
-  crucial forpredicting adverse events, and in particular for appropriately
-  designing public spaces, as well as for the real-time management of people
-  flows.
-</p>
-<p>
-  Scene understanding, especially motion analysis and trajectory prediction of
-  targets, has been extensively exploited to understand the dynamic of an
-  observed scene. Crowd models have been used to detect anomalies, predict paths
-  and perform data-driven simulations. Most models and algorithms for the
-  analysis of crowds are developed and tested using real-world videos and target
-  different applications including personal mobility, safety and security, and
-  enabling assistive robotics in public spaces.
-</p>
-<p>
-  In crowd analysis as in multiple other research fields, the ever increasing
-  demand for data to train modern machine learning and deep learning algorithms
-  appears to be unstoppable.When dealing with supervised learning, the basic
-  requirement is the availability of a large collection of labeled data. If the
-  amount of annotated data is scarce, supervised solutions often overfit,
-  leading, in the first place, to poor generalization capabilities. The
-  literature has shown that this problem can be mitigated with a variety of
-  regularization techniques, such as the dropout, batch normalization, transfer
-  learning between different datasets, pre-training the network on different
-  datasets, or implementing few-shot and zero-shot learning techniques.
-</p>
-<p>
-  Still, there is an ever growing demand for data, to which researchers respond
-  with larger andlarger datasets, at a huge cost in terms of acquisition,
-  storage, and annotation of images and clips. However, when dealing with
-  complex problems, it is common to validate the developed algorithms across
-  different datasets, facing inconsistencies in annotations (i.e. segmentation
-  maps vs bounding boxes), the use of different standards (i.e. the number of
-  joints of human skeletons in OpenPose and SMPL).
-</p>
-<p>
-  The use of synthetically-generated data can overcome such limitations, as the
-  generation engine can be designed to fulfill an arbitrary number of
-  requirements, all at the same time. For example, the same bounding box can
-  hold for multiple viewpoints of the same object/scene; the 3D position of the
-  object is always known, as well as its volume, the appearance, and the motion
-  features. These considerations have motivated the adoption of
-  computer-generated content to satisfy two requirements: (a) the visual
-  fidelity and (b) thebehavioral fidelity.
-</p>
-<p>
-  With this respect, crowd analysis provides a rich and diversified use case, in
-  which synthetic data can play a relevant role: the scene should replicate the
-  appearance of a crowd, which consists of multiple subjects of different
-  appearance exhibiting different behaviors. These elements imply fulfilling the
-  requirements of both visual fidelity and behavioral fidelity, simulating and
-  modeling the diversity of motion patterns, as well as the ongoing social
-  interactions.
-</p>
-<p>
-  We expect contributions involving, but not limited to crowd analysis
-  applications, and synthetic data applications.
-</p>
-<p>Potential topics included, but are not limited to:</p>
-<ul>
-  <li>Crowd analysis</li>
-  <li>Trajectory prediction</li>
-  <li>Crowd simulation</li>
-  <li>Synthetic data for crowds</li>
-  <li>People counting</li>
-  <li>Anomaly detection</li>
-  <li>Crowd simulators</li>
-  <li>Behavioral and interactions models</li>
-</ul>
-<h3 id="estimated-participants">Estimated participants</h3>
-<p>
-  This workshop is meant for Ph.D and post-doctoral students, researchers and
-  practitioners who deal with images and videos, in all areas including
-  detection, classification, segmentation, retrieval. The topic is at the
-  crossroad between image processing, multimedia, and vision, as well as
-  modeling, simulation, and computer graphics.
-</p>
-<h3 id="important-dates">Important Dates</h3>
-<p>
-  Camera-ready and early registration deadlines for a workshop/contest must
-  coincide with the corresponding deadlines of AVSS-2023 – see Important Dates
-  on <a href="https://www.avss2023.org/calls">Call for Papers</a>
-</p>
-<ul>
-  <li>Paper submission: July 30, 2023</li>
-  <li>Decision to authors: August 20, 2023</li>
-  <li>Camera ready: August 25, 2023</li>
-</ul>
-<h3 id="organized-by">Organized by</h3>
-<p>
-  <strong>Nicola Conci (University of Trento):</strong> Nicola Conci is Associate
-  Professor at the Department of Information Engineering and Computer Science, University
-  of Trento, where he teaches Computer Vision and Signal Processing. He received
-  his Ph.D in 2007 from the same University. In 2007 he was a visiting student at
-  the Image Processing Lab. at University of California Santa Barbara. In 2008 and
-  2009 he was post-doc researcher in the Multimedia and Vision research group at
-  Queen Mary University of London. Prof. Conci has authored and co-authored more
-  than 130 papers in peer-reviewed journals and conferences. His current research
-  interests are related to video analysis and computer vision applications for behavioral
-  understanding and monitoring, coordinating a team of 6 Ph.D Students, 1 post-doc
-  and 2 junior researchers. At the University of Trento he coordinates the M.Sc.
-  Degree in Information and Communications Engineering, he is member of the executive
-  committee of the IECS Doctoral School, and he is delegate for the department of
-  the research activities related to the Winter Olympic Games Milano-Cortina 2026.
-  He has served as Co-chair of several conferences, including the 1st and 2nd International
-  Workshop on Computer Vision for Winter Sports, hosted at IEEE WACV 2022 and 2023,
-  General Co-Chair of the International Conference on Distributed Smart Cameras 2019,
-  General Co-Chair of the Symposium Signal Processing for Understanding Crowd Dynamics,
-  held at IEEE AVSS 2017, and Technical Program Co-Chair of the Symposium Signal
-  Processing for Understanding Crowd Dynamics, IEEE GlobalSip 2016.
-</p>
-<ul>
-  <li>
-    E-mail: <a href="mailto:nicola.conci@unitn.it">nicola.conci@unitn.it</a>
-  </li>
-  <li>
-    Webpage: <a
-      href="https://webapps.unitn.it/du/en/Persona/PER0003698/Curriculum"
-      >https://webapps.unitn.it/du/en/Persona/PER0003698/Curriculum</a
-    >
-  </li>
-</ul>
-<p>
-  <strong>Lucio Marcenaro (University of Genoa)</strong>: Lucio Marcenaro
-  received the M.Sc. in Electronic Engineering and Ph.D. in Electronics and
-  Computer Engineering from the University of Genova in 1999 and 2003,
-  respectively. He became Assistant Professor (2011) and Associate Professor
-  (2021) of Telecommunications with the Polytechnic School, Department of
-  Electrical, Electronic, Telecommunications Engineering and Naval Architecture
-  (DITEN) of the University of Genoa, where he teaches the courses of Multimedia
-  Signal Processing for Autonomous Systems, Pervasive Electronics and
-  Fundamentals of Computer Programming. He spent over 20 years’ experience in
-  signal processing, image and video sequence analysis, and has authored almost
-  200 technical papers related to signal and video processing for signal
-  processing and autonomous systems. He is or was Associate Editor of the IEEE
-  Transactions on Image Processing (IEEE TIP) (2018 – ), Associate Editor of the
-  IEEE Transactions on Circuits and Systems for Video Technology (IEEE TCSVT)
-  (2019 – 2022), Associate Editor of the EURASIP Journal on Image and Video
-  Processing (2022 – ), Technical program vice-chair of the IEEE International
-  Conference on Autonomous Systems (IEEE ICAS 2021) (Montréal, Canada, August
-  11-13, 2021), Chair of the IEEE SPS Autonomous Systems Initiative (IEEE ASI)
-  (2023 – ), Chair of the IEEE Signal Processing Society Student Services
-  Committee (2018-2021).
-</p>
-<ul>
-  <li>
-    E-mail: <a href="mailto:lucio.marcenaro@unige.it"
-      >lucio.marcenaro@unige.it</a
-    >
-  </li>
-  <li>
-    Webpage: <a href="https://luciomarcenaro.github.io/"
-      >https://luciomarcenaro.github.io/</a
-    >
-  </li>
-</ul>
-<h3 id="technical-program-commitee">Technical Program Commitee</h3>
-<p>
-  <strong>Bo Zhang (Dalian Maritime University):</strong> Bo Zhang received the BSc
-  degree in computer science and technology in 2007 and the MSc degree in computer
-  application technology in 2010 from Jilin University, China. He received the PhD
-  degree in telecommunications in 2015 from the University of Trento, Italy. He is
-  currently an assistant professor in Dalian Maritime University, China. His research
-  interests include computer vision, multimedia signal processing, and machine learning.
-</p>
-<ul>
-  <li>E-mail: <a href="mailto:bzhang@dlmu.edu.cn">bzhang@dlmu.edu.cn</a></li>
-  <li>
-    Webpage: <a href="https://dblp.org/pid/36/2259-45.html"
-      >https://dblp.org/pid/36/2259-45.html</a
-    >
-  </li>
-</ul>
-<p>
-  <strong>Niccolò Bisagno (University of Trento):</strong> Niccolò Bisagno is an
-  Assistant Professor (RTD-a) at the University of Trento where he received his PhD
-  in 2020 for the thesis “On simulating and predicting pedestrian trajectories in
-  a crowd”. In 2019, he was visiting as a PhD student at the University of Central
-  Florida, Orlando, USA. In 2018, he was a visiting PhD student at the Alpen-Adria-Universität,
-  Klagenfurt , Austria. Prior to that, he received his BS and MS degree in Telecommunication
-  Engineering from the University of Trento, Italy, in 2015 and 2016. He has authored
-  and co-authored multiple papers in top-tier computer vision conferences, such as
-  ECCV, ICCV, CVPR. His research area focuses on crowd analysis with a focus on pedestrian
-  trajectory prediction and crowd simulation in virtual environments. He is also
-  interested in machine learning and computer vision, with special focus on open
-  set classification and sports analysis applications.
-</p>
-<ul>
-  <li>
-    E-mail: <a href="mailto:niccolo.bisagno@unitn.it"
-      >niccolo.bisagno@unitn.it</a
-    >
-  </li>
-  <li>
-    Webpage: <a href="https://webapps.unitn.it/du/it/Persona/PER0121429/"
-      >https://webapps.unitn.it/du/it/Persona/PER0121429/</a
-    >
-  </li>
-</ul>
-<p>
-  <strong>Pamela Zontone (University of Genoa):</strong> Pamela Zontone earned a
-  Laurea in Electronic Engineering from the University of Udine in 2004, and a PhD
-  in Information and Industrial Engineering from the University of Udine in 2008.
-  From 2009 to 2011, she was a postdoctoral fellow at the Department of Information
-  Engineering and Computer Science, University of Trento, working on the LivingKnowledge
-  European project. In 2017, she joined the Polytechnic Department of Engineering
-  and Architecture, University of Udine, where she worked in the field of sensor
-  signal processing and machine learning techniques applied to biophysical signals.
-  She is currently an assistant professor (RTD-a) at the Department of Electrical,
-  Electronic, Telecommunications Engineering and Naval Architecture, University of
-  Genoa. Her research interests include multidimensional signal processing, biophysical
-  signal processing, and machine learning.
-</p>
-<ul>
-  <li>
-    E-mail: <a href="mailto:pamela.zontone@unige.it">pamela.zontone@unige.it</a>
-  </li>
-  <li>
-    Webpage: <a href="https://rubrica.unige.it/personale/UkFGXl5h"
-      >https://rubrica.unige.it/personale/UkFGXl5h</a
-    >
-  </li>
-</ul>
+<Layout title="Program :: AVSS2023">
+  <MainHeader metaTitle="Program" title="Workshop" />
+  <Section>
+    <Heading3
+      title="Crowd Behavior Analysis in Smart Cities: From Real-world Data to Digital Twins"
+    />
+    <Paragraph>
+      <strong>
+        Organized by: Nicola Conci (University of Trento), and Lucio Marcenaro
+        (University of Genoa)
+      </strong>
+    </Paragraph>
+    <Paragraph>
+      <a
+        class="fancy"
+        href="/Crowd+behavior+analysis+in+smart+cities_+from+real+world+data+to+digital+twins.pdf"
+      >
+        Workshop Description File (PDF)
+      </a>
+    </Paragraph>
+    <Heading4 title="Introduction" />
+    <Paragraph>
+      The automated analysis of crowds and the identification of crowd behaviors
+      are crucial forpredicting adverse events, and in particular for
+      appropriately designing public spaces, as well as for the real-time
+      management of people flows.
+    </Paragraph>
+    <Paragraph>
+      Scene understanding, especially motion analysis and trajectory prediction
+      of targets, has been extensively exploited to understand the dynamic of an
+      observed scene. Crowd models have been used to detect anomalies, predict
+      paths and perform data-driven simulations. Most models and algorithms for
+      the analysis of crowds are developed and tested using real-world videos
+      and target different applications including personal mobility, safety and
+      security, and enabling assistive robotics in public spaces.
+    </Paragraph>
+    <Paragraph>
+      In crowd analysis as in multiple other research fields, the ever
+      increasing demand for data to train modern machine learning and deep
+      learning algorithms appears to be unstoppable.When dealing with supervised
+      learning, the basic requirement is the availability of a large collection
+      of labeled data. If the amount of annotated data is scarce, supervised
+      solutions often overfit, leading, in the first place, to poor
+      generalization capabilities. The literature has shown that this problem
+      can be mitigated with a variety of regularization techniques, such as the
+      dropout, batch normalization, transfer learning between different
+      datasets, pre-training the network on different datasets, or implementing
+      few-shot and zero-shot learning techniques.
+    </Paragraph>
+    <Paragraph>
+      Still, there is an ever growing demand for data, to which researchers
+      respond with larger andlarger datasets, at a huge cost in terms of
+      acquisition, storage, and annotation of images and clips. However, when
+      dealing with complex problems, it is common to validate the developed
+      algorithms across different datasets, facing inconsistencies in
+      annotations (i.e. segmentation maps vs bounding boxes), the use of
+      different standards (i.e. the number of joints of human skeletons in
+      OpenPose and SMPL).
+    </Paragraph>
+    <Paragraph>
+      The use of synthetically-generated data can overcome such limitations, as
+      the generation engine can be designed to fulfill an arbitrary number of
+      requirements, all at the same time. For example, the same bounding box can
+      hold for multiple viewpoints of the same object/scene; the 3D position of
+      the object is always known, as well as its volume, the appearance, and the
+      motion features. These considerations have motivated the adoption of
+      computer-generated content to satisfy two requirements: (a) the visual
+      fidelity and (b) thebehavioral fidelity.
+    </Paragraph>
+    <Paragraph>
+      With this respect, crowd analysis provides a rich and diversified use
+      case, in which synthetic data can play a relevant role: the scene should
+      replicate the appearance of a crowd, which consists of multiple subjects
+      of different appearance exhibiting different behaviors. These elements
+      imply fulfilling the requirements of both visual fidelity and behavioral
+      fidelity, simulating and modeling the diversity of motion patterns, as
+      well as the ongoing social interactions.
+    </Paragraph>
+    <Paragraph>
+      We expect contributions involving, but not limited to crowd analysis
+      applications, and synthetic data applications.
+    </Paragraph>
+    <Paragraph>Potential topics included, but are not limited to:</Paragraph>
+    <UList>
+      <List>Crowd analysis</List>
+      <List>Trajectory prediction</List>
+      <List>Crowd simulation</List>
+      <List>Synthetic data for crowds</List>
+      <List>People counting</List>
+      <List>Anomaly detection</List>
+      <List>Crowd simulators</List>
+      <List>Behavioral and interactions models</List>
+    </UList>
+    <Heading4 title="Estimated participants" />
+    <Paragraph>
+      This workshop is meant for Ph.D and post-doctoral students, researchers
+      and practitioners who deal with images and videos, in all areas including
+      detection, classification, segmentation, retrieval. The topic is at the
+      crossroad between image processing, multimedia, and vision, as well as
+      modeling, simulation, and computer graphics.
+    </Paragraph>
+    <Heading4 title="Important Dates" />
+    <Paragraph>
+      Camera-ready and early registration deadlines for a workshop/contest must
+      coincide with the corresponding deadlines of AVSS-2023 – see Important
+      Dates on <a class="fancy" href="https://www.avss2023.org/calls"
+        >Call for Papers</a
+      >
+    </Paragraph>
+    <UList>
+      <List>Paper submission: July 30, 2023</List>
+      <List>Decision to authors: August 20, 2023</List>
+      <List>Camera ready: August 25, 2023</List>
+    </UList>
+    <Heading4 title="Organized by" />
+    <Paragraph>
+      <strong>Nicola Conci (University of Trento):</strong> Nicola Conci is Associate
+      Professor at the Department of Information Engineering and Computer Science,
+      University of Trento, where he teaches Computer Vision and Signal Processing.
+      He received his Ph.D in 2007 from the same University. In 2007 he was a visiting
+      student at the Image Processing Lab. at University of California Santa Barbara.
+      In 2008 and 2009 he was post-doc researcher in the Multimedia and Vision research
+      group at Queen Mary University of London. Prof. Conci has authored and co-authored
+      more than 130 papers in peer-reviewed journals and conferences. His current
+      research interests are related to video analysis and computer vision applications
+      for behavioral understanding and monitoring, coordinating a team of 6 Ph.D
+      Students, 1 post-doc and 2 junior researchers. At the University of Trento
+      he coordinates the M.Sc. Degree in Information and Communications Engineering,
+      he is member of the executive committee of the IECS Doctoral School, and he
+      is delegate for the department of the research activities related to the Winter
+      Olympic Games Milano-Cortina 2026. He has served as Co-chair of several conferences,
+      including the 1st and 2nd International Workshop on Computer Vision for Winter
+      Sports, hosted at IEEE WACV 2022 and 2023, General Co-Chair of the International
+      Conference on Distributed Smart Cameras 2019, General Co-Chair of the Symposium
+      Signal Processing for Understanding Crowd Dynamics, held at IEEE AVSS 2017,
+      and Technical Program Co-Chair of the Symposium Signal Processing for Understanding
+      Crowd Dynamics, IEEE GlobalSip 2016.
+    </Paragraph>
+    <UList>
+      <List>
+        E-mail: <a class="fancy" href="mailto:nicola.conci@unitn.it"
+          >nicola.conci@unitn.it</a
+        >
+      </List>
+      <List>
+        Webpage: <a
+          class="fancy"
+          href="https://webapps.unitn.it/du/en/Persona/PER0003698/Curriculum"
+          >https://webapps.unitn.it/du/en/Persona/PER0003698/Curriculum</a
+        >
+      </List>
+    </UList>
+    <Paragraph>
+      <strong>Lucio Marcenaro (University of Genoa)</strong>: Lucio Marcenaro
+      received the M.Sc. in Electronic Engineering and Ph.D. in Electronics and
+      Computer Engineering from the University of Genova in 1999 and 2003,
+      respectively. He became Assistant Professor (2011) and Associate Professor
+      (2021) of Telecommunications with the Polytechnic School, Department of
+      Electrical, Electronic, Telecommunications Engineering and Naval
+      Architecture (DITEN) of the University of Genoa, where he teaches the
+      courses of Multimedia Signal Processing for Autonomous Systems, Pervasive
+      Electronics and Fundamentals of Computer Programming. He spent over 20
+      years’ experience in signal processing, image and video sequence analysis,
+      and has authored almost 200 technical papers related to signal and video
+      processing for signal processing and autonomous systems. He is or was
+      Associate Editor of the IEEE Transactions on Image Processing (IEEE TIP)
+      (2018 – ), Associate Editor of the IEEE Transactions on Circuits and
+      Systems for Video Technology (IEEE TCSVT) (2019 – 2022), Associate Editor
+      of the EURASIP Journal on Image and Video Processing (2022 – ), Technical
+      program vice-chair of the IEEE International Conference on Autonomous
+      Systems (IEEE ICAS 2021) (Montréal, Canada, August 11-13, 2021), Chair of
+      the IEEE SPS Autonomous Systems Initiative (IEEE ASI) (2023 – ), Chair of
+      the IEEE Signal Processing Society Student Services Committee (2018-2021).
+    </Paragraph>
+    <UList>
+      <List>
+        E-mail: <a class="fancy" href="mailto:lucio.marcenaro@unige.it"
+          >lucio.marcenaro@unige.it</a
+        >
+      </List>
+      <List>
+        Webpage: <a class="fancy" href="https://luciomarcenaro.github.io/"
+          >https://luciomarcenaro.github.io/</a
+        >
+      </List>
+    </UList>
+    <Heading4 title="Technical Program Commitee" />
+    <Paragraph>
+      <strong>Bo Zhang (Dalian Maritime University):</strong> Bo Zhang received the
+      BSc degree in computer science and technology in 2007 and the MSc degree in
+      computer application technology in 2010 from Jilin University, China. He received
+      the PhD degree in telecommunications in 2015 from the University of Trento,
+      Italy. He is currently an assistant professor in Dalian Maritime University,
+      China. His research interests include computer vision, multimedia signal processing,
+      and machine learning.
+    </Paragraph>
+    <UList>
+      <List>
+        E-mail: <a class="fancy" href="mailto:bzhang@dlmu.edu.cn"
+          >bzhang@dlmu.edu.cn</a
+        >
+      </List>
+      <List>
+        Webpage: <a class="fancy" href="https://dblp.org/pid/36/2259-45.html"
+          >https://dblp.org/pid/36/2259-45.html</a
+        >
+      </List>
+    </UList>
+    <Paragraph>
+      <strong>Niccolò Bisagno (University of Trento):</strong> Niccolò Bisagno is
+      an Assistant Professor (RTD-a) at the University of Trento where he received
+      his PhD in 2020 for the thesis “On simulating and predicting pedestrian trajectories
+      in a crowd”. In 2019, he was visiting as a PhD student at the University of
+      Central Florida, Orlando, USA. In 2018, he was a visiting PhD student at the
+      Alpen-Adria-Universität, Klagenfurt , Austria. Prior to that, he received his
+      BS and MS degree in Telecommunication Engineering from the University of Trento,
+      Italy, in 2015 and 2016. He has authored and co-authored multiple papers in
+      top-tier computer vision conferences, such as ECCV, ICCV, CVPR. His research
+      area focuses on crowd analysis with a focus on pedestrian trajectory prediction
+      and crowd simulation in virtual environments. He is also interested in machine
+      learning and computer vision, with special focus on open set classification
+      and sports analysis applications.
+    </Paragraph>
+    <UList>
+      <List>
+        E-mail: <a class="fancy" href="mailto:niccolo.bisagno@unitn.it"
+          >niccolo.bisagno@unitn.it</a
+        >
+      </List>
+      <List>
+        Webpage: <a
+          class="fancy"
+          href="https://webapps.unitn.it/du/it/Persona/PER0121429/"
+          >https://webapps.unitn.it/du/it/Persona/PER0121429/</a
+        >
+      </List>
+    </UList>
+    <Paragraph>
+      <strong>Pamela Zontone (University of Genoa):</strong> Pamela Zontone earned
+      a Laurea in Electronic Engineering from the University of Udine in 2004, and
+      a PhD in Information and Industrial Engineering from the University of Udine
+      in 2008. From 2009 to 2011, she was a postdoctoral fellow at the Department
+      of Information Engineering and Computer Science, University of Trento, working
+      on the LivingKnowledge European project. In 2017, she joined the Polytechnic
+      Department of Engineering and Architecture, University of Udine, where she
+      worked in the field of sensor signal processing and machine learning techniques
+      applied to biophysical signals. She is currently an assistant professor (RTD-a)
+      at the Department of Electrical, Electronic, Telecommunications Engineering
+      and Naval Architecture, University of Genoa. Her research interests include
+      multidimensional signal processing, biophysical signal processing, and machine
+      learning.
+    </Paragraph>
+    <UList>
+      <List>
+        E-mail: <a class="fancy" href="mailto:pamela.zontone@unige.it"
+          >pamela.zontone@unige.it</a
+        >
+      </List>
+      <List>
+        Webpage: <a
+          class="fancy"
+          href="https://rubrica.unige.it/personale/UkFGXl5h"
+          >https://rubrica.unige.it/personale/UkFGXl5h</a
+        >
+      </List>
+    </UList>
+  </Section>
+</Layout>
