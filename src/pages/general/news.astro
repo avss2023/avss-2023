@@ -9,6 +9,7 @@ export interface Post {
   date: string;
   content: string;
   links?: { text: string; link: string }[];
+  important?: boolean;
 }
 
 export const news: Post[] = [
@@ -16,13 +17,14 @@ export const news: Post[] = [
     title: "Submission Deadline Extended",
     date: "June 11, 2023",
     content:
-      "Responding to extensive requests, the paper submission deadline for IEEE AVSS 2023 is now extended to 28th June, 2023 AOE. This is the final, non-extendable deadline.",
+      "Responding to extensive requests, the paper submission deadline for IEEE AVSS 2023 is now extended to 28th June, 2023 AOE.",
+    important: true,
   },
   {
     title: "Paper Submission Is Now Open: [Submission]",
-    date: "June 12, 2023",
+    date: "May 15, 2023",
     content: "Paper submission is now open.",
-    links: [{ text: "[Submission]", link: "/submission" }],
+    links: [{ text: "Submission", link: "/submission" }],
   },
   {
     title: "[Workshops], [Tutorials], and [Challenges] Pages Are Available Now",
@@ -30,9 +32,9 @@ export const news: Post[] = [
     content:
       "The [Workshops], [Tutorials], and [Challenges] pages are available now.",
     links: [
-      { text: "[Workshops]", link: "/program/workshops" },
-      { text: "[Tutorials]", link: "/program/tutorials" },
-      { text: "[Challenges]", link: "/program/challenges" },
+      { text: "Workshops", link: "/program/workshops" },
+      { text: "Tutorials", link: "/program/tutorials" },
+      { text: "Challenges", link: "/program/challenges" },
     ],
   },
 ];
@@ -40,7 +42,17 @@ export const news: Post[] = [
 export const sortedByDate = news.sort((a, b) => {
   const dateA = new Date(a.date);
   const dateB = new Date(b.date);
-  return dateB.getTime() - dateA.getTime();
+
+  let diff = dateB.getTime() - dateA.getTime();
+
+  if (a.important) {
+    diff = -1;
+  }
+  if (b.important) {
+    if (diff != -1) diff = 1;
+    else diff = dateB.getTime() - dateA.getTime();
+  }
+  return diff;
 });
 ---
 

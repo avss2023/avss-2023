@@ -3,19 +3,22 @@ import type { Post } from "../pages/general/news.astro";
 import Heading3 from "./Tags/Heading3.astro";
 import Paragraph from "./Tags/Paragraph.astro";
 
-const { title, date, content, links } = Astro.props as Post;
+const { title, date, content, links, important } = Astro.props as Post;
 ---
 
-<div class="pb-4">
+<div class={"px-6 -mx-2 pb-9 pt-1 rounded" + (important ? " bg-red-100" : "")}>
   <Heading3 title={title} />
-  <p class="text-neutral-400">{date}</p>
+  <p class="-mb-2 text-neutral-400">{date}</p>
   <Paragraph>{content}</Paragraph>
   {
     links && (
-      <div class="mt-2 flex gap-4">
+      <div class="mt-6 flex gap-4">
         {links?.map(({ text, link }) => {
           return (
-            <a href={link} class="fancy text-2xl">
+            <a
+              href={link}
+              class="rounded border-0 border-pink-500 bg-pink-100 px-4 py-2 text-xl font-semibold text-pink-900 transition-colors hover:bg-pink-200"
+            >
               {text}
             </a>
           );
