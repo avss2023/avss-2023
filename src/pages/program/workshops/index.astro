@@ -1,0 +1,27 @@
+---
+import Heading3 from "../../../components/Tags/Heading3.astro";
+import List from "../../../components/Tags/List.astro";
+import MainHeader from "../../../components/Tags/MainHeader.astro";
+import Section from "../../../components/Tags/Section.astro";
+import UList from "../../../components/Tags/UList.astro";
+import Layout from "../../../layouts/Layout.astro";
+import { workshops } from "../index.astro";
+---
+
+<Layout title="Program :: AVSS2023">
+  <MainHeader metaTitle="Program" title="Workshops" />
+  <Section>
+    <Heading3 title="Workshops" />
+    <UList class="ml-2 flex gap-4">
+      {
+        workshops.events.map(({ title, link }) => (
+          <List>
+            <a class="fancy block w-fit hover:underline" href={link}>
+              {title}
+            </a>
+          </List>
+        ))
+      }
+    </UList>
+  </Section>
+</Layout>
