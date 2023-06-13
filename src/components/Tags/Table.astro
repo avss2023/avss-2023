@@ -10,8 +10,8 @@ interface Props {
 const { rows } = Astro.props as Props;
 ---
 
-<figure class="mt-4 max-w-[100%] overflow-x-scroll border-gray-800">
-  <table class="table-auto text-xl">
+<figure class="mt-4 w-full max-w-[100%] overflow-x-scroll border-gray-800">
+  <table class="w-full table-auto text-xl">
     <tbody class="border-2">
       {
         rows.map(({ items, title, bold }) => {
