@@ -5,25 +5,21 @@ import { Image } from "@astrojs/image/components";
 import { sortedByDate } from "./general/news.astro";
 import lowerCasify from "../utils/lowerCasify";
 
-const MAX_NEWS = 3;
+const MAX_NEWS = 5;
 
 export type ContentProps = {
   left: string;
   right: string | Array<string>;
   highlight?: boolean;
 };
+
 const paperContents: Array<ContentProps> = [
   {
     left: "Submission Deadline",
-    right: "Jun 28, 2023, 11:59 PM AoE (Extended firm)",
+    right: "Jun 28, 2023, 11:59 PM AoE (Extended)",
     highlight: true,
   },
   { left: "Author Notification", right: "Aug 15, 2023" },
-];
-
-const workshopContents: Array<ContentProps> = [
-  { left: "Proposals Deadline", right: "May 1, 2023" },
-  { left: "Acceptance Notification", right: "May 15, 2023" },
 ];
 
 const registrationContents: Array<ContentProps> = [
@@ -42,19 +38,13 @@ const avssContent: Array<ContentProps> = [
   meta="AVSS 2023 is the 19th edition of the IEEE International Conference on Advanced Video and Signal-Based Surveillance. AVSS is the premier international conference in the field of video and signal-based surveillance."
 >
   <div
-    class="mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-[1fr_1fr] md:grid-cols-[2fr_1fr] lg:grid-cols-[2fr_1fr]"
+    class="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-flow-col md:grid-cols-2"
   >
-    <div class="grid grid-cols-1 gap-x-6 gap-y-6 md:grid-cols-2">
-      <Card title="Paper" contents={paperContents} />
-      <Card
-        title="Workshop / Tutorial / Challenge"
-        contents={workshopContents}
-      />
-      <Card title="Registration" contents={registrationContents} />
-      <Card title="AVSS 2023" contents={avssContent} />
-    </div>
+    <Card title="Paper" contents={paperContents} />
+    <Card title="Registration" contents={registrationContents} />
+    <Card title="AVSS 2023" contents={avssContent} />
     <div
-      class="link-card order-first flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-500 ease-out hover:shadow-2xl sm:order-last"
+      class="link-card order-first flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-500 ease-out hover:shadow-2xl md:order-last md:row-span-3"
     >
       <header
         class="group flex items-center bg-primary px-5 py-3 text-xl font-semibold text-neutral-100"
@@ -66,26 +56,35 @@ const avssContent: Array<ContentProps> = [
         </div>
       </header>
       <div class="flex flex-col gap-1 overflow-scroll">
-        <div class="w-full grow divide-y-2 bg-white px-3 py-1 text-sm">
+        <div class="w-full grow divide-y-2 bg-white py-1 px-3 text-sm">
           {
-            sortedByDate.slice(0, MAX_NEWS).map(({ title, date, content }) => {
-              return (
-                <div>
-                  <a
-                    href={"/general/news/#" + lowerCasify(title)}
-                    class="group my-2 flex flex-col gap-1 px-2 py-2 transition-colors hover:bg-neutral-100"
-                  >
-                    <div class="line-clamp-2 text-xl font-bold text-neutral-600 group-hover:underline">
-                      {title}
-                    </div>
-                    <div class="font-semibold text-neutral-400">{date}</div>
-                    <div class="line-clamp-2 text-sm text-neutral-500">
-                      {content}
-                    </div>
-                  </a>
-                </div>
-              );
-            })
+            sortedByDate
+              .slice(0, MAX_NEWS)
+              .map(({ title, date, content, important }) => {
+                return (
+                  <div>
+                    <a
+                      href={"/general/news/#" + lowerCasify(title)}
+                      class="group my-2 flex flex-col gap-1 rounded px-4 py-3 transition-colors hover:bg-neutral-100"
+                    >
+                      <div
+                        class={
+                          "line-clamp-2 text-xl font-bold group-hover:underline" +
+                          (important ? " -m-1 bg-red-100 p-1" : " ")
+                        }
+                      >
+                        {important && <span class="text-red-600">{"[["}</span>}
+                        {title}
+                        {important && <span class="text-red-600">{"]]"}</span>}
+                      </div>
+                      <div class="font-semibold text-neutral-500">{date}</div>
+                      <div class="line-clamp-2 text-sm text-neutral-500">
+                        {content}
+                      </div>
+                    </a>
+                  </div>
+                );
+              })
           }
         </div>
       </div>
