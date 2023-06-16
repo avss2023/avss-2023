@@ -19,12 +19,6 @@ const generalChairs: ChairsInterface = {
       profileImage: "/committee/jenqneng-hwang.png",
       email: "hwang@uw.edu",
     },
-    {
-      name: "Michael S. Ryoo",
-      description: "Stony Brook University & Google Brain, USA",
-      profileImage: "/committee/michael-ryoo.png",
-      email: "mryoo@cs.stonybrook.edu",
-    },
   ],
 };
 
