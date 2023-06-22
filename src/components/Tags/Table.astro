@@ -3,6 +3,7 @@ export interface Row {
   items: string[];
   title?: boolean;
   bold?: boolean;
+  updated?: string;
 }
 interface Props {
   rows: Row[];
@@ -14,7 +15,7 @@ const { rows } = Astro.props as Props;
   <table class="w-full table-auto text-xl">
     <tbody class="border-2">
       {
-        rows.map(({ items, title, bold }) => {
+        rows.map(({ items, title, bold, updated }) => {
           return (
             <tr
               class={
@@ -26,6 +27,14 @@ const { rows } = Astro.props as Props;
               }
             >
               {items.map((item) => {
+                if (updated && (Date.parse(item).toString() !== "NaN")) {
+                  return (
+                    <td class="border-x-2 border-gray-800 px-4 py-4 text-center">
+                      <p>{updated}</p>
+                      <s class="decoration-red-600">{item}</s>
+                    </td>
+                  );
+                }
                 return (
                   <td class="border-x-2 border-gray-800 px-4 py-4 text-center">
                     {item}
