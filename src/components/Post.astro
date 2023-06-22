@@ -12,7 +12,7 @@ const { title, date, content, links, important } = Astro.props as Post;
   <Paragraph>{content}</Paragraph>
   {
     links && (
-      <div class="mt-6 flex gap-4">
+      <div class="mt-6 flex flex-wrap gap-4">
         {links?.map(({ text, link }) => {
           return (
             <a
