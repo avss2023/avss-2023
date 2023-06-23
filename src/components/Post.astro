@@ -6,7 +6,7 @@ import Paragraph from "./Tags/Paragraph.astro";
 const { title, date, content, links, important } = Astro.props as Post;
 ---
 
-<div class={"px-6 -mx-2 pb-9 pt-1 rounded" + (important ? " bg-red-100" : "")}>
+<div class={"px-4 -mx-2 pb-9 pt-1 rounded" + (important ? " bg-gray-300" : "")}>
   <Heading3 title={title} />
   <p class="-mb-2 text-neutral-400">{date}</p>
   <Paragraph>{content}</Paragraph>
