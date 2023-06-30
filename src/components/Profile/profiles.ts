@@ -19,6 +19,12 @@ const generalChairs: ChairsInterface = {
       profileImage: "/committee/jenqneng-hwang.png",
       email: "hwang@uw.edu",
     },
+    {
+      name: "Byoung Chul Ko",
+      description: "Keimyung University, S.Korea",
+      profileImage: "/committee/byoungchul-ko.png",
+      email: "niceko@kmu.ac.kr",
+    },
   ],
 };
 
@@ -56,16 +62,22 @@ const programChairs: ChairsInterface = {
       email: "jongtaeklee@knu.ac.kr",
     },
     {
-      name: "Byoung Chul Ko",
-      description: "Keimyung University, S.Korea",
-      profileImage: "/committee/byoungchul-ko.png",
-      email: "niceko@kmu.ac.kr",
-    },
-    {
       name: "Arslan Basharat",
       description: "Kitware Inc, USA",
       profileImage: "/committee/arslan-basharat.png",
       email: "arslan.basharat@kitware.com",
+    },
+    {
+      name: "Senem Velipasalar",
+      description: "Syracuse University, USA",
+      profileImage: "/committee/senem-velipasalar.png",
+      email: "svelipas@syr.edu",
+    },
+    {
+      name: "Liang Zheng",
+      description: "Australian National University, Australia",
+      profileImage: "/committee/liang-zheng.png",
+      email: "liang.zheng@anu.edu.au",
     },
   ],
 };
