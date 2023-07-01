@@ -62,12 +62,6 @@ const programChairs: ChairsInterface = {
       email: "jongtaeklee@knu.ac.kr",
     },
     {
-      name: "Arslan Basharat",
-      description: "Kitware Inc, USA",
-      profileImage: "/committee/arslan-basharat.png",
-      email: "arslan.basharat@kitware.com",
-    },
-    {
       name: "Senem Velipasalar",
       description: "Syracuse University, USA",
       profileImage: "/committee/senem-velipasalar.png",
