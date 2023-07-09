@@ -283,6 +283,24 @@ const areaChairs: ChairsInterface = {
       profileImage: "/committee/srijan-das.png",
       email: "sdas24@uncc.edu",
     },
+    {
+      name: "Zhun Zhong",
+      description: "University of Nottingham",
+      profileImage: "/committee/zhun-zhong.png",
+      email: "zhunzhong007@gmail.com"
+    },
+    {
+      name: "Zhedong Zheng",
+      description: "University of Macau",
+      profileImage: "/committee/zhedong-zheng.webp",
+      email: "zdzheng12@gmail.com",
+    },
+    {
+      name: "Yantao Lu",
+      description: "Northwestern Polytechnical University",
+      profileImage: "/committee/yantao-lu.jpg",
+      email: "yantaolu@nwpu.edu.cn",
+    }
   ],
 };
 
